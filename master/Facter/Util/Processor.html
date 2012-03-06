@@ -215,15 +215,7 @@
 54
 55
 56
-57
-58
-59
-60
-61
-62
-63
-64
-65</pre>
+57</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/facter/util/processor.rb', line 2</span>
@@ -237,55 +229,47 @@
     <span class='id identifier rubyid_model'>model</span> <span class='op'>=</span> <span class='const'>Facter</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span><span class='lparen'>(</span><span class='symbol'>:architecture</span><span class='rparen'>)</span>
     <span class='kw'>case</span> <span class='id identifier rubyid_model'>model</span>
     <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>x86_64</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>amd64</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>i386</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>parisc</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>hppa</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ia64</span><span class='tstring_end'>&quot;</span></span>
-      <span class='const'>Thread</span><span class='op'>::</span><span class='id identifier rubyid_exclusive'>exclusive</span> <span class='kw'>do</span>
-        <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_readlines'>readlines</span><span class='lparen'>(</span><span class='id identifier rubyid_cpuinfo'>cpuinfo</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_l'>l</span><span class='op'>|</span>
-          <span class='kw'>if</span> <span class='id identifier rubyid_l'>l</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>processor\s+:\s+(\d+)</span><span class='regexp_end'>/</span></span>
-            <span class='id identifier rubyid_processor_num'>processor_num</span> <span class='op'>=</span> <span class='backref'>$1</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
-          <span class='kw'>elsif</span> <span class='id identifier rubyid_l'>l</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>model name\s+:\s+(.*)\s*$</span><span class='regexp_end'>/</span></span>
-            <span class='id identifier rubyid_processor_list'>processor_list</span><span class='lbracket'>[</span><span class='id identifier rubyid_processor_num'>processor_num</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='backref'>$1</span> <span class='kw'>unless</span> <span class='id identifier rubyid_processor_num'>processor_num</span> <span class='op'>==</span> <span class='op'>-</span><span class='int'>1</span>
-            <span class='id identifier rubyid_processor_num'>processor_num</span> <span class='op'>=</span> <span class='op'>-</span><span class='int'>1</span>
-          <span class='kw'>elsif</span> <span class='id identifier rubyid_l'>l</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>processor\s+(\d+):\s+(.*)</span><span class='regexp_end'>/</span></span>
-            <span class='id identifier rubyid_processor_num'>processor_num</span> <span class='op'>=</span> <span class='backref'>$1</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
-            <span class='id identifier rubyid_processor_list'>processor_list</span><span class='lbracket'>[</span><span class='id identifier rubyid_processor_num'>processor_num</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='backref'>$2</span> <span class='kw'>unless</span> <span class='id identifier rubyid_processor_num'>processor_num</span> <span class='op'>==</span> <span class='op'>-</span><span class='int'>1</span>
-          <span class='kw'>end</span>
+      <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_readlines'>readlines</span><span class='lparen'>(</span><span class='id identifier rubyid_cpuinfo'>cpuinfo</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_l'>l</span><span class='op'>|</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_l'>l</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>processor\s+:\s+(\d+)</span><span class='regexp_end'>/</span></span>
+          <span class='id identifier rubyid_processor_num'>processor_num</span> <span class='op'>=</span> <span class='backref'>$1</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+        <span class='kw'>elsif</span> <span class='id identifier rubyid_l'>l</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>model name\s+:\s+(.*)\s*$</span><span class='regexp_end'>/</span></span>
+          <span class='id identifier rubyid_processor_list'>processor_list</span><span class='lbracket'>[</span><span class='id identifier rubyid_processor_num'>processor_num</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='backref'>$1</span> <span class='kw'>unless</span> <span class='id identifier rubyid_processor_num'>processor_num</span> <span class='op'>==</span> <span class='op'>-</span><span class='int'>1</span>
+          <span class='id identifier rubyid_processor_num'>processor_num</span> <span class='op'>=</span> <span class='op'>-</span><span class='int'>1</span>
+        <span class='kw'>elsif</span> <span class='id identifier rubyid_l'>l</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>processor\s+(\d+):\s+(.*)</span><span class='regexp_end'>/</span></span>
+          <span class='id identifier rubyid_processor_num'>processor_num</span> <span class='op'>=</span> <span class='backref'>$1</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+          <span class='id identifier rubyid_processor_list'>processor_list</span><span class='lbracket'>[</span><span class='id identifier rubyid_processor_num'>processor_num</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='backref'>$2</span> <span class='kw'>unless</span> <span class='id identifier rubyid_processor_num'>processor_num</span> <span class='op'>==</span> <span class='op'>-</span><span class='int'>1</span>
         <span class='kw'>end</span>
       <span class='kw'>end</span>
 
     <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ppc64</span><span class='tstring_end'>&quot;</span></span>
-      <span class='const'>Thread</span><span class='op'>::</span><span class='id identifier rubyid_exclusive'>exclusive</span> <span class='kw'>do</span>
-        <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_readlines'>readlines</span><span class='lparen'>(</span><span class='id identifier rubyid_cpuinfo'>cpuinfo</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_l'>l</span><span class='op'>|</span>
-          <span class='kw'>if</span> <span class='id identifier rubyid_l'>l</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>processor\s+:\s+(\d+)</span><span class='regexp_end'>/</span></span>
-            <span class='id identifier rubyid_processor_num'>processor_num</span> <span class='op'>=</span> <span class='backref'>$1</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
-          <span class='kw'>elsif</span> <span class='id identifier rubyid_l'>l</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>cpu\s+:\s+(.*)\s*$</span><span class='regexp_end'>/</span></span>
-            <span class='id identifier rubyid_processor_list'>processor_list</span><span class='lbracket'>[</span><span class='id identifier rubyid_processor_num'>processor_num</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='backref'>$1</span> <span class='kw'>unless</span> <span class='id identifier rubyid_processor_num'>processor_num</span> <span class='op'>==</span> <span class='op'>-</span><span class='int'>1</span>
-            <span class='id identifier rubyid_processor_num'>processor_num</span> <span class='op'>=</span> <span class='op'>-</span><span class='int'>1</span>
-          <span class='kw'>end</span>
+      <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_readlines'>readlines</span><span class='lparen'>(</span><span class='id identifier rubyid_cpuinfo'>cpuinfo</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_l'>l</span><span class='op'>|</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_l'>l</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>processor\s+:\s+(\d+)</span><span class='regexp_end'>/</span></span>
+          <span class='id identifier rubyid_processor_num'>processor_num</span> <span class='op'>=</span> <span class='backref'>$1</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+        <span class='kw'>elsif</span> <span class='id identifier rubyid_l'>l</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>cpu\s+:\s+(.*)\s*$</span><span class='regexp_end'>/</span></span>
+          <span class='id identifier rubyid_processor_list'>processor_list</span><span class='lbracket'>[</span><span class='id identifier rubyid_processor_num'>processor_num</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='backref'>$1</span> <span class='kw'>unless</span> <span class='id identifier rubyid_processor_num'>processor_num</span> <span class='op'>==</span> <span class='op'>-</span><span class='int'>1</span>
+          <span class='id identifier rubyid_processor_num'>processor_num</span> <span class='op'>=</span> <span class='op'>-</span><span class='int'>1</span>
         <span class='kw'>end</span>
       <span class='kw'>end</span>
 
     <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>arm</span><span class='regexp_end'>/</span></span>
-      <span class='const'>Thread</span><span class='op'>::</span><span class='id identifier rubyid_exclusive'>exclusive</span> <span class='kw'>do</span>
-        <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_readlines'>readlines</span><span class='lparen'>(</span><span class='id identifier rubyid_cpuinfo'>cpuinfo</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_l'>l</span><span class='op'>|</span>
-          <span class='kw'>if</span> <span class='id identifier rubyid_l'>l</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>Processor\s+:\s+(.+)</span><span class='regexp_end'>/</span></span>
+      <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_readlines'>readlines</span><span class='lparen'>(</span><span class='id identifier rubyid_cpuinfo'>cpuinfo</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_l'>l</span><span class='op'>|</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_l'>l</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>Processor\s+:\s+(.+)</span><span class='regexp_end'>/</span></span>
+          <span class='id identifier rubyid_processor_num'>processor_num</span> <span class='op'>+=</span> <span class='int'>1</span>
+          <span class='id identifier rubyid_processor_list'>processor_list</span><span class='lbracket'>[</span><span class='id identifier rubyid_processor_num'>processor_num</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='backref'>$1</span><span class='period'>.</span><span class='id identifier rubyid_chomp'>chomp</span>
+        <span class='kw'>elsif</span> <span class='id identifier rubyid_l'>l</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>processor\s+:\s+(\d+)\s*$</span><span class='regexp_end'>/</span></span>
+          <span class='id identifier rubyid_proc_num'>proc_num</span> <span class='op'>=</span> <span class='backref'>$1</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+          <span class='kw'>if</span> <span class='id identifier rubyid_proc_num'>proc_num</span> <span class='op'>!=</span> <span class='int'>0</span>
             <span class='id identifier rubyid_processor_num'>processor_num</span> <span class='op'>+=</span> <span class='int'>1</span>
-            <span class='id identifier rubyid_processor_list'>processor_list</span><span class='lbracket'>[</span><span class='id identifier rubyid_processor_num'>processor_num</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='backref'>$1</span><span class='period'>.</span><span class='id identifier rubyid_chomp'>chomp</span>
-          <span class='kw'>elsif</span> <span class='id identifier rubyid_l'>l</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>processor\s+:\s+(\d+)\s*$</span><span class='regexp_end'>/</span></span>
-            <span class='id identifier rubyid_proc_num'>proc_num</span> <span class='op'>=</span> <span class='backref'>$1</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
-            <span class='kw'>if</span> <span class='id identifier rubyid_proc_num'>proc_num</span> <span class='op'>!=</span> <span class='int'>0</span>
-              <span class='id identifier rubyid_processor_num'>processor_num</span> <span class='op'>+=</span> <span class='int'>1</span>
-              <span class='id identifier rubyid_processor_list'>processor_list</span><span class='lbracket'>[</span><span class='id identifier rubyid_processor_num'>processor_num</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_processor_list'>processor_list</span><span class='lbracket'>[</span><span class='id identifier rubyid_processor_num'>processor_num</span><span class='op'>-</span><span class='int'>1</span><span class='rbracket'>]</span>
-            <span class='kw'>end</span>
+            <span class='id identifier rubyid_processor_list'>processor_list</span><span class='lbracket'>[</span><span class='id identifier rubyid_processor_num'>processor_num</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_processor_list'>processor_list</span><span class='lbracket'>[</span><span class='id identifier rubyid_processor_num'>processor_num</span><span class='op'>-</span><span class='int'>1</span><span class='rbracket'>]</span>
           <span class='kw'>end</span>
         <span class='kw'>end</span>
       <span class='kw'>end</span>
 
     <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>sparc</span><span class='regexp_end'>/</span></span>
-      <span class='const'>Thread</span><span class='op'>::</span><span class='id identifier rubyid_exclusive'>exclusive</span> <span class='kw'>do</span>
-        <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_readlines'>readlines</span><span class='lparen'>(</span><span class='id identifier rubyid_cpuinfo'>cpuinfo</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_l'>l</span><span class='op'>|</span>
-          <span class='kw'>if</span> <span class='id identifier rubyid_l'>l</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>cpu\s+:\s+(.*)\s*$</span><span class='regexp_end'>/</span></span>
-            <span class='id identifier rubyid_processor_num'>processor_num</span> <span class='op'>+=</span> <span class='int'>1</span>
-            <span class='id identifier rubyid_processor_list'>processor_list</span><span class='lbracket'>[</span><span class='id identifier rubyid_processor_num'>processor_num</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='backref'>$1</span>
-          <span class='kw'>end</span>
+      <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_readlines'>readlines</span><span class='lparen'>(</span><span class='id identifier rubyid_cpuinfo'>cpuinfo</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_l'>l</span><span class='op'>|</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_l'>l</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>cpu\s+:\s+(.*)\s*$</span><span class='regexp_end'>/</span></span>
+          <span class='id identifier rubyid_processor_num'>processor_num</span> <span class='op'>+=</span> <span class='int'>1</span>
+          <span class='id identifier rubyid_processor_list'>processor_list</span><span class='lbracket'>[</span><span class='id identifier rubyid_processor_num'>processor_num</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='backref'>$1</span>
         <span class='kw'>end</span>
       <span class='kw'>end</span>
     <span class='kw'>end</span>
@@ -363,15 +347,7 @@
 55
 56
 57
-58
-59
-60
-61
-62
-63
-64
-65
-66</pre>
+58</pre>
       </td>
       <td class="code">
         <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_enum_cpuinfo'>enum_cpuinfo</span>
@@ -383,55 +359,47 @@
     <span class='id identifier rubyid_model'>model</span> <span class='op'>=</span> <span class='const'>Facter</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span><span class='lparen'>(</span><span class='symbol'>:architecture</span><span class='rparen'>)</span>
     <span class='kw'>case</span> <span class='id identifier rubyid_model'>model</span>
     <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>x86_64</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>amd64</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>i386</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>parisc</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>hppa</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ia64</span><span class='tstring_end'>&quot;</span></span>
-      <span class='const'>Thread</span><span class='op'>::</span><span class='id identifier rubyid_exclusive'>exclusive</span> <span class='kw'>do</span>
-        <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_readlines'>readlines</span><span class='lparen'>(</span><span class='id identifier rubyid_cpuinfo'>cpuinfo</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_l'>l</span><span class='op'>|</span>
-          <span class='kw'>if</span> <span class='id identifier rubyid_l'>l</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>processor\s+:\s+(\d+)</span><span class='regexp_end'>/</span></span>
-            <span class='id identifier rubyid_processor_num'>processor_num</span> <span class='op'>=</span> <span class='backref'>$1</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
-          <span class='kw'>elsif</span> <span class='id identifier rubyid_l'>l</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>model name\s+:\s+(.*)\s*$</span><span class='regexp_end'>/</span></span>
-            <span class='id identifier rubyid_processor_list'>processor_list</span><span class='lbracket'>[</span><span class='id identifier rubyid_processor_num'>processor_num</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='backref'>$1</span> <span class='kw'>unless</span> <span class='id identifier rubyid_processor_num'>processor_num</span> <span class='op'>==</span> <span class='op'>-</span><span class='int'>1</span>
-            <span class='id identifier rubyid_processor_num'>processor_num</span> <span class='op'>=</span> <span class='op'>-</span><span class='int'>1</span>
-          <span class='kw'>elsif</span> <span class='id identifier rubyid_l'>l</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>processor\s+(\d+):\s+(.*)</span><span class='regexp_end'>/</span></span>
-            <span class='id identifier rubyid_processor_num'>processor_num</span> <span class='op'>=</span> <span class='backref'>$1</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
-            <span class='id identifier rubyid_processor_list'>processor_list</span><span class='lbracket'>[</span><span class='id identifier rubyid_processor_num'>processor_num</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='backref'>$2</span> <span class='kw'>unless</span> <span class='id identifier rubyid_processor_num'>processor_num</span> <span class='op'>==</span> <span class='op'>-</span><span class='int'>1</span>
-          <span class='kw'>end</span>
+      <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_readlines'>readlines</span><span class='lparen'>(</span><span class='id identifier rubyid_cpuinfo'>cpuinfo</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_l'>l</span><span class='op'>|</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_l'>l</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>processor\s+:\s+(\d+)</span><span class='regexp_end'>/</span></span>
+          <span class='id identifier rubyid_processor_num'>processor_num</span> <span class='op'>=</span> <span class='backref'>$1</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+        <span class='kw'>elsif</span> <span class='id identifier rubyid_l'>l</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>model name\s+:\s+(.*)\s*$</span><span class='regexp_end'>/</span></span>
+          <span class='id identifier rubyid_processor_list'>processor_list</span><span class='lbracket'>[</span><span class='id identifier rubyid_processor_num'>processor_num</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='backref'>$1</span> <span class='kw'>unless</span> <span class='id identifier rubyid_processor_num'>processor_num</span> <span class='op'>==</span> <span class='op'>-</span><span class='int'>1</span>
+          <span class='id identifier rubyid_processor_num'>processor_num</span> <span class='op'>=</span> <span class='op'>-</span><span class='int'>1</span>
+        <span class='kw'>elsif</span> <span class='id identifier rubyid_l'>l</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>processor\s+(\d+):\s+(.*)</span><span class='regexp_end'>/</span></span>
+          <span class='id identifier rubyid_processor_num'>processor_num</span> <span class='op'>=</span> <span class='backref'>$1</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+          <span class='id identifier rubyid_processor_list'>processor_list</span><span class='lbracket'>[</span><span class='id identifier rubyid_processor_num'>processor_num</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='backref'>$2</span> <span class='kw'>unless</span> <span class='id identifier rubyid_processor_num'>processor_num</span> <span class='op'>==</span> <span class='op'>-</span><span class='int'>1</span>
         <span class='kw'>end</span>
       <span class='kw'>end</span>
 
     <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ppc64</span><span class='tstring_end'>&quot;</span></span>
-      <span class='const'>Thread</span><span class='op'>::</span><span class='id identifier rubyid_exclusive'>exclusive</span> <span class='kw'>do</span>
-        <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_readlines'>readlines</span><span class='lparen'>(</span><span class='id identifier rubyid_cpuinfo'>cpuinfo</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_l'>l</span><span class='op'>|</span>
-          <span class='kw'>if</span> <span class='id identifier rubyid_l'>l</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>processor\s+:\s+(\d+)</span><span class='regexp_end'>/</span></span>
-            <span class='id identifier rubyid_processor_num'>processor_num</span> <span class='op'>=</span> <span class='backref'>$1</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
-          <span class='kw'>elsif</span> <span class='id identifier rubyid_l'>l</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>cpu\s+:\s+(.*)\s*$</span><span class='regexp_end'>/</span></span>
-            <span class='id identifier rubyid_processor_list'>processor_list</span><span class='lbracket'>[</span><span class='id identifier rubyid_processor_num'>processor_num</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='backref'>$1</span> <span class='kw'>unless</span> <span class='id identifier rubyid_processor_num'>processor_num</span> <span class='op'>==</span> <span class='op'>-</span><span class='int'>1</span>
-            <span class='id identifier rubyid_processor_num'>processor_num</span> <span class='op'>=</span> <span class='op'>-</span><span class='int'>1</span>
-          <span class='kw'>end</span>
+      <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_readlines'>readlines</span><span class='lparen'>(</span><span class='id identifier rubyid_cpuinfo'>cpuinfo</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_l'>l</span><span class='op'>|</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_l'>l</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>processor\s+:\s+(\d+)</span><span class='regexp_end'>/</span></span>
+          <span class='id identifier rubyid_processor_num'>processor_num</span> <span class='op'>=</span> <span class='backref'>$1</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+        <span class='kw'>elsif</span> <span class='id identifier rubyid_l'>l</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>cpu\s+:\s+(.*)\s*$</span><span class='regexp_end'>/</span></span>
+          <span class='id identifier rubyid_processor_list'>processor_list</span><span class='lbracket'>[</span><span class='id identifier rubyid_processor_num'>processor_num</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='backref'>$1</span> <span class='kw'>unless</span> <span class='id identifier rubyid_processor_num'>processor_num</span> <span class='op'>==</span> <span class='op'>-</span><span class='int'>1</span>
+          <span class='id identifier rubyid_processor_num'>processor_num</span> <span class='op'>=</span> <span class='op'>-</span><span class='int'>1</span>
         <span class='kw'>end</span>
       <span class='kw'>end</span>
 
     <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>arm</span><span class='regexp_end'>/</span></span>
-      <span class='const'>Thread</span><span class='op'>::</span><span class='id identifier rubyid_exclusive'>exclusive</span> <span class='kw'>do</span>
-        <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_readlines'>readlines</span><span class='lparen'>(</span><span class='id identifier rubyid_cpuinfo'>cpuinfo</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_l'>l</span><span class='op'>|</span>
-          <span class='kw'>if</span> <span class='id identifier rubyid_l'>l</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>Processor\s+:\s+(.+)</span><span class='regexp_end'>/</span></span>
+      <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_readlines'>readlines</span><span class='lparen'>(</span><span class='id identifier rubyid_cpuinfo'>cpuinfo</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_l'>l</span><span class='op'>|</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_l'>l</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>Processor\s+:\s+(.+)</span><span class='regexp_end'>/</span></span>
+          <span class='id identifier rubyid_processor_num'>processor_num</span> <span class='op'>+=</span> <span class='int'>1</span>
+          <span class='id identifier rubyid_processor_list'>processor_list</span><span class='lbracket'>[</span><span class='id identifier rubyid_processor_num'>processor_num</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='backref'>$1</span><span class='period'>.</span><span class='id identifier rubyid_chomp'>chomp</span>
+        <span class='kw'>elsif</span> <span class='id identifier rubyid_l'>l</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>processor\s+:\s+(\d+)\s*$</span><span class='regexp_end'>/</span></span>
+          <span class='id identifier rubyid_proc_num'>proc_num</span> <span class='op'>=</span> <span class='backref'>$1</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+          <span class='kw'>if</span> <span class='id identifier rubyid_proc_num'>proc_num</span> <span class='op'>!=</span> <span class='int'>0</span>
             <span class='id identifier rubyid_processor_num'>processor_num</span> <span class='op'>+=</span> <span class='int'>1</span>
-            <span class='id identifier rubyid_processor_list'>processor_list</span><span class='lbracket'>[</span><span class='id identifier rubyid_processor_num'>processor_num</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='backref'>$1</span><span class='period'>.</span><span class='id identifier rubyid_chomp'>chomp</span>
-          <span class='kw'>elsif</span> <span class='id identifier rubyid_l'>l</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>processor\s+:\s+(\d+)\s*$</span><span class='regexp_end'>/</span></span>
-            <span class='id identifier rubyid_proc_num'>proc_num</span> <span class='op'>=</span> <span class='backref'>$1</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
-            <span class='kw'>if</span> <span class='id identifier rubyid_proc_num'>proc_num</span> <span class='op'>!=</span> <span class='int'>0</span>
-              <span class='id identifier rubyid_processor_num'>processor_num</span> <span class='op'>+=</span> <span class='int'>1</span>
-              <span class='id identifier rubyid_processor_list'>processor_list</span><span class='lbracket'>[</span><span class='id identifier rubyid_processor_num'>processor_num</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_processor_list'>processor_list</span><span class='lbracket'>[</span><span class='id identifier rubyid_processor_num'>processor_num</span><span class='op'>-</span><span class='int'>1</span><span class='rbracket'>]</span>
-            <span class='kw'>end</span>
+            <span class='id identifier rubyid_processor_list'>processor_list</span><span class='lbracket'>[</span><span class='id identifier rubyid_processor_num'>processor_num</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_processor_list'>processor_list</span><span class='lbracket'>[</span><span class='id identifier rubyid_processor_num'>processor_num</span><span class='op'>-</span><span class='int'>1</span><span class='rbracket'>]</span>
           <span class='kw'>end</span>
         <span class='kw'>end</span>
       <span class='kw'>end</span>
 
     <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>sparc</span><span class='regexp_end'>/</span></span>
-      <span class='const'>Thread</span><span class='op'>::</span><span class='id identifier rubyid_exclusive'>exclusive</span> <span class='kw'>do</span>
-        <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_readlines'>readlines</span><span class='lparen'>(</span><span class='id identifier rubyid_cpuinfo'>cpuinfo</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_l'>l</span><span class='op'>|</span>
-          <span class='kw'>if</span> <span class='id identifier rubyid_l'>l</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>cpu\s+:\s+(.*)\s*$</span><span class='regexp_end'>/</span></span>
-            <span class='id identifier rubyid_processor_num'>processor_num</span> <span class='op'>+=</span> <span class='int'>1</span>
-            <span class='id identifier rubyid_processor_list'>processor_list</span><span class='lbracket'>[</span><span class='id identifier rubyid_processor_num'>processor_num</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='backref'>$1</span>
-          <span class='kw'>end</span>
+      <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_readlines'>readlines</span><span class='lparen'>(</span><span class='id identifier rubyid_cpuinfo'>cpuinfo</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_l'>l</span><span class='op'>|</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_l'>l</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>cpu\s+:\s+(.*)\s*$</span><span class='regexp_end'>/</span></span>
+          <span class='id identifier rubyid_processor_num'>processor_num</span> <span class='op'>+=</span> <span class='int'>1</span>
+          <span class='id identifier rubyid_processor_list'>processor_list</span><span class='lbracket'>[</span><span class='id identifier rubyid_processor_num'>processor_num</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='backref'>$1</span>
         <span class='kw'>end</span>
       <span class='kw'>end</span>
     <span class='kw'>end</span>
@@ -457,6 +425,14 @@
       <pre class="lines">
 
 
+59
+60
+61
+62
+63
+64
+65
+66
 67
 68
 69
@@ -467,36 +443,24 @@
 74
 75
 76
-77
-78
-79
-80
-81
-82
-83
-84
-85
-86
-87</pre>
+77</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/facter/util/processor.rb', line 67</span>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/processor.rb', line 59</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_enum_lsdev'>enum_lsdev</span>
   <span class='id identifier rubyid_processor_num'>processor_num</span> <span class='op'>=</span> <span class='op'>-</span><span class='int'>1</span>
   <span class='id identifier rubyid_processor_list'>processor_list</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
-  <span class='const'>Thread</span><span class='op'>::</span><span class='id identifier rubyid_exclusive'>exclusive</span> <span class='kw'>do</span>
-    <span class='id identifier rubyid_procs'>procs</span> <span class='op'>=</span> <span class='const'>Facter</span><span class='op'>::</span><span class='const'>Util</span><span class='op'>::</span><span class='const'>Resolution</span><span class='period'>.</span><span class='id identifier rubyid_exec'>exec</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>lsdev -Cc processor</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
-    <span class='kw'>if</span> <span class='id identifier rubyid_procs'>procs</span>
-      <span class='id identifier rubyid_procs'>procs</span><span class='period'>.</span><span class='id identifier rubyid_each_line'>each_line</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_proc'>proc</span><span class='op'>|</span>
-        <span class='kw'>if</span> <span class='id identifier rubyid_proc'>proc</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^proc(\d+)</span><span class='regexp_end'>/</span></span>
-          <span class='id identifier rubyid_processor_num'>processor_num</span> <span class='op'>=</span> <span class='backref'>$1</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
-          <span class='comment'># Not retrieving the frequency since AIX 4.3.3 doesn't support the
-</span>          <span class='comment'># attribute and some people still use the OS.
-</span>          <span class='id identifier rubyid_proctype'>proctype</span> <span class='op'>=</span> <span class='const'>Facter</span><span class='op'>::</span><span class='const'>Util</span><span class='op'>::</span><span class='const'>Resolution</span><span class='period'>.</span><span class='id identifier rubyid_exec'>exec</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>lsattr -El proc0 -a type</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
-          <span class='kw'>if</span> <span class='id identifier rubyid_proctype'>proctype</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^type\s+(\S+)\s+</span><span class='regexp_end'>/</span></span>
-            <span class='id identifier rubyid_processor_list'>processor_list</span><span class='lbracket'>[</span><span class='id identifier rubyid_processor_num'>processor_num</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='backref'>$1</span>
-          <span class='kw'>end</span>
+  <span class='id identifier rubyid_procs'>procs</span> <span class='op'>=</span> <span class='const'>Facter</span><span class='op'>::</span><span class='const'>Util</span><span class='op'>::</span><span class='const'>Resolution</span><span class='period'>.</span><span class='id identifier rubyid_exec'>exec</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>lsdev -Cc processor</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_procs'>procs</span>
+    <span class='id identifier rubyid_procs'>procs</span><span class='period'>.</span><span class='id identifier rubyid_each_line'>each_line</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_proc'>proc</span><span class='op'>|</span>
+      <span class='kw'>if</span> <span class='id identifier rubyid_proc'>proc</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^proc(\d+)</span><span class='regexp_end'>/</span></span>
+        <span class='id identifier rubyid_processor_num'>processor_num</span> <span class='op'>=</span> <span class='backref'>$1</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+        <span class='comment'># Not retrieving the frequency since AIX 4.3.3 doesn't support the
+</span>        <span class='comment'># attribute and some people still use the OS.
+</span>        <span class='id identifier rubyid_proctype'>proctype</span> <span class='op'>=</span> <span class='const'>Facter</span><span class='op'>::</span><span class='const'>Util</span><span class='op'>::</span><span class='const'>Resolution</span><span class='period'>.</span><span class='id identifier rubyid_exec'>exec</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>lsattr -El proc0 -a type</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_proctype'>proctype</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^type\s+(\S+)\s+</span><span class='regexp_end'>/</span></span>
+          <span class='id identifier rubyid_processor_list'>processor_list</span><span class='lbracket'>[</span><span class='id identifier rubyid_processor_num'>processor_num</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='backref'>$1</span>
         <span class='kw'>end</span>
       <span class='kw'>end</span>
     <span class='kw'>end</span>
@@ -509,7 +473,7 @@
 </div><table class="annotated_source_code">
   <tr>
     <td colspan="3" style="padding-left: 10px;">
-      <pre class="code"><span class="info file"># File 'lib/facter/util/processor.rb', line 67</span></pre>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/processor.rb', line 59</span></pre>
     </td>
   </tr>
   
@@ -518,27 +482,25 @@
         <span>  
       </td>
       <td class="line-numbers">
-        <pre class="lines" style="padding-right: 0px;">67
-68
-69
-70
-71
-72
-73
-74
-75
-76</pre>
+        <pre class="lines" style="padding-right: 0px;">59
+60
+61
+62
+63
+64
+65
+66
+67</pre>
       </td>
       <td class="code">
         <pre class="code"><span class="info file">def self.enum_lsdev
   processor_num = -1
   processor_list = {}
-  Thread::exclusive do
-    procs = Facter::Util::Resolution.exec('lsdev -Cc processor')
-    if procs
-      procs.each_line do |proc|
-        if proc =~ /^proc(\d+)/
-          processor_num = $1.to_i</pre>
+  procs = Facter::Util::Resolution.exec('lsdev -Cc processor')
+  if procs
+    procs.each_line do |proc|
+      if proc =~ /^proc(\d+)/
+        processor_num = $1.to_i</pre>
       </td>
     </tr>
   
@@ -560,23 +522,21 @@ attribute and some people still use the OS.
 </div>  
       </td>
       <td class="line-numbers">
-        <pre class="lines" style="padding-right: 0px;">78
-79
-80
-81
-82
-83
-84
-85
-86
-87
-88</pre>
+        <pre class="lines" style="padding-right: 0px;">69
+70
+71
+72
+73
+74
+75
+76
+77
+78</pre>
       </td>
       <td class="code">
-        <pre class="code"><span class="info file">          proctype = Facter::Util::Resolution.exec('lsattr -El proc0 -a type')
-          if proctype =~ /^type\s+(\S+)\s+/
-            processor_list[processor_num] = $1
-          end
+        <pre class="code"><span class="info file">        proctype = Facter::Util::Resolution.exec('lsattr -El proc0 -a type')
+        if proctype =~ /^type\s+(\S+)\s+/
+          processor_list[processor_num] = $1
         end
       end
     end
@@ -594,7 +554,7 @@ end</pre>
 </div>
     
     <div id="footer">
-  Generated on Tue Mar  6 02:16:59 2012 by 
+  Generated on Tue Mar  6 18:16:47 2012 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.7.5 (ruby-1.9.2).
 </div>
