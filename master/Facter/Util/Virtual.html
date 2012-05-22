@@ -6,7 +6,7 @@
 <title>
   Module: Facter::Util::Virtual
   
-    &mdash; Documentation by YARD 0.7.5
+    &mdash; Documentation by YARD 0.8.1
   
 </title>
 
@@ -17,9 +17,11 @@
   <link rel="stylesheet" href="../../css/docco.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  relpath = '../..';
-  if (relpath != '') relpath += '/';
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../../';
+  framesUrl = "../../frames.html#!" + escape(window.location.href);
 </script>
+
 
   <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
 
@@ -30,36 +32,41 @@
 
   </head>
   <body>
-    <script type="text/javascript" charset="utf-8">
-      if (window.top.frames.main) document.body.className = 'frames';
-    </script>
-    
     <div id="header">
       <div id="menu">
   
-    <a href="../../_index.html">Index (V)</a> &raquo; 
+    <a href="../../_index.html">Index (V)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../../Facter.html" title="Facter (module)">Facter</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Util.html" title="Facter::Util (module)">Util</a></span></span>
      &raquo; 
     <span class="title">Virtual</span>
   
-  
+
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
       <div id="search">
   
-    <a id="class_list_link" href="#">Class List</a>
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+      Class List
+    </a>
   
-    <a id="method_list_link" href="#">Method List</a>
+    <a class="full_list_link" id="method_list_link"
+        href="../../method_list.html">
+      Method List
+    </a>
   
-    <a id="file_list_link" href="#">File List</a>
+    <a class="full_list_link" id="file_list_link"
+        href="../../file_list.html">
+      File List
+    </a>
   
 </div>
       <div class="clear"></div>
     </div>
-    
+
     <iframe id="search_frame"></iframe>
-    
+
     <div id="content"><h1>Module: Facter::Util::Virtual
   
   
@@ -110,6 +117,7 @@
   
   
   
+  
 
   
     <span class="summary_desc"><div class='inline'></div></span>
@@ -125,6 +133,7 @@
 
     
   </span>
+  
   
   
   
@@ -152,6 +161,7 @@
   
   
   
+  
 
   
     <span class="summary_desc"><div class='inline'></div></span>
@@ -167,6 +177,7 @@
 
     
   </span>
+  
   
   
   
@@ -194,6 +205,7 @@
   
   
   
+  
 
   
     <span class="summary_desc"><div class='inline'></div></span>
@@ -215,12 +227,12 @@
   
   
   
+  
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Cloudlinux uses OpenVZ to a degree, but always has an empty /proc/vz/ and
-has /proc/lve/list present.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Cloudlinux uses OpenVZ to a degree, but always has an empty /proc/vz/ and
+has /proc/lve/list present.</p>
 </div></span>
   
 </li>
@@ -240,11 +252,11 @@ has /proc/lve/list present.
   
   
   
+  
 
   
-    <span class="summary_desc"><div class='inline'><p>
-So one can either have #6728 work on OpenVZ or Cloudlinux.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>So one can either have #6728 work on OpenVZ or Cloudlinux.</p>
 </div></span>
   
 </li>
@@ -258,6 +270,7 @@ So one can either have #6728 work on OpenVZ or Cloudlinux.
 
     
   </span>
+  
   
   
   
@@ -285,6 +298,7 @@ So one can either have #6728 work on OpenVZ or Cloudlinux.
   
   
   
+  
 
   
     <span class="summary_desc"><div class='inline'></div></span>
@@ -300,6 +314,7 @@ So one can either have #6728 work on OpenVZ or Cloudlinux.
 
     
   </span>
+  
   
   
   
@@ -327,6 +342,7 @@ So one can either have #6728 work on OpenVZ or Cloudlinux.
   
   
   
+  
 
   
     <span class="summary_desc"><div class='inline'></div></span>
@@ -342,6 +358,7 @@ So one can either have #6728 work on OpenVZ or Cloudlinux.
 
     
   </span>
+  
   
   
   
@@ -369,6 +386,7 @@ So one can either have #6728 work on OpenVZ or Cloudlinux.
   
   
   
+  
 
   
     <span class="summary_desc"><div class='inline'></div></span>
@@ -383,16 +401,18 @@ So one can either have #6728 work on OpenVZ or Cloudlinux.
 
   <div id="class_method_details" class="method_details_list">
     <h2>Class Method Details</h2>
-    
+
     
       <div class="method_details first">
-  <p class="signature first" id="hpvm?-class_method">
+  <h3 class="signature first" id="hpvm?-class_method">
   
     + (<tt>Boolean</tt>) <strong>hpvm?</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     
 
@@ -400,7 +420,7 @@ So one can either have #6728 work on OpenVZ or Cloudlinux.
 </div>
 <div class="tags">
   
-<h3>Returns:</h3>
+<p class="tag_title">Returns:</p>
 <ul class="return">
   
     <li>
@@ -461,13 +481,15 @@ So one can either have #6728 work on OpenVZ or Cloudlinux.
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="jail?-class_method">
+  <h3 class="signature " id="jail?-class_method">
   
     + (<tt>Boolean</tt>) <strong>jail?</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     
 
@@ -475,7 +497,7 @@ So one can either have #6728 work on OpenVZ or Cloudlinux.
 </div>
 <div class="tags">
   
-<h3>Returns:</h3>
+<p class="tag_title">Returns:</p>
 <ul class="return">
   
     <li>
@@ -552,13 +574,15 @@ So one can either have #6728 work on OpenVZ or Cloudlinux.
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="kvm?-class_method">
+  <h3 class="signature " id="kvm?-class_method">
   
     + (<tt>Boolean</tt>) <strong>kvm?</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     
 
@@ -566,7 +590,7 @@ So one can either have #6728 work on OpenVZ or Cloudlinux.
 </div>
 <div class="tags">
   
-<h3>Returns:</h3>
+<p class="tag_title">Returns:</p>
 <ul class="return">
   
     <li>
@@ -647,13 +671,15 @@ So one can either have #6728 work on OpenVZ or Cloudlinux.
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="kvm_type-class_method">
+  <h3 class="signature " id="kvm_type-class_method">
   
     + (<tt>Object</tt>) <strong>kvm_type</strong> 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -702,10 +728,9 @@ So one can either have #6728 work on OpenVZ or Cloudlinux.
       <td class="comment">
         <span><div class="docstring">
   <div class="discussion">
-    <p>
-TODO Tell the difference between kvm and qemu Can&#8217;t work out a way to
-do this at the moment that doesn&#8217;t require a special binary
-</p>
+    
+<p>TODO Tell the difference between kvm and qemu Can't work out a way to do
+this at the moment that doesn't require a special binary</p>
 
 
   </div>
@@ -730,13 +755,15 @@ end</pre>
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="openvz?-class_method">
+  <h3 class="signature " id="openvz?-class_method">
   
     + (<tt>Boolean</tt>) <strong>openvz?</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     
 
@@ -744,7 +771,7 @@ end</pre>
 </div>
 <div class="tags">
   
-<h3>Returns:</h3>
+<p class="tag_title">Returns:</p>
 <ul class="return">
   
     <li>
@@ -805,25 +832,26 @@ end</pre>
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="openvz_cloudlinux?-class_method">
+  <h3 class="signature " id="openvz_cloudlinux?-class_method">
   
     + (<tt>Boolean</tt>) <strong>openvz_cloudlinux?</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-Cloudlinux uses OpenVZ to a degree, but always has an empty /proc/vz/ and
-has /proc/lve/list present
-</p>
+    
+<p>Cloudlinux uses OpenVZ to a degree, but always has an empty /proc/vz/ and
+has /proc/lve/list present</p>
 
 
   </div>
 </div>
 <div class="tags">
   
-<h3>Returns:</h3>
+<p class="tag_title">Returns:</p>
 <ul class="return">
   
     <li>
@@ -884,17 +912,18 @@ has /proc/lve/list present
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="openvz_type-class_method">
+  <h3 class="signature " id="openvz_type-class_method">
   
     + (<tt>Object</tt>) <strong>openvz_type</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-So one can either have #6728 work on OpenVZ or Cloudlinux. Whoo.
-</p>
+    
+<p>So one can either have #6728 work on OpenVZ or Cloudlinux. Whoo.</p>
 
 
   </div>
@@ -981,13 +1010,15 @@ So one can either have #6728 work on OpenVZ or Cloudlinux. Whoo.
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="virtualbox?-class_method">
+  <h3 class="signature " id="virtualbox?-class_method">
   
     + (<tt>Boolean</tt>) <strong>virtualbox?</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     
 
@@ -995,7 +1026,7 @@ So one can either have #6728 work on OpenVZ or Cloudlinux. Whoo.
 </div>
 <div class="tags">
   
-<h3>Returns:</h3>
+<p class="tag_title">Returns:</p>
 <ul class="return">
   
     <li>
@@ -1056,13 +1087,15 @@ So one can either have #6728 work on OpenVZ or Cloudlinux. Whoo.
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="vserver?-class_method">
+  <h3 class="signature " id="vserver?-class_method">
   
     + (<tt>Boolean</tt>) <strong>vserver?</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     
 
@@ -1070,7 +1103,7 @@ So one can either have #6728 work on OpenVZ or Cloudlinux. Whoo.
 </div>
 <div class="tags">
   
-<h3>Returns:</h3>
+<p class="tag_title">Returns:</p>
 <ul class="return">
   
     <li>
@@ -1143,13 +1176,15 @@ So one can either have #6728 work on OpenVZ or Cloudlinux. Whoo.
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="vserver_type-class_method">
+  <h3 class="signature " id="vserver_type-class_method">
   
     + (<tt>Object</tt>) <strong>vserver_type</strong> 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -1220,13 +1255,15 @@ So one can either have #6728 work on OpenVZ or Cloudlinux. Whoo.
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="xen?-class_method">
+  <h3 class="signature " id="xen?-class_method">
   
     + (<tt>Boolean</tt>) <strong>xen?</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     
 
@@ -1234,7 +1271,7 @@ So one can either have #6728 work on OpenVZ or Cloudlinux. Whoo.
 </div>
 <div class="tags">
   
-<h3>Returns:</h3>
+<p class="tag_title">Returns:</p>
 <ul class="return">
   
     <li>
@@ -1303,13 +1340,15 @@ So one can either have #6728 work on OpenVZ or Cloudlinux. Whoo.
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="zlinux?-class_method">
+  <h3 class="signature " id="zlinux?-class_method">
   
     + (<tt>Boolean</tt>) <strong>zlinux?</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     
 
@@ -1317,7 +1356,7 @@ So one can either have #6728 work on OpenVZ or Cloudlinux. Whoo.
 </div>
 <div class="tags">
   
-<h3>Returns:</h3>
+<p class="tag_title">Returns:</p>
 <ul class="return">
   
     <li>
@@ -1378,13 +1417,15 @@ So one can either have #6728 work on OpenVZ or Cloudlinux. Whoo.
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="zone?-class_method">
+  <h3 class="signature " id="zone?-class_method">
   
     + (<tt>Boolean</tt>) <strong>zone?</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     
 
@@ -1392,7 +1433,7 @@ So one can either have #6728 work on OpenVZ or Cloudlinux. Whoo.
 </div>
 <div class="tags">
   
-<h3>Returns:</h3>
+<p class="tag_title">Returns:</p>
 <ul class="return">
   
     <li>
@@ -1467,11 +1508,11 @@ So one can either have #6728 work on OpenVZ or Cloudlinux. Whoo.
   </div>
 
 </div>
-    
+
     <div id="footer">
-  Generated on Tue Mar  6 18:16:47 2012 by 
+  Generated on Tue May 22 18:49:34 2012 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.7.5 (ruby-1.9.2).
+  0.8.1 (ruby-1.9.3).
 </div>
 
   </body>

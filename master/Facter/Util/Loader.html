@@ -6,7 +6,7 @@
 <title>
   Class: Facter::Util::Loader
   
-    &mdash; Documentation by YARD 0.7.5
+    &mdash; Documentation by YARD 0.8.1
   
 </title>
 
@@ -17,9 +17,11 @@
   <link rel="stylesheet" href="../../css/docco.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  relpath = '../..';
-  if (relpath != '') relpath += '/';
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../../';
+  framesUrl = "../../frames.html#!" + escape(window.location.href);
 </script>
+
 
   <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
 
@@ -30,36 +32,41 @@
 
   </head>
   <body>
-    <script type="text/javascript" charset="utf-8">
-      if (window.top.frames.main) document.body.className = 'frames';
-    </script>
-    
     <div id="header">
       <div id="menu">
   
-    <a href="../../_index.html">Index (L)</a> &raquo; 
+    <a href="../../_index.html">Index (L)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../../Facter.html" title="Facter (module)">Facter</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Util.html" title="Facter::Util (module)">Util</a></span></span>
      &raquo; 
     <span class="title">Loader</span>
   
-  
+
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
       <div id="search">
   
-    <a id="class_list_link" href="#">Class List</a>
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+      Class List
+    </a>
   
-    <a id="method_list_link" href="#">Method List</a>
+    <a class="full_list_link" id="method_list_link"
+        href="../../method_list.html">
+      Method List
+    </a>
   
-    <a id="file_list_link" href="#">File List</a>
+    <a class="full_list_link" id="file_list_link"
+        href="../../file_list.html">
+      File List
+    </a>
   
 </div>
       <div class="clear"></div>
     </div>
-    
+
     <iframe id="search_frame"></iframe>
-    
+
     <div id="content"><h1>Class: Facter::Util::Loader
   
   
@@ -98,9 +105,8 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>
-Load facts on demand.
-</p>
+    
+<p>Load facts on demand.</p>
 
 
   </div>
@@ -132,6 +138,7 @@ Load facts on demand.
     
   </span>
   
+  
     <span class="note title constructor">constructor</span>
   
   
@@ -141,9 +148,8 @@ Load facts on demand.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-A new instance of Loader.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of Loader.</p>
 </div></span>
   
 </li>
@@ -163,11 +169,11 @@ A new instance of Loader.
   
   
   
+  
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Load all resolutions for a single fact.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Load all resolutions for a single fact.</p>
 </div></span>
   
 </li>
@@ -187,11 +193,11 @@ Load all resolutions for a single fact.
   
   
   
+  
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Load all facts from all directories.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Load all facts from all directories.</p>
 </div></span>
   
 </li>
@@ -211,11 +217,11 @@ Load all facts from all directories.
   
   
   
+  
 
   
-    <span class="summary_desc"><div class='inline'><p>
-The list of directories we&#8217;re going to search through for facts.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>The list of directories we're going to search through for facts.</p>
 </div></span>
   
 </li>
@@ -228,17 +234,18 @@ The list of directories we&#8217;re going to search through for facts.
   <h2>Constructor Details</h2>
   
     <div class="method_details first">
-  <p class="signature first" id="initialize-instance_method">
+  <h3 class="signature first" id="initialize-instance_method">
   
     - (<tt><span class='object_link'><a href="" title="Facter::Util::Loader (class)">Loader</a></span></tt>) <strong>initialize</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-A new instance of Loader
-</p>
+    
+<p>A new instance of Loader</p>
 
 
   </div>
@@ -252,15 +259,17 @@ A new instance of Loader
       <pre class="lines">
 
 
-6
 7
-8</pre>
+8
+9
+10</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/facter/util/loader.rb', line 6</span>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/loader.rb', line 7</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span>
   <span class='ivar'>@loaded</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='ivar'>@valid_path</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -268,7 +277,7 @@ A new instance of Loader
 </div><table class="annotated_source_code">
   <tr>
     <td colspan="3" style="padding-left: 10px;">
-      <pre class="code"><span class="info file"># File 'lib/facter/util/loader.rb', line 6</span></pre>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/loader.rb', line 7</span></pre>
     </td>
   </tr>
   
@@ -277,14 +286,16 @@ A new instance of Loader
         <span>  
       </td>
       <td class="line-numbers">
-        <pre class="lines" style="padding-right: 0px;">6
-7
+        <pre class="lines" style="padding-right: 0px;">7
 8
-9</pre>
+9
+10
+11</pre>
       </td>
       <td class="code">
         <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span>
   <span class='ivar'>@loaded</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='ivar'>@valid_path</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
       </td>
     </tr>
@@ -297,20 +308,21 @@ A new instance of Loader
 
   <div id="instance_method_details" class="method_details_list">
     <h2>Instance Method Details</h2>
-    
+
     
       <div class="method_details first">
-  <p class="signature first" id="load-instance_method">
+  <h3 class="signature first" id="load-instance_method">
   
     - (<tt>Object</tt>) <strong>load</strong>(fact) 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-Load all resolutions for a single fact.
-</p>
+    
+<p>Load all resolutions for a single fact.</p>
 
 
   </div>
@@ -324,8 +336,6 @@ Load all resolutions for a single fact.
       <pre class="lines">
 
 
-11
-12
 13
 14
 15
@@ -340,10 +350,12 @@ Load all resolutions for a single fact.
 24
 25
 26
-27</pre>
+27
+28
+29</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/facter/util/loader.rb', line 11</span>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/loader.rb', line 13</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_load'>load</span><span class='lparen'>(</span><span class='id identifier rubyid_fact'>fact</span><span class='rparen'>)</span>
   <span class='comment'># Now load from the search path
@@ -368,7 +380,7 @@ Load all resolutions for a single fact.
 </div><table class="annotated_source_code">
   <tr>
     <td colspan="3" style="padding-left: 10px;">
-      <pre class="code"><span class="info file"># File 'lib/facter/util/loader.rb', line 11</span></pre>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/loader.rb', line 13</span></pre>
     </td>
   </tr>
   
@@ -377,8 +389,8 @@ Load all resolutions for a single fact.
         <span>  
       </td>
       <td class="line-numbers">
-        <pre class="lines" style="padding-right: 0px;">11
-12</pre>
+        <pre class="lines" style="padding-right: 0px;">13
+14</pre>
       </td>
       <td class="code">
         <pre class="code"><span class="info file">def load(fact)</pre>
@@ -389,9 +401,8 @@ Load all resolutions for a single fact.
       <td class="comment">
         <span><div class="docstring">
   <div class="discussion">
-    <p>
-Now load from the search path
-</p>
+    
+<p>Now load from the search path</p>
 
 
   </div>
@@ -402,12 +413,12 @@ Now load from the search path
 </div>  
       </td>
       <td class="line-numbers">
-        <pre class="lines" style="padding-right: 0px;">13
-14
-15
+        <pre class="lines" style="padding-right: 0px;">15
 16
 17
-18</pre>
+18
+19
+20</pre>
       </td>
       <td class="code">
         <pre class="code"><span class="info file">  shortname = fact.to_s.downcase
@@ -422,9 +433,8 @@ Now load from the search path
       <td class="comment">
         <span><div class="docstring">
   <div class="discussion">
-    <p>
-Load individual files
-</p>
+    
+<p>Load individual files</p>
 
 
   </div>
@@ -435,11 +445,11 @@ Load individual files
 </div>  
       </td>
       <td class="line-numbers">
-        <pre class="lines" style="padding-right: 0px;">19
-20
-21
+        <pre class="lines" style="padding-right: 0px;">21
 22
-23</pre>
+23
+24
+25</pre>
       </td>
       <td class="code">
         <pre class="code"><span class="info file">    <span class='id identifier rubyid_file'>file</span> <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='id identifier rubyid_dir'>dir</span><span class='comma'>,</span> <span class='id identifier rubyid_filename'>filename</span><span class='rparen'>)</span>
@@ -453,9 +463,8 @@ Load individual files
       <td class="comment">
         <span><div class="docstring">
   <div class="discussion">
-    <p>
-And load any directories matching the name
-</p>
+    
+<p>And load any directories matching the name</p>
 
 
   </div>
@@ -466,11 +475,11 @@ And load any directories matching the name
 </div>  
       </td>
       <td class="line-numbers">
-        <pre class="lines" style="padding-right: 0px;">24
-25
-26
+        <pre class="lines" style="padding-right: 0px;">26
 27
-28</pre>
+28
+29
+30</pre>
       </td>
       <td class="code">
         <pre class="code"><span class="info file">    factdir = File.join(dir, shortname)
@@ -484,17 +493,18 @@ end</pre>
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="load_all-instance_method">
+  <h3 class="signature " id="load_all-instance_method">
   
     - (<tt>Object</tt>) <strong>load_all</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-Load all facts from all directories.
-</p>
+    
+<p>Load all facts from all directories.</p>
 
 
   </div>
@@ -508,8 +518,6 @@ Load all facts from all directories.
       <pre class="lines">
 
 
-30
-31
 32
 33
 34
@@ -527,10 +535,12 @@ Load all facts from all directories.
 46
 47
 48
-49</pre>
+49
+50
+51</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/facter/util/loader.rb', line 30</span>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/loader.rb', line 32</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_load_all'>load_all</span>
   <span class='kw'>return</span> <span class='kw'>if</span> <span class='kw'>defined?</span><span class='lparen'>(</span><span class='ivar'>@loaded_all</span><span class='rparen'>)</span>
@@ -558,7 +568,7 @@ Load all facts from all directories.
 </div><table class="annotated_source_code">
   <tr>
     <td colspan="3" style="padding-left: 10px;">
-      <pre class="code"><span class="info file"># File 'lib/facter/util/loader.rb', line 30</span></pre>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/loader.rb', line 32</span></pre>
     </td>
   </tr>
   
@@ -567,9 +577,7 @@ Load all facts from all directories.
         <span>  
       </td>
       <td class="line-numbers">
-        <pre class="lines" style="padding-right: 0px;">30
-31
-32
+        <pre class="lines" style="padding-right: 0px;">32
 33
 34
 35
@@ -587,7 +595,9 @@ Load all facts from all directories.
 47
 48
 49
-50</pre>
+50
+51
+52</pre>
       </td>
       <td class="code">
         <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='id identifier rubyid_load_all'>load_all</span>
@@ -617,17 +627,18 @@ Load all facts from all directories.
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="search_path-instance_method">
+  <h3 class="signature " id="search_path-instance_method">
   
     - (<tt>Object</tt>) <strong>search_path</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-The list of directories we&#8217;re going to search through for facts.
-</p>
+    
+<p>The list of directories we're going to search through for facts.</p>
 
 
   </div>
@@ -641,8 +652,6 @@ The list of directories we&#8217;re going to search through for facts.
       <pre class="lines">
 
 
-52
-53
 54
 55
 56
@@ -652,22 +661,32 @@ The list of directories we&#8217;re going to search through for facts.
 60
 61
 62
-63</pre>
+63
+64
+65
+66
+67
+68
+69</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/facter/util/loader.rb', line 52</span>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/loader.rb', line 54</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_search_path'>search_path</span>
   <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
   <span class='id identifier rubyid_result'>result</span> <span class='op'>+=</span> <span class='gvar'>$LOAD_PATH</span><span class='period'>.</span><span class='id identifier rubyid_collect'>collect</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_d'>d</span><span class='op'>|</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='id identifier rubyid_d'>d</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>facter</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='rbrace'>}</span>
   <span class='kw'>if</span> <span class='const'>ENV</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>FACTERLIB</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_result'>result</span> <span class='op'>+=</span> <span class='const'>ENV</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>FACTERLIB</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>:</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_result'>result</span> <span class='op'>+=</span> <span class='const'>ENV</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>FACTERLIB</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='const'>File</span><span class='op'>::</span><span class='const'>PATH_SEPARATOR</span><span class='rparen'>)</span>
   <span class='kw'>end</span>
 
   <span class='comment'># This allows others to register additional paths we should search.
 </span>  <span class='id identifier rubyid_result'>result</span> <span class='op'>+=</span> <span class='const'>Facter</span><span class='period'>.</span><span class='id identifier rubyid_search_path'>search_path</span>
 
-  <span class='id identifier rubyid_result'>result</span>
+  <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_dir'>dir</span><span class='op'>|</span>
+    <span class='id identifier rubyid_good'>good</span> <span class='op'>=</span> <span class='id identifier rubyid_valid_search_path?'>valid_search_path?</span> <span class='id identifier rubyid_dir'>dir</span>
+    <span class='const'>Facter</span><span class='period'>.</span><span class='id identifier rubyid_debugonce'>debugonce</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Relative directory </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dir'>dir</span><span class='rbrace'>}</span><span class='tstring_content'> removed from search path.</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_good'>good</span>
+    <span class='id identifier rubyid_good'>good</span>
+  <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -675,7 +694,7 @@ The list of directories we&#8217;re going to search through for facts.
 </div><table class="annotated_source_code">
   <tr>
     <td colspan="3" style="padding-left: 10px;">
-      <pre class="code"><span class="info file"># File 'lib/facter/util/loader.rb', line 52</span></pre>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/loader.rb', line 54</span></pre>
     </td>
   </tr>
   
@@ -684,21 +703,21 @@ The list of directories we&#8217;re going to search through for facts.
         <span>  
       </td>
       <td class="line-numbers">
-        <pre class="lines" style="padding-right: 0px;">52
-53
-54
+        <pre class="lines" style="padding-right: 0px;">54
 55
 56
 57
 58
-59</pre>
+59
+60
+61</pre>
       </td>
       <td class="code">
         <pre class="code"><span class="info file">def search_path
   result = []
   result += $LOAD_PATH.collect { |d| File.join(d, &quot;facter&quot;) }
   if ENV.include?(&quot;FACTERLIB&quot;)
-    result += ENV[&quot;FACTERLIB&quot;].split(&quot;:&quot;)
+    result += ENV[&quot;FACTERLIB&quot;].split(File::PATH_SEPARATOR)
   end
 </pre>
       </td>
@@ -708,9 +727,8 @@ The list of directories we&#8217;re going to search through for facts.
       <td class="comment">
         <span><div class="docstring">
   <div class="discussion">
-    <p>
-This allows others to register additional paths we should search.
-</p>
+    
+<p>This allows others to register additional paths we should search.</p>
 
 
   </div>
@@ -721,16 +739,24 @@ This allows others to register additional paths we should search.
 </div>  
       </td>
       <td class="line-numbers">
-        <pre class="lines" style="padding-right: 0px;">60
-61
-62
+        <pre class="lines" style="padding-right: 0px;">62
 63
-64</pre>
+64
+65
+66
+67
+68
+69
+70</pre>
       </td>
       <td class="code">
         <pre class="code"><span class="info file">  result += Facter.search_path
 
-  result
+  result.select do |dir|
+    good = valid_search_path? dir
+    Facter.debugonce(&quot;Relative directory #{dir} removed from search path.&quot;) unless good
+    good
+  end
 end</pre>
       </td>
     </tr>
@@ -741,11 +767,11 @@ end</pre>
   </div>
 
 </div>
-    
+
     <div id="footer">
-  Generated on Tue Mar  6 18:16:47 2012 by 
+  Generated on Tue May 22 18:49:35 2012 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.7.5 (ruby-1.9.2).
+  0.8.1 (ruby-1.9.3).
 </div>
 
   </body>

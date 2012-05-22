@@ -6,7 +6,7 @@
 <title>
   Class: Facter::Util::Resolution
   
-    &mdash; Documentation by YARD 0.7.5
+    &mdash; Documentation by YARD 0.8.1
   
 </title>
 
@@ -17,9 +17,11 @@
   <link rel="stylesheet" href="../../css/docco.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  relpath = '../..';
-  if (relpath != '') relpath += '/';
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../../';
+  framesUrl = "../../frames.html#!" + escape(window.location.href);
 </script>
+
 
   <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
 
@@ -30,36 +32,41 @@
 
   </head>
   <body>
-    <script type="text/javascript" charset="utf-8">
-      if (window.top.frames.main) document.body.className = 'frames';
-    </script>
-    
     <div id="header">
       <div id="menu">
   
-    <a href="../../_index.html">Index (R)</a> &raquo; 
+    <a href="../../_index.html">Index (R)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../../Facter.html" title="Facter (module)">Facter</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Util.html" title="Facter::Util (module)">Util</a></span></span>
      &raquo; 
     <span class="title">Resolution</span>
   
-  
+
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
       <div id="search">
   
-    <a id="class_list_link" href="#">Class List</a>
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+      Class List
+    </a>
   
-    <a id="method_list_link" href="#">Method List</a>
+    <a class="full_list_link" id="method_list_link"
+        href="../../method_list.html">
+      Method List
+    </a>
   
-    <a id="file_list_link" href="#">File List</a>
+    <a class="full_list_link" id="file_list_link"
+        href="../../file_list.html">
+      File List
+    </a>
   
 </div>
       <div class="clear"></div>
     </div>
-    
+
     <iframe id="search_frame"></iframe>
-    
+
     <div id="content"><h1>Class: Facter::Util::Resolution
   
   
@@ -125,6 +132,7 @@
   </span>
   
   
+  
     
     
   
@@ -134,9 +142,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Returns the value of attribute code.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute code.</p>
 </div></span>
   
 </li>
@@ -152,6 +159,7 @@ Returns the value of attribute code.
   </span>
   
   
+  
     
     
   
@@ -161,9 +169,8 @@ Returns the value of attribute code.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Returns the value of attribute interpreter.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute interpreter.</p>
 </div></span>
   
 </li>
@@ -179,6 +186,7 @@ Returns the value of attribute interpreter.
   </span>
   
   
+  
     
     
   
@@ -188,9 +196,8 @@ Returns the value of attribute interpreter.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Returns the value of attribute name.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute name.</p>
 </div></span>
   
 </li>
@@ -206,6 +213,7 @@ Returns the value of attribute name.
   </span>
   
   
+  
     
     
   
@@ -215,9 +223,8 @@ Returns the value of attribute name.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Returns the value of attribute timeout.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute timeout.</p>
 </div></span>
   
 </li>
@@ -233,6 +240,7 @@ Returns the value of attribute timeout.
   </span>
   
   
+  
     
     
   
@@ -242,9 +250,8 @@ Returns the value of attribute timeout.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-How we get a value for our resolution mechanism.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>How we get a value for our resolution mechanism.</p>
 </div></span>
   
 </li>
@@ -260,6 +267,7 @@ How we get a value for our resolution mechanism.
   </span>
   
   
+  
     
     
   
@@ -269,9 +277,8 @@ How we get a value for our resolution mechanism.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Return the importance of this resolution.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Return the importance of this resolution.</p>
 </div></span>
   
 </li>
@@ -304,11 +311,11 @@ Return the importance of this resolution.
   
   
   
+  
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Execute a program and return the output of that program.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Execute a program and return the output of that program.</p>
 </div></span>
   
 </li>
@@ -322,6 +329,7 @@ Execute a program and return the output of that program.
 
     
   </span>
+  
   
   
   
@@ -349,14 +357,14 @@ Execute a program and return the output of that program.
   
   
   
+  
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Call this method with a block of code for which you would like to
+    <span class="summary_desc"><div class='inline'>
+<p>Call this method with a block of code for which you would like to
 temporarily modify one or more environment variables; the specified values
 will be set for the duration of your block, after which the original values
-(if any) will be restored.
-</p>
+(if any) will be restored.</p>
 </div></span>
   
 </li>
@@ -385,11 +393,11 @@ will be set for the duration of your block, after which the original values
   
   
   
+  
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Add a new confine to the resolution mechanism.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Add a new confine to the resolution mechanism.</p>
 </div></span>
   
 </li>
@@ -403,6 +411,7 @@ Add a new confine to the resolution mechanism.
 
     
   </span>
+  
   
   
   
@@ -425,6 +434,7 @@ Add a new confine to the resolution mechanism.
     
   </span>
   
+  
     <span class="note title constructor">constructor</span>
   
   
@@ -434,9 +444,8 @@ Add a new confine to the resolution mechanism.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Create a new resolution mechanism.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Create a new resolution mechanism.</p>
 </div></span>
   
 </li>
@@ -456,14 +465,36 @@ Create a new resolution mechanism.
   
   
   
+  
 
   
-    <span class="summary_desc"><div class='inline'><p>
-We need this as a getter for &#8216;timeout&#8217;, because some versions
-of ruby seem to already have a &#8216;timeout&#8217; method and we
-can&#8217;t seem to override the instance methods, somehow.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>We need this as a getter for 'timeout', because some versions of ruby seem
+to already have a 'timeout' method and we can't seem to override the
+instance methods, somehow.</p>
 </div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#preserve_whitespace-instance_method" title="#preserve_whitespace (instance method)">- (Object) <strong>preserve_whitespace</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -482,11 +513,11 @@ can&#8217;t seem to override the instance methods, somehow.
   
   
   
+  
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Set our code for returning a value.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Set our code for returning a value.</p>
 </div></span>
   
 </li>
@@ -506,11 +537,11 @@ Set our code for returning a value.
   
   
   
+  
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Is this resolution mechanism suitable on the system in question?.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Is this resolution mechanism suitable on the system in question?.</p>
 </div></span>
   
 </li>
@@ -524,6 +555,7 @@ Is this resolution mechanism suitable on the system in question?.
 
     
   </span>
+  
   
   
   
@@ -544,17 +576,18 @@ Is this resolution mechanism suitable on the system in question?.
   <h2>Constructor Details</h2>
   
     <div class="method_details first">
-  <p class="signature first" id="initialize-instance_method">
+  <h3 class="signature first" id="initialize-instance_method">
   
     - (<tt><span class='object_link'><a href="" title="Facter::Util::Resolution (class)">Resolution</a></span></tt>) <strong>initialize</strong>(name) 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-Create a new resolution mechanism.
-</p>
+    
+<p>Create a new resolution mechanism.</p>
 
 
   </div>
@@ -633,17 +666,18 @@ Create a new resolution mechanism.
       <span id="code=-instance_method"></span>
       <span id="code-instance_method"></span>
       <div class="method_details first">
-  <p class="signature first" id="code-instance_method">
+  <h3 class="signature first" id="code-instance_method">
   
     - (<tt>Object</tt>) <strong>code</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-Returns the value of attribute code
-</p>
+    
+<p>Returns the value of attribute code</p>
 
 
   </div>
@@ -701,17 +735,18 @@ Returns the value of attribute code
       <span id="interpreter=-instance_method"></span>
       <span id="interpreter-instance_method"></span>
       <div class="method_details ">
-  <p class="signature " id="interpreter-instance_method">
+  <h3 class="signature " id="interpreter-instance_method">
   
     - (<tt>Object</tt>) <strong>interpreter</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-Returns the value of attribute interpreter
-</p>
+    
+<p>Returns the value of attribute interpreter</p>
 
 
   </div>
@@ -727,14 +762,12 @@ Returns the value of attribute interpreter
 
 12
 13
-14
-15</pre>
+14</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/facter/util/resolution.rb', line 12</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_interpreter'>interpreter</span>
-  <span class='const'>Facter</span><span class='period'>.</span><span class='id identifier rubyid_warnonce'>warnonce</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>The 'Facter::Util::Resolution.interpreter' method is deprecated and will be removed in a future version.</span><span class='tstring_end'>&quot;</span></span>
   <span class='ivar'>@interpreter</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -755,12 +788,10 @@ Returns the value of attribute interpreter
         <pre class="lines" style="padding-right: 0px;">12
 13
 14
-15
-16</pre>
+15</pre>
       </td>
       <td class="code">
         <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='id identifier rubyid_interpreter'>interpreter</span>
-  <span class='const'>Facter</span><span class='period'>.</span><span class='id identifier rubyid_warnonce'>warnonce</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>The 'Facter::Util::Resolution.interpreter' method is deprecated and will be removed in a future version.</span><span class='tstring_end'>&quot;</span></span>
   <span class='ivar'>@interpreter</span>
 <span class='kw'>end</span></pre>
       </td>
@@ -773,17 +804,18 @@ Returns the value of attribute interpreter
       <span id="name=-instance_method"></span>
       <span id="name-instance_method"></span>
       <div class="method_details ">
-  <p class="signature " id="name-instance_method">
+  <h3 class="signature " id="name-instance_method">
   
     - (<tt>Object</tt>) <strong>name</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-Returns the value of attribute name
-</p>
+    
+<p>Returns the value of attribute name</p>
 
 
   </div>
@@ -841,17 +873,18 @@ Returns the value of attribute name
       <span id="timeout=-instance_method"></span>
       <span id="timeout-instance_method"></span>
       <div class="method_details ">
-  <p class="signature " id="timeout-instance_method">
+  <h3 class="signature " id="timeout-instance_method">
   
     - (<tt>Object</tt>) <strong>timeout</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-Returns the value of attribute timeout
-</p>
+    
+<p>Returns the value of attribute timeout</p>
 
 
   </div>
@@ -909,17 +942,18 @@ Returns the value of attribute timeout
       <span id="value=-instance_method"></span>
       <span id="value-instance_method"></span>
       <div class="method_details ">
-  <p class="signature " id="value-instance_method">
+  <h3 class="signature " id="value-instance_method">
   
     - (<tt>Object</tt>) <strong>value</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-How we get a value for our resolution mechanism.
-</p>
+    
+<p>How we get a value for our resolution mechanism.</p>
 
 
   </div>
@@ -933,10 +967,6 @@ How we get a value for our resolution mechanism.
       <pre class="lines">
 
 
-196
-197
-198
-199
 200
 201
 202
@@ -967,10 +997,18 @@ How we get a value for our resolution mechanism.
 227
 228
 229
-230</pre>
+230
+231
+232
+233
+234
+235
+236
+237
+238</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/facter/util/resolution.rb', line 196</span>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/resolution.rb', line 200</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_value'>value</span>
   <span class='kw'>return</span> <span class='ivar'>@value</span> <span class='kw'>if</span> <span class='ivar'>@value</span>
@@ -1004,6 +1042,10 @@ How we get a value for our resolution mechanism.
   <span class='id identifier rubyid_ms'>ms</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_finishtime'>finishtime</span> <span class='op'>-</span> <span class='id identifier rubyid_starttime'>starttime</span><span class='rparen'>)</span> <span class='op'>*</span> <span class='int'>1000</span>
   <span class='const'>Facter</span><span class='period'>.</span><span class='id identifier rubyid_show_time'>show_time</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='rbrace'>}</span><span class='tstring_content'>: </span><span class='embexpr_beg'>#{</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>%.2f</span><span class='tstring_end'>&quot;</span></span> <span class='op'>%</span> <span class='id identifier rubyid_ms'>ms</span><span class='rbrace'>}</span><span class='tstring_content'>ms</span><span class='tstring_end'>&quot;</span></span>
 
+  <span class='kw'>unless</span> <span class='ivar'>@preserve_whitespace</span>
+    <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span>  <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_strip'>strip</span> <span class='kw'>if</span> <span class='id identifier rubyid_result'>result</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:strip</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  
   <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>if</span> <span class='id identifier rubyid_result'>result</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
   <span class='kw'>return</span> <span class='id identifier rubyid_result'>result</span>
 <span class='kw'>end</span></pre>
@@ -1013,7 +1055,7 @@ How we get a value for our resolution mechanism.
 </div><table class="annotated_source_code">
   <tr>
     <td colspan="3" style="padding-left: 10px;">
-      <pre class="code"><span class="info file"># File 'lib/facter/util/resolution.rb', line 196</span></pre>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/resolution.rb', line 200</span></pre>
     </td>
   </tr>
   
@@ -1022,11 +1064,7 @@ How we get a value for our resolution mechanism.
         <span>  
       </td>
       <td class="line-numbers">
-        <pre class="lines" style="padding-right: 0px;">196
-197
-198
-199
-200
+        <pre class="lines" style="padding-right: 0px;">200
 201
 202
 203
@@ -1040,7 +1078,11 @@ How we get a value for our resolution mechanism.
 211
 212
 213
-214</pre>
+214
+215
+216
+217
+218</pre>
       </td>
       <td class="code">
         <pre class="code"><span class="info file">def value
@@ -1068,11 +1110,9 @@ How we get a value for our resolution mechanism.
       <td class="comment">
         <span><div class="docstring">
   <div class="discussion">
-    <p>
-This call avoids zombies &#8212; basically, create a thread that will
-dezombify all of the child processes that we&#8217;re ignoring because of
-the timeout.
-</p>
+    
+<p>This call avoids zombies -- basically, create a thread that will dezombify
+all of the child processes that we're ignoring because of the timeout.</p>
 
 
   </div>
@@ -1083,11 +1123,7 @@ the timeout.
 </div>  
       </td>
       <td class="line-numbers">
-        <pre class="lines" style="padding-right: 0px;">217
-218
-219
-220
-221
+        <pre class="lines" style="padding-right: 0px;">221
 222
 223
 224
@@ -1097,7 +1133,15 @@ the timeout.
 228
 229
 230
-231</pre>
+231
+232
+233
+234
+235
+236
+237
+238
+239</pre>
       </td>
       <td class="code">
         <pre class="code"><span class="info file">    Thread.new { Process.waitall }
@@ -1111,6 +1155,10 @@ the timeout.
   ms = (finishtime - starttime) * 1000
   Facter.show_time &quot;#{self.name}: #{&quot;%.2f&quot; % ms}ms&quot;
 
+  unless @preserve_whitespace
+    result =  result.strip if result &amp;&amp; result.respond_to?(:strip)
+  end
+  
   return nil if result == &quot;&quot;
   return result
 end</pre>
@@ -1124,17 +1172,18 @@ end</pre>
       <span id="weight=-instance_method"></span>
       <span id="weight-instance_method"></span>
       <div class="method_details ">
-  <p class="signature " id="weight-instance_method">
+  <h3 class="signature " id="weight-instance_method">
   
     - (<tt>Object</tt>) <strong>weight</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-Return the importance of this resolution.
-</p>
+    
+<p>Return the importance of this resolution.</p>
 
 
   </div>
@@ -1209,24 +1258,24 @@ Return the importance of this resolution.
 
   <div id="class_method_details" class="method_details_list">
     <h2>Class Method Details</h2>
-    
+
     
       <div class="method_details first">
-  <p class="signature first" id="exec-class_method">
+  <h3 class="signature first" id="exec-class_method">
   
     + (<tt>Object</tt>) <strong>exec</strong>(code, interpreter = nil) 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-Execute a program and return the output of that program.
-</p>
-<p>
-Returns nil if the program can&#8217;t be found, or if there is a problem
-executing the code.
-</p>
+    
+<p>Execute a program and return the output of that program.</p>
+
+<p>Returns nil if the program can't be found, or if there is a problem
+executing the code.</p>
 
 
   </div>
@@ -1383,11 +1432,10 @@ executing the code.
       <td class="comment">
         <span><div class="docstring">
   <div class="discussion">
-    <p>
-# Set LANG to force i18n to C for the duration of this exec; this ensures
+    
+<p># Set LANG to force i18n to C for the duration of this exec; this ensures
 that any code that parses the # output of the command can expect it to be
-in a consistent / predictable format / locale
-</p>
+in a consistent / predictable format / locale</p>
 
 
   </div>
@@ -1412,19 +1460,16 @@ in a consistent / predictable format / locale
       <td class="comment">
         <span><div class="docstring">
   <div class="discussion">
-    <p>
-Try to guess whether the specified code can be executed by looking at the
+    
+<p>Try to guess whether the specified code can be executed by looking at the
 first word. If it cannot be found on the PATH defer on resolving the fact
 by returning nil. This only fails on shell built-ins, most of which are
-masked by stuff in /bin or of dubious value anyways. In the worst case,
-&#8220;sh -c &#8216;builtin&#8217;&#8221; can be used to work around this
-limitation
-</p>
-<p>
-Windows&#8217; %x{} throws Errno::ENOENT when the command is not found, so
-we can skip the check there. This is good, since builtins cannot be found
-elsewhere.
-</p>
+masked by stuff in /bin or of dubious value anyways. In the worst case, "sh
+-c 'builtin'" can be used to work around this limitation</p>
+
+<p>Windows' %x{} throws Errno::ENOENT when the command is not found, so we can
+skip the check there. This is good, since builtins cannot be found
+elsewhere.</p>
 
 
   </div>
@@ -1459,9 +1504,8 @@ elsewhere.
       <td class="comment">
         <span><div class="docstring">
   <div class="discussion">
-    <p>
-we don&#8217;t have the binary necessary
-</p>
+    
+<p>we don't have the binary necessary</p>
 
 
   </div>
@@ -1504,9 +1548,8 @@ we don&#8217;t have the binary necessary
       <td class="comment">
         <span><div class="docstring">
   <div class="discussion">
-    <p>
-command not found on Windows
-</p>
+    
+<p>command not found on Windows</p>
 
 
   </div>
@@ -1557,13 +1600,15 @@ end</pre>
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="have_which-class_method">
+  <h3 class="signature " id="have_which-class_method">
   
     + (<tt>Object</tt>) <strong>have_which</strong> 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -1586,11 +1631,11 @@ end</pre>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_have_which'>have_which</span>
   <span class='kw'>if</span> <span class='op'>!</span> <span class='kw'>defined?</span><span class='lparen'>(</span><span class='ivar'>@have_which</span><span class='rparen'>)</span> <span class='kw'>or</span> <span class='ivar'>@have_which</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
-    <span class='kw'>if</span> <span class='const'>Facter</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span><span class='lparen'>(</span><span class='symbol'>:kernel</span><span class='rparen'>)</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>windows</span><span class='tstring_end'>'</span></span>
+    <span class='kw'>if</span> <span class='const'>Facter</span><span class='op'>::</span><span class='const'>Util</span><span class='op'>::</span><span class='const'>Config</span><span class='period'>.</span><span class='id identifier rubyid_is_windows?'>is_windows?</span>
       <span class='ivar'>@have_which</span> <span class='op'>=</span> <span class='kw'>false</span>
     <span class='kw'>else</span>
       <span class='backtick'>%x{</span><span class='tstring_content'>which which &gt;/dev/null 2&gt;&amp;1</span><span class='tstring_end'>}</span></span>
-      <span class='ivar'>@have_which</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='gvar'>$?</span> <span class='op'>==</span> <span class='int'>0</span><span class='rparen'>)</span>
+      <span class='ivar'>@have_which</span> <span class='op'>=</span> <span class='gvar'>$?</span><span class='period'>.</span><span class='id identifier rubyid_success?'>success?</span>
     <span class='kw'>end</span>
   <span class='kw'>end</span>
   <span class='ivar'>@have_which</span>
@@ -1626,11 +1671,11 @@ end</pre>
       <td class="code">
         <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_have_which'>have_which</span>
   <span class='kw'>if</span> <span class='op'>!</span> <span class='kw'>defined?</span><span class='lparen'>(</span><span class='ivar'>@have_which</span><span class='rparen'>)</span> <span class='kw'>or</span> <span class='ivar'>@have_which</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
-    <span class='kw'>if</span> <span class='const'>Facter</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span><span class='lparen'>(</span><span class='symbol'>:kernel</span><span class='rparen'>)</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>windows</span><span class='tstring_end'>'</span></span>
+    <span class='kw'>if</span> <span class='const'>Facter</span><span class='op'>::</span><span class='const'>Util</span><span class='op'>::</span><span class='const'>Config</span><span class='period'>.</span><span class='id identifier rubyid_is_windows?'>is_windows?</span>
       <span class='ivar'>@have_which</span> <span class='op'>=</span> <span class='kw'>false</span>
     <span class='kw'>else</span>
       <span class='backtick'>%x{</span><span class='tstring_content'>which which &gt;/dev/null 2&gt;&amp;1</span><span class='tstring_end'>}</span></span>
-      <span class='ivar'>@have_which</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='gvar'>$?</span> <span class='op'>==</span> <span class='int'>0</span><span class='rparen'>)</span>
+      <span class='ivar'>@have_which</span> <span class='op'>=</span> <span class='gvar'>$?</span><span class='period'>.</span><span class='id identifier rubyid_success?'>success?</span>
     <span class='kw'>end</span>
   <span class='kw'>end</span>
   <span class='ivar'>@have_which</span>
@@ -1642,29 +1687,27 @@ end</pre>
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="with_env-class_method">
+  <h3 class="signature " id="with_env-class_method">
   
     + (<tt>Object</tt>) <strong>with_env</strong>(values) 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-Call this method with a block of code for which you would like to
+    
+<p>Call this method with a block of code for which you would like to
 temporarily modify one or more environment variables; the specified values
 will be set for the duration of your block, after which the original values
-(if any) will be restored.
-</p>
-<dl>
-<dt>values</dt><dd><p>
-a Hash containing the key/value pairs of any environment variables that you
-</p>
-</dd>
-</dl>
-<p>
-would like to temporarily override
-</p>
+(if any) will be restored.</p>
+<dl class="rdoc-list"><dt>values</dt>
+<dd>
+<p>a Hash containing the key/value pairs of any environment variables that you</p>
+</dd></dl>
+
+<p>would like to temporarily override</p>
 
 
   </div>
@@ -1765,9 +1808,8 @@ would like to temporarily override
       <td class="comment">
         <span><div class="docstring">
   <div class="discussion">
-    <p>
-save the old value if it exists
-</p>
+    
+<p>save the old value if it exists</p>
 
 
   </div>
@@ -1794,9 +1836,8 @@ save the old value if it exists
       <td class="comment">
         <span><div class="docstring">
   <div class="discussion">
-    <p>
-set the new (temporary) value for the environment variable
-</p>
+    
+<p>set the new (temporary) value for the environment variable</p>
 
 
   </div>
@@ -1821,9 +1862,8 @@ set the new (temporary) value for the environment variable
       <td class="comment">
         <span><div class="docstring">
   <div class="discussion">
-    <p>
-execute the caller&#8217;s block, capture the return value
-</p>
+    
+<p>execute the caller's block, capture the return value</p>
 
 
   </div>
@@ -1846,9 +1886,8 @@ execute the caller&#8217;s block, capture the return value
       <td class="comment">
         <span><div class="docstring">
   <div class="discussion">
-    <p>
-use an ensure block to make absolutely sure we restore the variables
-</p>
+    
+<p>use an ensure block to make absolutely sure we restore the variables</p>
 
 
   </div>
@@ -1871,9 +1910,8 @@ use an ensure block to make absolutely sure we restore the variables
       <td class="comment">
         <span><div class="docstring">
   <div class="discussion">
-    <p>
-restore the old values
-</p>
+    
+<p>restore the old values</p>
 
 
   </div>
@@ -1902,10 +1940,9 @@ restore the old values
       <td class="comment">
         <span><div class="docstring">
   <div class="discussion">
-    <p>
-if there was no old value, delete the key from the current environment
-variables hash
-</p>
+    
+<p>if there was no old value, delete the key from the current environment
+variables hash</p>
 
 
   </div>
@@ -1932,9 +1969,8 @@ variables hash
       <td class="comment">
         <span><div class="docstring">
   <div class="discussion">
-    <p>
-return the captured return value
-</p>
+    
+<p>return the captured return value</p>
 
 
   </div>
@@ -1962,20 +1998,21 @@ end</pre>
 
   <div id="instance_method_details" class="method_details_list">
     <h2>Instance Method Details</h2>
-    
+
     
       <div class="method_details first">
-  <p class="signature first" id="confine-instance_method">
+  <h3 class="signature first" id="confine-instance_method">
   
     - (<tt>Object</tt>) <strong>confine</strong>(confines) 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-Add a new confine to the resolution mechanism.
-</p>
+    
+<p>Add a new confine to the resolution mechanism.</p>
 
 
   </div>
@@ -2038,13 +2075,15 @@ Add a new confine to the resolution mechanism.
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="has_weight-instance_method">
+  <h3 class="signature " id="has_weight-instance_method">
   
     - (<tt>Object</tt>) <strong>has_weight</strong>(weight) 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -2091,19 +2130,20 @@ Add a new confine to the resolution mechanism.
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="limit-instance_method">
+  <h3 class="signature " id="limit-instance_method">
   
     - (<tt>Object</tt>) <strong>limit</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-We need this as a getter for &#8216;timeout&#8217;, because some versions
-of ruby seem to already have a &#8216;timeout&#8217; method and we
-can&#8217;t seem to override the instance methods, somehow.
-</p>
+    
+<p>We need this as a getter for 'timeout', because some versions of ruby seem
+to already have a 'timeout' method and we can't seem to override the
+instance methods, somehow.</p>
 
 
   </div>
@@ -2158,17 +2198,73 @@ can&#8217;t seem to override the instance methods, somehow.
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="setcode-instance_method">
+  <h3 class="signature " id="preserve_whitespace-instance_method">
+  
+    - (<tt>Object</tt>) <strong>preserve_whitespace</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+158
+159
+160</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/resolution.rb', line 158</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_preserve_whitespace'>preserve_whitespace</span>
+  <span class='ivar'>@preserve_whitespace</span> <span class='op'>=</span> <span class='kw'>true</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div><table class="annotated_source_code">
+  <tr>
+    <td colspan="3" style="padding-left: 10px;">
+      <pre class="code"><span class="info file"># File 'lib/facter/util/resolution.rb', line 158</span></pre>
+    </td>
+  </tr>
+  
+    <tr>
+      <td class="comment">
+        <span>  
+      </td>
+      <td class="line-numbers">
+        <pre class="lines" style="padding-right: 0px;">158
+159
+160
+161</pre>
+      </td>
+      <td class="code">
+        <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='id identifier rubyid_preserve_whitespace'>preserve_whitespace</span>
+  <span class='ivar'>@preserve_whitespace</span> <span class='op'>=</span> <span class='kw'>true</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  
+
+</table>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="setcode-instance_method">
   
     - (<tt>Object</tt>) <strong>setcode</strong>(string = nil, interp = nil, &amp;block) 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-Set our code for returning a value.
-</p>
+    
+<p>Set our code for returning a value.</p>
 
 
   </div>
@@ -2182,10 +2278,6 @@ Set our code for returning a value.
       <pre class="lines">
 
 
-159
-160
-161
-162
 163
 164
 165
@@ -2193,10 +2285,14 @@ Set our code for returning a value.
 167
 168
 169
-170</pre>
+170
+171
+172
+173
+174</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/facter/util/resolution.rb', line 159</span>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/resolution.rb', line 163</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_setcode'>setcode</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_interp'>interp</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='const'>Facter</span><span class='period'>.</span><span class='id identifier rubyid_warnonce'>warnonce</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>The interpreter parameter to 'setcode' is deprecated and will be removed in a future version.</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_interp'>interp</span>
@@ -2216,7 +2312,7 @@ Set our code for returning a value.
 </div><table class="annotated_source_code">
   <tr>
     <td colspan="3" style="padding-left: 10px;">
-      <pre class="code"><span class="info file"># File 'lib/facter/util/resolution.rb', line 159</span></pre>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/resolution.rb', line 163</span></pre>
     </td>
   </tr>
   
@@ -2225,11 +2321,7 @@ Set our code for returning a value.
         <span>  
       </td>
       <td class="line-numbers">
-        <pre class="lines" style="padding-right: 0px;">159
-160
-161
-162
-163
+        <pre class="lines" style="padding-right: 0px;">163
 164
 165
 166
@@ -2237,7 +2329,11 @@ Set our code for returning a value.
 168
 169
 170
-171</pre>
+171
+172
+173
+174
+175</pre>
       </td>
       <td class="code">
         <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='id identifier rubyid_setcode'>setcode</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_interp'>interp</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
@@ -2259,24 +2355,25 @@ Set our code for returning a value.
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="suitable?-instance_method">
+  <h3 class="signature " id="suitable?-instance_method">
   
     - (<tt>Boolean</tt>) <strong>suitable?</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-Is this resolution mechanism suitable on the system in question?
-</p>
+    
+<p>Is this resolution mechanism suitable on the system in question?</p>
 
 
   </div>
 </div>
 <div class="tags">
   
-<h3>Returns:</h3>
+<p class="tag_title">Returns:</p>
 <ul class="return">
   
     <li>
@@ -2296,16 +2393,16 @@ Is this resolution mechanism suitable on the system in question?
       <pre class="lines">
 
 
-183
-184
-185
-186
 187
 188
-189</pre>
+189
+190
+191
+192
+193</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/facter/util/resolution.rb', line 183</span>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/resolution.rb', line 187</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_suitable?'>suitable?</span>
   <span class='kw'>unless</span> <span class='kw'>defined?</span> <span class='ivar'>@suitable</span>
@@ -2320,7 +2417,7 @@ Is this resolution mechanism suitable on the system in question?
 </div><table class="annotated_source_code">
   <tr>
     <td colspan="3" style="padding-left: 10px;">
-      <pre class="code"><span class="info file"># File 'lib/facter/util/resolution.rb', line 183</span></pre>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/resolution.rb', line 187</span></pre>
     </td>
   </tr>
   
@@ -2329,14 +2426,14 @@ Is this resolution mechanism suitable on the system in question?
         <span>  
       </td>
       <td class="line-numbers">
-        <pre class="lines" style="padding-right: 0px;">183
-184
-185
-186
-187
+        <pre class="lines" style="padding-right: 0px;">187
 188
 189
-190</pre>
+190
+191
+192
+193
+194</pre>
       </td>
       <td class="code">
         <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='id identifier rubyid_suitable?'>suitable?</span>
@@ -2353,24 +2450,26 @@ Is this resolution mechanism suitable on the system in question?
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="to_s-instance_method">
+  <h3 class="signature " id="to_s-instance_method">
   
     - (<tt>Object</tt>) <strong>to_s</strong> 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-191
-192
-193</pre>
+195
+196
+197</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/facter/util/resolution.rb', line 191</span>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/resolution.rb', line 195</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_s'>to_s</span>
   <span class='kw'>return</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span><span class='lparen'>(</span><span class='rparen'>)</span>
@@ -2381,7 +2480,7 @@ Is this resolution mechanism suitable on the system in question?
 </div><table class="annotated_source_code">
   <tr>
     <td colspan="3" style="padding-left: 10px;">
-      <pre class="code"><span class="info file"># File 'lib/facter/util/resolution.rb', line 191</span></pre>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/resolution.rb', line 195</span></pre>
     </td>
   </tr>
   
@@ -2390,10 +2489,10 @@ Is this resolution mechanism suitable on the system in question?
         <span>  
       </td>
       <td class="line-numbers">
-        <pre class="lines" style="padding-right: 0px;">191
-192
-193
-194</pre>
+        <pre class="lines" style="padding-right: 0px;">195
+196
+197
+198</pre>
       </td>
       <td class="code">
         <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='id identifier rubyid_to_s'>to_s</span>
@@ -2408,11 +2507,11 @@ Is this resolution mechanism suitable on the system in question?
   </div>
 
 </div>
-    
+
     <div id="footer">
-  Generated on Tue Mar  6 18:16:47 2012 by 
+  Generated on Tue May 22 18:49:35 2012 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.7.5 (ruby-1.9.2).
+  0.8.1 (ruby-1.9.3).
 </div>
 
   </body>

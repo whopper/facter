@@ -6,7 +6,7 @@
 <title>
   Module: Plist::Emit
   
-    &mdash; Documentation by YARD 0.7.5
+    &mdash; Documentation by YARD 0.8.1
   
 </title>
 
@@ -17,9 +17,11 @@
   <link rel="stylesheet" href="../css/docco.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  relpath = '..';
-  if (relpath != '') relpath += '/';
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../';
+  framesUrl = "../frames.html#!" + escape(window.location.href);
 </script>
+
 
   <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
 
@@ -30,36 +32,41 @@
 
   </head>
   <body>
-    <script type="text/javascript" charset="utf-8">
-      if (window.top.frames.main) document.body.className = 'frames';
-    </script>
-    
     <div id="header">
       <div id="menu">
   
-    <a href="../_index.html">Index (E)</a> &raquo; 
+    <a href="../_index.html">Index (E)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../Plist.html" title="Plist (module)">Plist</a></span></span>
      &raquo; 
     <span class="title">Emit</span>
   
-  
+
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
       <div id="search">
   
-    <a id="class_list_link" href="#">Class List</a>
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+      Class List
+    </a>
   
-    <a id="method_list_link" href="#">Method List</a>
+    <a class="full_list_link" id="method_list_link"
+        href="../method_list.html">
+      Method List
+    </a>
   
-    <a id="file_list_link" href="#">File List</a>
+    <a class="full_list_link" id="file_list_link"
+        href="../file_list.html">
+      File List
+    </a>
   
 </div>
       <div class="clear"></div>
     </div>
-    
+
     <iframe id="search_frame"></iframe>
-    
+
     <div id="content"><h1>Module: Plist::Emit
   
   
@@ -87,56 +94,38 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <h3>Create a plist</h3>
-<p>
-You can dump an object to a plist in one of two ways:
-</p>
-<ul>
-<li><p>
-<tt>Plist::Emit.dump(obj)</tt>
-</p>
-</li>
-<li><p>
-<tt>obj.to_plist</tt>
-</p>
-<ul>
-<li><p>
-This requires that you mixin the <tt>Plist::Emit</tt> module, which is
-already done for <tt>Array</tt> and <tt>Hash</tt>.
-</p>
-</li>
-</ul>
-</li>
-</ul>
-<p>
-The following Ruby classes are converted into native plist types:
-</p>
-<pre class="code ruby"><code>
-  Array, Bignum, Date, DateTime, Fixnum, Float, Hash, Integer, String, Symbol, Time, true, false
-</code></pre>
-<ul>
-<li><p>
-<tt>Array</tt> and <tt>Hash</tt> are both recursive; their elements will be
-converted into plist nodes inside the <array> and <dict> containers
-(respectively).
-</p>
-</li>
-<li><p>
-<tt>IO</tt> (and its descendants) and <tt>StringIO</tt> objects are read
-from and their contents placed in a <data> element.
-</p>
-</li>
-<li><p>
-User classes may implement <tt>to_plist_node</tt> to dictate how they
+    
+<h3>Create a plist</h3>
+
+<p>You can dump an object to a plist in one of two ways:</p>
+<ul><li>
+<p><tt>Plist::Emit.dump(obj)</tt></p>
+</li><li>
+<p><tt>obj.to_plist</tt></p>
+<ul><li>
+<p>This requires that you mixin the <tt>Plist::Emit</tt> module, which is
+already done for <tt>Array</tt> and <tt>Hash</tt>.</p>
+</li></ul>
+</li></ul>
+
+<p>The following Ruby classes are converted into native plist types:</p>
+
+<pre class="code ruby"><code>Array, Bignum, Date, DateTime, Fixnum, Float, Hash, Integer, String, Symbol, Time, true, false</code></pre>
+<ul><li>
+<p><tt>Array</tt> and <tt>Hash</tt> are both recursive; their elements will be
+converted into plist nodes inside the &lt;array&gt; and &lt;dict&gt;
+containers (respectively).</p>
+</li><li>
+<p><tt>IO</tt> (and its descendants) and <tt>StringIO</tt> objects are read
+from and their contents placed in a &lt;data&gt; element.</p>
+</li><li>
+<p>User classes may implement <tt>to_plist_node</tt> to dictate how they
 should be serialized; otherwise the object will be passed to
-<tt>Marshal.dump</tt> and the result placed in a <data> element.
-</p>
-</li>
-</ul>
-<p>
-For detailed usage instructions, refer to <a
-href="files/docs/USAGE.html">USAGE</a> and the methods documented below.
-</p>
+<tt>Marshal.dump</tt> and the result placed in a &lt;data&gt; element.</p>
+</li></ul>
+
+<p>For detailed usage instructions, refer to <a
+href="files/docs/USAGE.html">USAGE</a> and the methods documented below.</p>
 
 
   </div>
@@ -144,17 +133,7 @@ href="files/docs/USAGE.html">USAGE</a> and the methods documented below.
 <div class="tags">
   
 
-</div><h2>Defined Under Namespace</h2>
-<p class="children">
-   
-    
-   
-    
-      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Emit/IndentedString.html" title="Plist::Emit::IndentedString (class)">IndentedString</a></span>
-    
-  
-</p>
-
+</div>
 
 
 
@@ -183,11 +162,11 @@ href="files/docs/USAGE.html">USAGE</a> and the methods documented below.
   
   
   
+  
 
   
-    <span class="summary_desc"><div class='inline'><p>
-The following Ruby classes are converted into native plist types:.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>The following Ruby classes are converted into native plist types:.</p>
 </div></span>
   
 </li>
@@ -207,11 +186,11 @@ The following Ruby classes are converted into native plist types:.
   
   
   
+  
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Writes the serialized object&#8217;s plist to the specified filename.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Writes the serialized object's plist to the specified filename.</p>
 </div></span>
   
 </li>
@@ -240,11 +219,11 @@ Writes the serialized object&#8217;s plist to the specified filename.
   
   
   
+  
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Helper method for injecting into classes.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Helper method for injecting into classes.</p>
 </div></span>
   
 </li>
@@ -264,11 +243,11 @@ Helper method for injecting into classes.
   
   
   
+  
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Helper method for injecting into classes.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Helper method for injecting into classes.</p>
 </div></span>
   
 </li>
@@ -281,37 +260,34 @@ Helper method for injecting into classes.
 
   <div id="class_method_details" class="method_details_list">
     <h2>Class Method Details</h2>
-    
+
     
       <div class="method_details first">
-  <p class="signature first" id="dump-class_method">
+  <h3 class="signature first" id="dump-class_method">
   
     + (<tt>Object</tt>) <strong>dump</strong>(obj, envelope = true) 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-The following Ruby classes are converted into native plist types:
-</p>
-<pre class="code ruby"><code>
-  Array, Bignum, Date, DateTime, Fixnum, Float, Hash, Integer, String, Symbol, Time
-</code></pre>
-<p>
-Write us (via RubyForge) if you think another class can be coerced safely
-into one of the expected plist classes.
-</p>
-<p>
-<tt>IO</tt> and <tt>StringIO</tt> objects are encoded and placed in <data>
-elements; other objects are <tt>Marshal.dump</tt>&#8216;ed unless they
-implement <tt>to_plist_node</tt>.
-</p>
-<p>
-The <tt>envelope</tt> parameters dictates whether or not the resultant
+    
+<p>The following Ruby classes are converted into native plist types:</p>
+
+<pre class="code ruby"><code>Array, Bignum, Date, DateTime, Fixnum, Float, Hash, Integer, String, Symbol, Time</code></pre>
+
+<p>Write us (via RubyForge) if you think another class can be coerced safely
+into one of the expected plist classes.</p>
+
+<p><tt>IO</tt> and <tt>StringIO</tt> objects are encoded and placed in
+&lt;data&gt; elements; other objects are <tt>Marshal.dump</tt>'ed unless
+they implement <tt>to_plist_node</tt>.</p>
+
+<p>The <tt>envelope</tt> parameters dictates whether or not the resultant
 plist fragment is wrapped in the normal XML/plist header and footer.  Set
-it to false if you only want the fragment.
-</p>
+it to false if you only want the fragment.</p>
 
 
   </div>
@@ -382,17 +358,18 @@ it to false if you only want the fragment.
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="save_plist-class_method">
+  <h3 class="signature " id="save_plist-class_method">
   
     + (<tt>Object</tt>) <strong>save_plist</strong>(obj, filename) 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-Writes the serialized object&#8217;s plist to the specified filename.
-</p>
+    
+<p>Writes the serialized object's plist to the specified filename.</p>
 
 
   </div>
@@ -458,21 +435,22 @@ Writes the serialized object&#8217;s plist to the specified filename.
 
   <div id="instance_method_details" class="method_details_list">
     <h2>Instance Method Details</h2>
-    
+
     
       <div class="method_details first">
-  <p class="signature first" id="save_plist-instance_method">
+  <h3 class="signature first" id="save_plist-instance_method">
   
     - (<tt>Object</tt>) <strong>save_plist</strong>(filename) 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-Helper method for injecting into classes.  Calls
-<tt>Plist::Emit.save_plist</tt> with <tt>self</tt>.
-</p>
+    
+<p>Helper method for injecting into classes.  Calls
+<tt>Plist::Emit.save_plist</tt> with <tt>self</tt>.</p>
 
 
   </div>
@@ -527,18 +505,19 @@ Helper method for injecting into classes.  Calls
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="to_plist-instance_method">
+  <h3 class="signature " id="to_plist-instance_method">
   
     - (<tt>Object</tt>) <strong>to_plist</strong>(envelope = true) 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-Helper method for injecting into classes.  Calls <tt>Plist::Emit.dump</tt>
-with <tt>self</tt>.
-</p>
+    
+<p>Helper method for injecting into classes.  Calls <tt>Plist::Emit.dump</tt>
+with <tt>self</tt>.</p>
 
 
   </div>
@@ -595,11 +574,11 @@ with <tt>self</tt>.
   </div>
 
 </div>
-    
+
     <div id="footer">
-  Generated on Tue Mar  6 18:16:47 2012 by 
+  Generated on Tue May 22 18:49:35 2012 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.7.5 (ruby-1.9.2).
+  0.8.1 (ruby-1.9.3).
 </div>
 
   </body>

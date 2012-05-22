@@ -6,7 +6,7 @@
 <title>
   Module: Facter::Util
   
-    &mdash; Documentation by YARD 0.7.5
+    &mdash; Documentation by YARD 0.8.1
   
 </title>
 
@@ -17,9 +17,11 @@
   <link rel="stylesheet" href="../css/docco.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  relpath = '..';
-  if (relpath != '') relpath += '/';
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../';
+  framesUrl = "../frames.html#!" + escape(window.location.href);
 </script>
+
 
   <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
 
@@ -30,36 +32,41 @@
 
   </head>
   <body>
-    <script type="text/javascript" charset="utf-8">
-      if (window.top.frames.main) document.body.className = 'frames';
-    </script>
-    
     <div id="header">
       <div id="menu">
   
-    <a href="../_index.html">Index (U)</a> &raquo; 
+    <a href="../_index.html">Index (U)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../Facter.html" title="Facter (module)">Facter</a></span></span>
      &raquo; 
     <span class="title">Util</span>
   
-  
+
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
       <div id="search">
   
-    <a id="class_list_link" href="#">Class List</a>
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+      Class List
+    </a>
   
-    <a id="method_list_link" href="#">Method List</a>
+    <a class="full_list_link" id="method_list_link"
+        href="../method_list.html">
+      Method List
+    </a>
   
-    <a id="file_list_link" href="#">File List</a>
+    <a class="full_list_link" id="file_list_link"
+        href="../file_list.html">
+      File List
+    </a>
   
 </div>
       <div class="clear"></div>
     </div>
-    
+
     <iframe id="search_frame"></iframe>
-    
+
     <div id="content"><h1>Module: Facter::Util
   
   
@@ -85,9 +92,8 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>
-This is just so the other classes have the constant.
-</p>
+    
+<p>This is just so the other classes have the constant.</p>
 
 
   </div>
@@ -97,11 +103,11 @@ This is just so the other classes have the constant.
 
 </div><h2>Defined Under Namespace</h2>
 <p class="children">
-   
+  
     
-      <strong class="modules">Modules:</strong> <span class='object_link'><a href="Util/Config.html" title="Facter::Util::Config (module)">Config</a></span>, <span class='object_link'><a href="Util/EC2.html" title="Facter::Util::EC2 (module)">EC2</a></span>, <span class='object_link'><a href="Util/IP.html" title="Facter::Util::IP (module)">IP</a></span>, <span class='object_link'><a href="Util/Macaddress.html" title="Facter::Util::Macaddress (module)">Macaddress</a></span>, <span class='object_link'><a href="Util/Macosx.html" title="Facter::Util::Macosx (module)">Macosx</a></span>, <span class='object_link'><a href="Util/Processor.html" title="Facter::Util::Processor (module)">Processor</a></span>, <span class='object_link'><a href="Util/Uptime.html" title="Facter::Util::Uptime (module)">Uptime</a></span>, <span class='object_link'><a href="Util/Values.html" title="Facter::Util::Values (module)">Values</a></span>, <span class='object_link'><a href="Util/Virtual.html" title="Facter::Util::Virtual (module)">Virtual</a></span>, <span class='object_link'><a href="Util/Vlans.html" title="Facter::Util::Vlans (module)">Vlans</a></span>, <span class='object_link'><a href="Util/WMI.html" title="Facter::Util::WMI (module)">WMI</a></span>, <span class='object_link'><a href="Util/Xendomains.html" title="Facter::Util::Xendomains (module)">Xendomains</a></span>
+      <strong class="modules">Modules:</strong> <span class='object_link'><a href="Util/CFPropertyList.html" title="Facter::Util::CFPropertyList (module)">CFPropertyList</a></span>, <span class='object_link'><a href="Util/Config.html" title="Facter::Util::Config (module)">Config</a></span>, <span class='object_link'><a href="Util/EC2.html" title="Facter::Util::EC2 (module)">EC2</a></span>, <span class='object_link'><a href="Util/IP.html" title="Facter::Util::IP (module)">IP</a></span>, <span class='object_link'><a href="Util/Macaddress.html" title="Facter::Util::Macaddress (module)">Macaddress</a></span>, <span class='object_link'><a href="Util/Macosx.html" title="Facter::Util::Macosx (module)">Macosx</a></span>, <span class='object_link'><a href="Util/Processor.html" title="Facter::Util::Processor (module)">Processor</a></span>, <span class='object_link'><a href="Util/Registry.html" title="Facter::Util::Registry (module)">Registry</a></span>, <span class='object_link'><a href="Util/Uptime.html" title="Facter::Util::Uptime (module)">Uptime</a></span>, <span class='object_link'><a href="Util/Values.html" title="Facter::Util::Values (module)">Values</a></span>, <span class='object_link'><a href="Util/Virtual.html" title="Facter::Util::Virtual (module)">Virtual</a></span>, <span class='object_link'><a href="Util/Vlans.html" title="Facter::Util::Vlans (module)">Vlans</a></span>, <span class='object_link'><a href="Util/WMI.html" title="Facter::Util::WMI (module)">WMI</a></span>, <span class='object_link'><a href="Util/Xendomains.html" title="Facter::Util::Xendomains (module)">Xendomains</a></span>
     
-   
+  
     
       <strong class="classes">Classes:</strong> <span class='object_link'><a href="Util/Collection.html" title="Facter::Util::Collection (class)">Collection</a></span>, <span class='object_link'><a href="Util/Confine.html" title="Facter::Util::Confine (class)">Confine</a></span>, <span class='object_link'><a href="Util/Fact.html" title="Facter::Util::Fact (class)">Fact</a></span>, <span class='object_link'><a href="Util/Loader.html" title="Facter::Util::Loader (class)">Loader</a></span>, <span class='object_link'><a href="Util/Resolution.html" title="Facter::Util::Resolution (class)">Resolution</a></span>
     
@@ -117,11 +123,11 @@ This is just so the other classes have the constant.
 
 
 </div>
-    
+
     <div id="footer">
-  Generated on Tue Mar  6 18:16:46 2012 by 
+  Generated on Tue May 22 18:49:34 2012 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.7.5 (ruby-1.9.2).
+  0.8.1 (ruby-1.9.3).
 </div>
 
   </body>

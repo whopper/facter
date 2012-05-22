@@ -6,7 +6,7 @@
 <title>
   Top Level Namespace
   
-    &mdash; Documentation by YARD 0.7.5
+    &mdash; Documentation by YARD 0.8.1
   
 </title>
 
@@ -17,9 +17,11 @@
   <link rel="stylesheet" href="css/docco.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
   relpath = '';
-  if (relpath != '') relpath += '/';
+  framesUrl = "frames.html#!" + escape(window.location.href);
 </script>
+
 
   <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
 
@@ -30,36 +32,41 @@
 
   </head>
   <body>
-    <script type="text/javascript" charset="utf-8">
-      if (window.top.frames.main) document.body.className = 'frames';
-    </script>
-    
     <div id="header">
       <div id="menu">
   
-    <a href="_index.html">Index</a> &raquo; 
+    <a href="_index.html">Index</a> &raquo;
     
     
     <span class="title">Top Level Namespace</span>
   
-  
+
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
       <div id="search">
   
-    <a id="class_list_link" href="#">Class List</a>
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
   
-    <a id="method_list_link" href="#">Method List</a>
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
   
-    <a id="file_list_link" href="#">File List</a>
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
   
 </div>
       <div class="clear"></div>
     </div>
-    
+
     <iframe id="search_frame"></iframe>
-    
+
     <div id="content"><h1>Top Level Namespace
   
   
@@ -80,13 +87,13 @@
 
 <h2>Defined Under Namespace</h2>
 <p class="children">
-   
+  
     
       <strong class="modules">Modules:</strong> <span class='object_link'><a href="Facter.html" title="Facter (module)">Facter</a></span>, <span class='object_link'><a href="Plist.html" title="Plist (module)">Plist</a></span>
     
-   
+  
     
-      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span>, <span class='object_link'><a href="Hash.html" title="Hash (class)">Hash</a></span>, <span class='object_link'><a href="Symbol.html" title="Symbol (class)">Symbol</a></span>
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span>, <span class='object_link'><a href="CFFormatError.html" title="CFFormatError (class)">CFFormatError</a></span>, <span class='object_link'><a href="CFPlistError.html" title="CFPlistError (class)">CFPlistError</a></span>, <span class='object_link'><a href="CFTypeError.html" title="CFTypeError (class)">CFTypeError</a></span>, <span class='object_link'><a href="Enumerator.html" title="Enumerator (class)">Enumerator</a></span>, <span class='object_link'><a href="Hash.html" title="Hash (class)">Hash</a></span>, <span class='object_link'><a href="String.html" title="String (class)">String</a></span>, <span class='object_link'><a href="Symbol.html" title="Symbol (class)">Symbol</a></span>
     
   
 </p>
@@ -119,35 +126,11 @@
   
   
   
-
-  
-    <span class="summary_desc"><div class='inline'><p>
-ssh.rb Facts related to SSH.
-</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#fact-instance_method" title="#fact (instance method)">- (Object) <strong>fact</strong> </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-lsb.rb Facts related to Linux Standard Base (LSB).
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>ssh.rb Facts related to SSH.</p>
 </div></span>
   
 </li>
@@ -167,11 +150,11 @@ lsb.rb Facts related to Linux Standard Base (LSB).
   
   
   
+  
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Cody Herriges <c.a.herriges@gmail.com>.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Cody Herriges &lt;c.a.herriges@gmail.com&gt;.</p>
 </div></span>
   
 </li>
@@ -185,6 +168,7 @@ Cody Herriges <c.a.herriges@gmail.com>.
 
     
   </span>
+  
   
   
   
@@ -212,12 +196,12 @@ Cody Herriges <c.a.herriges@gmail.com>.
   
   
   
+  
 
   
-    <span class="summary_desc"><div class='inline'><p>
-This supports the fact that the selinux mount point is not always in the
-same location &#8212; the selinux mount point is operating system specific.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>This supports the fact that the selinux mount point is not always in the
+same location -- the selinux mount point is operating system specific.</p>
 </div></span>
   
 </li>
@@ -231,6 +215,7 @@ same location &#8212; the selinux mount point is operating system specific.
 
     
   </span>
+  
   
   
   
@@ -251,20 +236,21 @@ same location &#8212; the selinux mount point is operating system specific.
 
   <div id="instance_method_details" class="method_details_list">
     <h2>Instance Method Details</h2>
-    
+
     
       <div class="method_details first">
-  <p class="signature first" id="dir-instance_method">
+  <h3 class="signature first" id="dir-instance_method">
   
     - (<tt>Object</tt>) <strong>dir</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-ssh.rb Facts related to SSH
-</p>
+    
+<p>ssh.rb Facts related to SSH</p>
 
 
   </div>
@@ -467,165 +453,20 @@ ssh.rb Facts related to SSH
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="fact-instance_method">
-  
-    - (<tt>Object</tt>) <strong>fact</strong> 
-  
-
-  
-</p><div class="docstring">
-  <div class="discussion">
-    <p>
-lsb.rb Facts related to Linux Standard Base (LSB)
-</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/facter/lsb.rb', line 17</span>
-
-<span class='lbrace'>{</span>  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>LSBRelease</span><span class='tstring_end'>&quot;</span></span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='regexp_beg'>%r{</span><span class='tstring_content'>^LSB Version:\t(.*)$</span><span class='regexp_end'>}</span></span><span class='comma'>,</span>
-   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>LSBDistId</span><span class='tstring_end'>&quot;</span></span>          <span class='op'>=&gt;</span> <span class='tstring'><span class='regexp_beg'>%r{</span><span class='tstring_content'>^Distributor ID:\t(.*)$</span><span class='regexp_end'>}</span></span><span class='comma'>,</span>
-   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>LSBDistRelease</span><span class='tstring_end'>&quot;</span></span>     <span class='op'>=&gt;</span> <span class='tstring'><span class='regexp_beg'>%r{</span><span class='tstring_content'>^Release:\t(.*)$</span><span class='regexp_end'>}</span></span><span class='comma'>,</span>
-   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>LSBDistDescription</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='regexp_beg'>%r{</span><span class='tstring_content'>^Description:\t(.*)$</span><span class='regexp_end'>}</span></span><span class='comma'>,</span>
-   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>LSBDistCodeName</span><span class='tstring_end'>&quot;</span></span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='regexp_beg'>%r{</span><span class='tstring_content'>^Codename:\t(.*)$</span><span class='regexp_end'>}</span></span>
-<span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_fact'>fact</span><span class='comma'>,</span> <span class='id identifier rubyid_pattern'>pattern</span><span class='op'>|</span>
-  <span class='const'>Facter</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='id identifier rubyid_fact'>fact</span><span class='rparen'>)</span> <span class='kw'>do</span>
-    <span class='id identifier rubyid_confine'>confine</span> <span class='symbol'>:kernel</span> <span class='op'>=&gt;</span> <span class='lbracket'>[</span> <span class='symbol'>:linux</span><span class='comma'>,</span> <span class='symbol'>:gnu/kfreebsd</span><span class='tstring_end'>&quot;</span></span> <span class='rbracket'>]</span>
-    <span class='id identifier rubyid_setcode'>setcode</span> <span class='kw'>do</span>
-      <span class='kw'>unless</span> <span class='kw'>defined?</span><span class='lparen'>(</span><span class='id identifier rubyid_lsbdata'>lsbdata</span><span class='rparen'>)</span> <span class='kw'>and</span> <span class='kw'>defined?</span><span class='lparen'>(</span><span class='id identifier rubyid_lsbtime'>lsbtime</span><span class='rparen'>)</span> <span class='kw'>and</span> <span class='lparen'>(</span><span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='op'>-</span> <span class='id identifier rubyid_lsbtime'>lsbtime</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='op'>&lt;</span> <span class='int'>5</span><span class='rparen'>)</span>
-        <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='kw'>nil</span>
-        <span class='id identifier rubyid_lsbtime'>lsbtime</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span>
-        <span class='id identifier rubyid_lsbdata'>lsbdata</span> <span class='op'>=</span> <span class='const'>Facter</span><span class='op'>::</span><span class='const'>Util</span><span class='op'>::</span><span class='const'>Resolution</span><span class='period'>.</span><span class='id identifier rubyid_exec'>exec</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>lsb_release -a 2&gt;/dev/null</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
-      <span class='kw'>end</span>
-
-      <span class='kw'>if</span> <span class='id identifier rubyid_pattern'>pattern</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='id identifier rubyid_lsbdata'>lsbdata</span><span class='rparen'>)</span>
-        <span class='backref'>$1</span>
-      <span class='kw'>else</span>
-        <span class='kw'>nil</span>
-      <span class='kw'>end</span>
-    <span class='kw'>end</span>
-  <span class='kw'>end</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div><table class="annotated_source_code">
-  <tr>
-    <td colspan="3" style="padding-left: 10px;">
-      <pre class="code"><span class="info file"># File 'lib/facter/lsb.rb', line 17</span></pre>
-    </td>
-  </tr>
-  
-    <tr>
-      <td class="comment">
-        <span>  
-      </td>
-      <td class="line-numbers">
-        <pre class="lines" style="padding-right: 0px;">17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40</pre>
-      </td>
-      <td class="code">
-        <pre class="code"><span class="info file"><span class='lbrace'>{</span>  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>LSBRelease</span><span class='tstring_end'>&quot;</span></span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='regexp_beg'>%r{</span><span class='tstring_content'>^LSB Version:\t(.*)$</span><span class='regexp_end'>}</span></span><span class='comma'>,</span>
-   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>LSBDistId</span><span class='tstring_end'>&quot;</span></span>          <span class='op'>=&gt;</span> <span class='tstring'><span class='regexp_beg'>%r{</span><span class='tstring_content'>^Distributor ID:\t(.*)$</span><span class='regexp_end'>}</span></span><span class='comma'>,</span>
-   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>LSBDistRelease</span><span class='tstring_end'>&quot;</span></span>     <span class='op'>=&gt;</span> <span class='tstring'><span class='regexp_beg'>%r{</span><span class='tstring_content'>^Release:\t(.*)$</span><span class='regexp_end'>}</span></span><span class='comma'>,</span>
-   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>LSBDistDescription</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='regexp_beg'>%r{</span><span class='tstring_content'>^Description:\t(.*)$</span><span class='regexp_end'>}</span></span><span class='comma'>,</span>
-   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>LSBDistCodeName</span><span class='tstring_end'>&quot;</span></span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='regexp_beg'>%r{</span><span class='tstring_content'>^Codename:\t(.*)$</span><span class='regexp_end'>}</span></span>
-<span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_fact'>fact</span><span class='comma'>,</span> <span class='id identifier rubyid_pattern'>pattern</span><span class='op'>|</span>
-  <span class='const'>Facter</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='id identifier rubyid_fact'>fact</span><span class='rparen'>)</span> <span class='kw'>do</span>
-    <span class='id identifier rubyid_confine'>confine</span> <span class='symbol'>:kernel</span> <span class='op'>=&gt;</span> <span class='lbracket'>[</span> <span class='symbol'>:linux</span><span class='comma'>,</span> <span class='symbol'>:gnu/kfreebsd</span><span class='tstring_end'>&quot;</span></span> <span class='rbracket'>]</span>
-    <span class='id identifier rubyid_setcode'>setcode</span> <span class='kw'>do</span>
-      <span class='kw'>unless</span> <span class='kw'>defined?</span><span class='lparen'>(</span><span class='id identifier rubyid_lsbdata'>lsbdata</span><span class='rparen'>)</span> <span class='kw'>and</span> <span class='kw'>defined?</span><span class='lparen'>(</span><span class='id identifier rubyid_lsbtime'>lsbtime</span><span class='rparen'>)</span> <span class='kw'>and</span> <span class='lparen'>(</span><span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='op'>-</span> <span class='id identifier rubyid_lsbtime'>lsbtime</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='op'>&lt;</span> <span class='int'>5</span><span class='rparen'>)</span>
-        <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='kw'>nil</span>
-        <span class='id identifier rubyid_lsbtime'>lsbtime</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span>
-        <span class='id identifier rubyid_lsbdata'>lsbdata</span> <span class='op'>=</span> <span class='const'>Facter</span><span class='op'>::</span><span class='const'>Util</span><span class='op'>::</span><span class='const'>Resolution</span><span class='period'>.</span><span class='id identifier rubyid_exec'>exec</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>lsb_release -a 2&gt;/dev/null</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
-      <span class='kw'>end</span>
-
-      <span class='kw'>if</span> <span class='id identifier rubyid_pattern'>pattern</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='id identifier rubyid_lsbdata'>lsbdata</span><span class='rparen'>)</span>
-        <span class='backref'>$1</span>
-      <span class='kw'>else</span>
-        <span class='kw'>nil</span>
-      <span class='kw'>end</span>
-    <span class='kw'>end</span>
-  <span class='kw'>end</span>
-<span class='kw'>end</span></pre>
-      </td>
-    </tr>
-  
-
-</table>
-    
-      <div class="method_details ">
-  <p class="signature " id="get_address_after_token-instance_method">
+  <h3 class="signature " id="get_address_after_token-instance_method">
   
     - (<tt>Object</tt>) <strong>get_address_after_token</strong>(output, token, return_first = false) 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-Cody Herriges <c.a.herriges@gmail.com>
-</p>
-<p>
-Used the ipaddress fact that is already part of Facter as a template.
-</p>
+    
+<p>Cody Herriges &lt;c.a.herriges@gmail.com&gt;</p>
+
+<p>Used the ipaddress fact that is already part of Facter as a template.</p>
 
 
   </div>
@@ -720,13 +561,15 @@ Used the ipaddress fact that is already part of Facter as a template.
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="metadata-instance_method">
+  <h3 class="signature " id="metadata-instance_method">
   
     - (<tt>Object</tt>) <strong>metadata</strong>(id = &quot;&quot;) 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -817,18 +660,19 @@ Used the ipaddress fact that is already part of Facter as a template.
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="selinux_mount_point-instance_method">
+  <h3 class="signature " id="selinux_mount_point-instance_method">
   
     - (<tt>Object</tt>) <strong>selinux_mount_point</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-This supports the fact that the selinux mount point is not always in the
-same location &#8212; the selinux mount point is operating system specific.
-</p>
+    
+<p>This supports the fact that the selinux mount point is not always in the
+same location -- the selinux mount point is operating system specific.</p>
 
 
   </div>
@@ -915,13 +759,15 @@ same location &#8212; the selinux mount point is operating system specific.
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="userdata-instance_method">
+  <h3 class="signature " id="userdata-instance_method">
   
     - (<tt>Object</tt>) <strong>userdata</strong> 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -986,11 +832,11 @@ same location &#8212; the selinux mount point is operating system specific.
   </div>
 
 </div>
-    
+
     <div id="footer">
-  Generated on Tue Mar  6 18:16:48 2012 by 
+  Generated on Tue May 22 18:49:34 2012 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.7.5 (ruby-1.9.2).
+  0.8.1 (ruby-1.9.3).
 </div>
 
   </body>

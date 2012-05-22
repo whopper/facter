@@ -6,7 +6,7 @@
 <title>
   Class: Facter::Util::Collection
   
-    &mdash; Documentation by YARD 0.7.5
+    &mdash; Documentation by YARD 0.8.1
   
 </title>
 
@@ -17,9 +17,11 @@
   <link rel="stylesheet" href="../../css/docco.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  relpath = '../..';
-  if (relpath != '') relpath += '/';
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../../';
+  framesUrl = "../../frames.html#!" + escape(window.location.href);
 </script>
+
 
   <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
 
@@ -30,36 +32,41 @@
 
   </head>
   <body>
-    <script type="text/javascript" charset="utf-8">
-      if (window.top.frames.main) document.body.className = 'frames';
-    </script>
-    
     <div id="header">
       <div id="menu">
   
-    <a href="../../_index.html">Index (C)</a> &raquo; 
+    <a href="../../_index.html">Index (C)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../../Facter.html" title="Facter (module)">Facter</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Util.html" title="Facter::Util (module)">Util</a></span></span>
      &raquo; 
     <span class="title">Collection</span>
   
-  
+
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
       <div id="search">
   
-    <a id="class_list_link" href="#">Class List</a>
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+      Class List
+    </a>
   
-    <a id="method_list_link" href="#">Method List</a>
+    <a class="full_list_link" id="method_list_link"
+        href="../../method_list.html">
+      Method List
+    </a>
   
-    <a id="file_list_link" href="#">File List</a>
+    <a class="full_list_link" id="file_list_link"
+        href="../../file_list.html">
+      File List
+    </a>
   
 </div>
       <div class="clear"></div>
     </div>
-    
+
     <iframe id="search_frame"></iframe>
-    
+
     <div id="content"><h1>Class: Facter::Util::Collection
   
   
@@ -102,10 +109,9 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>
-Manage which facts exist and how we access them.  Largely just a wrapper
-around a hash of facts.
-</p>
+    
+<p>Manage which facts exist and how we access them.  Largely just a wrapper
+around a hash of facts.</p>
 
 
   </div>
@@ -142,11 +148,11 @@ around a hash of facts.
   
   
   
+  
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Return a fact object by name.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Return a fact object by name.</p>
 </div></span>
   
 </li>
@@ -166,11 +172,11 @@ Return a fact object by name.
   
   
   
+  
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Add a resolution mechanism for a named fact.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Add a resolution mechanism for a named fact.</p>
 </div></span>
   
 </li>
@@ -190,11 +196,11 @@ Add a resolution mechanism for a named fact.
   
   
   
+  
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Iterate across all of the facts.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Iterate across all of the facts.</p>
 </div></span>
   
 </li>
@@ -214,11 +220,11 @@ Iterate across all of the facts.
   
   
   
+  
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Return a fact by name.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Return a fact by name.</p>
 </div></span>
   
 </li>
@@ -238,11 +244,11 @@ Return a fact by name.
   
   
   
+  
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Flush all cached values.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Flush all cached values.</p>
 </div></span>
   
 </li>
@@ -257,6 +263,7 @@ Flush all cached values.
     
   </span>
   
+  
     <span class="note title constructor">constructor</span>
   
   
@@ -266,9 +273,8 @@ Flush all cached values.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-A new instance of Collection.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of Collection.</p>
 </div></span>
   
 </li>
@@ -288,11 +294,11 @@ A new instance of Collection.
   
   
   
+  
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Return a list of all of the facts.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Return a list of all of the facts.</p>
 </div></span>
   
 </li>
@@ -312,11 +318,11 @@ Return a list of all of the facts.
   
   
   
+  
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Load all known facts.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Load all known facts.</p>
 </div></span>
   
 </li>
@@ -336,11 +342,11 @@ Load all known facts.
   
   
   
+  
 
   
-    <span class="summary_desc"><div class='inline'><p>
-The thing that loads facts if we don&#8217;t have them.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>The thing that loads facts if we don't have them.</p>
 </div></span>
   
 </li>
@@ -360,11 +366,11 @@ The thing that loads facts if we don&#8217;t have them.
   
   
   
+  
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Return a hash of all of our facts.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Return a hash of all of our facts.</p>
 </div></span>
   
 </li>
@@ -378,6 +384,7 @@ Return a hash of all of our facts.
 
     
   </span>
+  
   
   
   
@@ -399,17 +406,18 @@ Return a hash of all of our facts.
   <h2>Constructor Details</h2>
   
     <div class="method_details first">
-  <p class="signature first" id="initialize-instance_method">
+  <h3 class="signature first" id="initialize-instance_method">
   
     - (<tt><span class='object_link'><a href="" title="Facter::Util::Collection (class)">Collection</a></span></tt>) <strong>initialize</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-A new instance of Collection
-</p>
+    
+<p>A new instance of Collection</p>
 
 
   </div>
@@ -468,21 +476,22 @@ A new instance of Collection
 
   <div id="instance_method_details" class="method_details_list">
     <h2>Instance Method Details</h2>
-    
+
     
       <div class="method_details first">
-  <p class="signature first" id="[]-instance_method">
+  <h3 class="signature first" id="[]-instance_method">
   
     - (<tt>Object</tt>) <strong>[]</strong>(name) 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-Return a fact object by name.  If you use this, you still have to call
-&#8216;value&#8217; on it to retrieve the actual value.
-</p>
+    
+<p>Return a fact object by name.  If you use this, you still have to call
+'value' on it to retrieve the actual value.</p>
 
 
   </div>
@@ -537,18 +546,19 @@ Return a fact object by name.  If you use this, you still have to call
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="add-instance_method">
+  <h3 class="signature " id="add-instance_method">
   
     - (<tt>Object</tt>) <strong>add</strong>(name, options = {}, &amp;block) 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-Add a resolution mechanism for a named fact.  This does not distinguish
-between adding a new fact and adding a new way to resolve a fact.
-</p>
+    
+<p>Add a resolution mechanism for a named fact.  This does not distinguish
+between adding a new fact and adding a new way to resolve a fact.</p>
 
 
   </div>
@@ -693,9 +703,8 @@ between adding a new fact and adding a new way to resolve a fact.
       <td class="comment">
         <span><div class="docstring">
   <div class="discussion">
-    <p>
-Set any fact-appropriate options.
-</p>
+    
+<p>Set any fact-appropriate options.</p>
 
 
   </div>
@@ -744,9 +753,8 @@ Set any fact-appropriate options.
       <td class="comment">
         <span><div class="docstring">
   <div class="discussion">
-    <p>
-Set any resolve-appropriate options
-</p>
+    
+<p>Set any resolve-appropriate options</p>
 
 
   </div>
@@ -769,9 +777,8 @@ Set any resolve-appropriate options
       <td class="comment">
         <span><div class="docstring">
   <div class="discussion">
-    <p>
-If the resolve was actually added, set any resolve-appropriate options
-</p>
+    
+<p>If the resolve was actually added, set any resolve-appropriate options</p>
 
 
   </div>
@@ -822,17 +829,18 @@ end</pre>
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="each-instance_method">
+  <h3 class="signature " id="each-instance_method">
   
     - (<tt>Object</tt>) <strong>each</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-Iterate across all of the facts.
-</p>
+    
+<p>Iterate across all of the facts.</p>
 
 
   </div>
@@ -907,17 +915,18 @@ Iterate across all of the facts.
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="fact-instance_method">
+  <h3 class="signature " id="fact-instance_method">
   
     - (<tt>Object</tt>) <strong>fact</strong>(name) 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-Return a fact by name.
-</p>
+    
+<p>Return a fact by name.</p>
 
 
   </div>
@@ -988,9 +997,8 @@ Return a fact by name.
       <td class="comment">
         <span><div class="docstring">
   <div class="discussion">
-    <p>
-Try to load the fact if necessary
-</p>
+    
+<p>Try to load the fact if necessary</p>
 
 
   </div>
@@ -1015,9 +1023,8 @@ Try to load the fact if necessary
       <td class="comment">
         <span><div class="docstring">
   <div class="discussion">
-    <p>
-Try HARDER
-</p>
+    
+<p>Try HARDER</p>
 
 
   </div>
@@ -1046,17 +1053,18 @@ end</pre>
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="flush-instance_method">
+  <h3 class="signature " id="flush-instance_method">
   
     - (<tt>Object</tt>) <strong>flush</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-Flush all cached values.
-</p>
+    
+<p>Flush all cached values.</p>
 
 
   </div>
@@ -1111,17 +1119,18 @@ Flush all cached values.
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="list-instance_method">
+  <h3 class="signature " id="list-instance_method">
   
     - (<tt>Object</tt>) <strong>list</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-Return a list of all of the facts.
-</p>
+    
+<p>Return a list of all of the facts.</p>
 
 
   </div>
@@ -1176,17 +1185,18 @@ Return a list of all of the facts.
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="load_all-instance_method">
+  <h3 class="signature " id="load_all-instance_method">
   
     - (<tt>Object</tt>) <strong>load_all</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-Load all known facts.
-</p>
+    
+<p>Load all known facts.</p>
 
 
   </div>
@@ -1241,17 +1251,18 @@ Load all known facts.
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="loader-instance_method">
+  <h3 class="signature " id="loader-instance_method">
   
     - (<tt>Object</tt>) <strong>loader</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-The thing that loads facts if we don&#8217;t have them.
-</p>
+    
+<p>The thing that loads facts if we don't have them.</p>
 
 
   </div>
@@ -1318,17 +1329,18 @@ The thing that loads facts if we don&#8217;t have them.
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="to_hash-instance_method">
+  <h3 class="signature " id="to_hash-instance_method">
   
     - (<tt>Object</tt>) <strong>to_hash</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-Return a hash of all of our facts.
-</p>
+    
+<p>Return a hash of all of our facts.</p>
 
 
   </div>
@@ -1399,9 +1411,8 @@ Return a hash of all of our facts.
       <td class="comment">
         <span><div class="docstring">
   <div class="discussion">
-    <p>
-For backwards compatibility, convert the fact name to a string.
-</p>
+    
+<p>For backwards compatibility, convert the fact name to a string.</p>
 
 
   </div>
@@ -1432,13 +1443,15 @@ end</pre>
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="value-instance_method">
+  <h3 class="signature " id="value-instance_method">
   
     - (<tt>Object</tt>) <strong>value</strong>(name) 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -1495,11 +1508,11 @@ end</pre>
   </div>
 
 </div>
-    
+
     <div id="footer">
-  Generated on Tue Mar  6 18:16:47 2012 by 
+  Generated on Tue May 22 18:49:35 2012 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.7.5 (ruby-1.9.2).
+  0.8.1 (ruby-1.9.3).
 </div>
 
   </body>

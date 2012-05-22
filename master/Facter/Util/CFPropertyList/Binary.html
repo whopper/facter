@@ -1,0 +1,3162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: Facter::Util::CFPropertyList::Binary
+  
+    &mdash; Documentation by YARD 0.8.1
+  
+</title>
+
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../../css/docco.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../../../';
+  framesUrl = "../../../frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/docco.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../../_index.html">Index (B)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../../Facter.html" title="Facter (module)">Facter</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../Util.html" title="Facter::Util (module)">Util</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../CFPropertyList.html" title="Facter::Util::CFPropertyList (module)">CFPropertyList</a></span></span>
+     &raquo; 
+    <span class="title">Binary</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../../../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../../../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: Facter::Util::CFPropertyList::Binary
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Facter::Util::CFPropertyList::Binary</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/facter/util/cfpropertylist/lib/rbBinaryCFPropertyList.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Binary PList parser class</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ascii_string%3F-class_method" title="ascii_string? (class method)">+ (Boolean) <strong>ascii_string?</strong>(str) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#bytes_needed-class_method" title="bytes_needed (class method)">+ (Object) <strong>bytes_needed</strong>(count) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>calculate how many bytes are needed to save <tt>count</tt>.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#charset_convert-class_method" title="charset_convert (class method)">+ (Object) <strong>charset_convert</strong>(str, from, to = &quot;UTF-8&quot;) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Convert the given string from one charset to another.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#charset_strlen-class_method" title="charset_strlen (class method)">+ (Object) <strong>charset_strlen</strong>(str, charset = &quot;UTF-8&quot;) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Count characters considering character set.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#pack_int_array_with_size-class_method" title="pack_int_array_with_size (class method)">+ (Object) <strong>pack_int_array_with_size</strong>(nbytes, array) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#pack_it_with_size-class_method" title="pack_it_with_size (class method)">+ (Object) <strong>pack_it_with_size</strong>(nbytes, int) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>pack an <tt>int</tt> of <tt>nbytes</tt> with size.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#type_bytes-class_method" title="type_bytes (class method)">+ (Object) <strong>type_bytes</strong>(type, length) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Create a type byte for binary format as defined by apple.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#array_to_binary-instance_method" title="#array_to_binary (instance method)">- (Object) <strong>array_to_binary</strong>(val) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Convert array to binary format and add it to the object table.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#bool_to_binary-instance_method" title="#bool_to_binary (instance method)">- (Object) <strong>bool_to_binary</strong>(val) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Convert a bool value to binary and add it to the object table.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#count_object_refs-instance_method" title="#count_object_refs (instance method)">- (Object) <strong>count_object_refs</strong>(object) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#data_to_binary-instance_method" title="#data_to_binary (instance method)">- (Object) <strong>data_to_binary</strong>(val) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Convert data value to binary format and add it to the object table.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#date_to_binary-instance_method" title="#date_to_binary (instance method)">- (Object) <strong>date_to_binary</strong>(val) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Convert date value (apple format) to binary and adds it to the object
+table.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#dict_to_binary-instance_method" title="#dict_to_binary (instance method)">- (Object) <strong>dict_to_binary</strong>(val) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Convert dictionary to binary format and add it to the object table.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#int_to_binary-instance_method" title="#int_to_binary (instance method)">- (Object) <strong>int_to_binary</strong>(value) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Codes an integer to binary format.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#load-instance_method" title="#load (instance method)">- (Object) <strong>load</strong>(opts) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Read a binary plist file.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#num_to_binary-instance_method" title="#num_to_binary (instance method)">- (Object) <strong>num_to_binary</strong>(value) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Converts a numeric value to binary and adds it to the object table.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#object_ref_size-instance_method" title="#object_ref_size (instance method)">- (Object) <strong>object_ref_size</strong>(object_refs) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#read_fd-instance_method" title="#read_fd (instance method)">- (Object) <strong>read_fd</strong>(fd, length) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#real_to_binary-instance_method" title="#real_to_binary (instance method)">- (Object) <strong>real_to_binary</strong>(val) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Codes a real value to binary format.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#string_to_binary-instance_method" title="#string_to_binary (instance method)">- (Object) <strong>string_to_binary</strong>(val) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Uniques and transforms a string value to binary format and adds it to the
+object table.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_str-instance_method" title="#to_str (instance method)">- (Object) <strong>to_str</strong>(opts = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Convert Facter::Util::CFPropertyList to binary format; since we have to
+count our objects we simply unique CFDictionary and CFArray.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="ascii_string?-class_method">
+  
+    + (<tt>Boolean</tt>) <strong>ascii_string?</strong>(str) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+428
+429
+430
+431
+432
+433
+434</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/cfpropertylist/lib/rbBinaryCFPropertyList.rb', line 428</span>
+
+<span class='kw'>def</span> <span class='const'>Binary</span><span class='period'>.</span><span class='id identifier rubyid_ascii_string?'>ascii_string?</span><span class='lparen'>(</span><span class='id identifier rubyid_str'>str</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_str'>str</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:ascii_only?</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_str'>str</span><span class='period'>.</span><span class='id identifier rubyid_ascii_only?'>ascii_only?</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_str'>str</span> <span class='op'>!~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>[\x80-\xFF]</span><span class='regexp_end'>/mn</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div><table class="annotated_source_code">
+  <tr>
+    <td colspan="3" style="padding-left: 10px;">
+      <pre class="code"><span class="info file"># File 'lib/facter/util/cfpropertylist/lib/rbBinaryCFPropertyList.rb', line 428</span></pre>
+    </td>
+  </tr>
+  
+    <tr>
+      <td class="comment">
+        <span>  
+      </td>
+      <td class="line-numbers">
+        <pre class="lines" style="padding-right: 0px;">428
+429
+430
+431
+432
+433
+434
+435</pre>
+      </td>
+      <td class="code">
+        <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='const'>Binary</span><span class='period'>.</span><span class='id identifier rubyid_ascii_string?'>ascii_string?</span><span class='lparen'>(</span><span class='id identifier rubyid_str'>str</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_str'>str</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:ascii_only?</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_str'>str</span><span class='period'>.</span><span class='id identifier rubyid_ascii_only?'>ascii_only?</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_str'>str</span> <span class='op'>!~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>[\x80-\xFF]</span><span class='regexp_end'>/mn</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  
+
+</table>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="bytes_needed-class_method">
+  
+    + (<tt>Object</tt>) <strong>bytes_needed</strong>(count) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>calculate how many bytes are needed to save <tt>count</tt></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/cfpropertylist/lib/rbBinaryCFPropertyList.rb', line 374</span>
+
+<span class='kw'>def</span> <span class='const'>Binary</span><span class='period'>.</span><span class='id identifier rubyid_bytes_needed'>bytes_needed</span><span class='lparen'>(</span><span class='id identifier rubyid_count'>count</span><span class='rparen'>)</span>
+  <span class='kw'>case</span>
+  <span class='kw'>when</span> <span class='id identifier rubyid_count'>count</span> <span class='op'>&lt;</span> <span class='int'>2</span><span class='op'>**</span><span class='int'>8</span>  <span class='kw'>then</span> <span class='int'>1</span>
+  <span class='kw'>when</span> <span class='id identifier rubyid_count'>count</span> <span class='op'>&lt;</span> <span class='int'>2</span><span class='op'>**</span><span class='int'>16</span> <span class='kw'>then</span> <span class='int'>2</span>
+  <span class='kw'>when</span> <span class='id identifier rubyid_count'>count</span> <span class='op'>&lt;</span> <span class='int'>2</span><span class='op'>**</span><span class='int'>32</span> <span class='kw'>then</span> <span class='int'>4</span>
+  <span class='kw'>when</span> <span class='id identifier rubyid_count'>count</span> <span class='op'>&lt;</span> <span class='int'>2</span><span class='op'>**</span><span class='int'>64</span> <span class='kw'>then</span> <span class='int'>8</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>CFFormatError</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Data size too large: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_count'>count</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div><table class="annotated_source_code">
+  <tr>
+    <td colspan="3" style="padding-left: 10px;">
+      <pre class="code"><span class="info file"># File 'lib/facter/util/cfpropertylist/lib/rbBinaryCFPropertyList.rb', line 374</span></pre>
+    </td>
+  </tr>
+  
+    <tr>
+      <td class="comment">
+        <span>  
+      </td>
+      <td class="line-numbers">
+        <pre class="lines" style="padding-right: 0px;">374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384</pre>
+      </td>
+      <td class="code">
+        <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='const'>Binary</span><span class='period'>.</span><span class='id identifier rubyid_bytes_needed'>bytes_needed</span><span class='lparen'>(</span><span class='id identifier rubyid_count'>count</span><span class='rparen'>)</span>
+  <span class='kw'>case</span>
+  <span class='kw'>when</span> <span class='id identifier rubyid_count'>count</span> <span class='op'>&lt;</span> <span class='int'>2</span><span class='op'>**</span><span class='int'>8</span>  <span class='kw'>then</span> <span class='int'>1</span>
+  <span class='kw'>when</span> <span class='id identifier rubyid_count'>count</span> <span class='op'>&lt;</span> <span class='int'>2</span><span class='op'>**</span><span class='int'>16</span> <span class='kw'>then</span> <span class='int'>2</span>
+  <span class='kw'>when</span> <span class='id identifier rubyid_count'>count</span> <span class='op'>&lt;</span> <span class='int'>2</span><span class='op'>**</span><span class='int'>32</span> <span class='kw'>then</span> <span class='int'>4</span>
+  <span class='kw'>when</span> <span class='id identifier rubyid_count'>count</span> <span class='op'>&lt;</span> <span class='int'>2</span><span class='op'>**</span><span class='int'>64</span> <span class='kw'>then</span> <span class='int'>8</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>CFFormatError</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Data size too large: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_count'>count</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  
+
+</table>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="charset_convert-class_method">
+  
+    + (<tt>Object</tt>) <strong>charset_convert</strong>(str, from, to = &quot;UTF-8&quot;) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Convert the given string from one charset to another</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+216
+217
+218
+219</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/cfpropertylist/lib/rbBinaryCFPropertyList.rb', line 216</span>
+
+<span class='kw'>def</span> <span class='const'>Binary</span><span class='period'>.</span><span class='id identifier rubyid_charset_convert'>charset_convert</span><span class='lparen'>(</span><span class='id identifier rubyid_str'>str</span><span class='comma'>,</span><span class='id identifier rubyid_from'>from</span><span class='comma'>,</span><span class='id identifier rubyid_to'>to</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>UTF-8</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_str'>str</span><span class='period'>.</span><span class='id identifier rubyid_clone'>clone</span><span class='period'>.</span><span class='id identifier rubyid_force_encoding'>force_encoding</span><span class='lparen'>(</span><span class='id identifier rubyid_from'>from</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_encode'>encode</span><span class='lparen'>(</span><span class='id identifier rubyid_to'>to</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_str'>str</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>encode</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='const'>Iconv</span><span class='period'>.</span><span class='id identifier rubyid_conv'>conv</span><span class='lparen'>(</span><span class='id identifier rubyid_to'>to</span><span class='comma'>,</span><span class='id identifier rubyid_from'>from</span><span class='comma'>,</span><span class='id identifier rubyid_str'>str</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div><table class="annotated_source_code">
+  <tr>
+    <td colspan="3" style="padding-left: 10px;">
+      <pre class="code"><span class="info file"># File 'lib/facter/util/cfpropertylist/lib/rbBinaryCFPropertyList.rb', line 216</span></pre>
+    </td>
+  </tr>
+  
+    <tr>
+      <td class="comment">
+        <span>  
+      </td>
+      <td class="line-numbers">
+        <pre class="lines" style="padding-right: 0px;">216
+217
+218
+219
+220</pre>
+      </td>
+      <td class="code">
+        <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='const'>Binary</span><span class='period'>.</span><span class='id identifier rubyid_charset_convert'>charset_convert</span><span class='lparen'>(</span><span class='id identifier rubyid_str'>str</span><span class='comma'>,</span><span class='id identifier rubyid_from'>from</span><span class='comma'>,</span><span class='id identifier rubyid_to'>to</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>UTF-8</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_str'>str</span><span class='period'>.</span><span class='id identifier rubyid_clone'>clone</span><span class='period'>.</span><span class='id identifier rubyid_force_encoding'>force_encoding</span><span class='lparen'>(</span><span class='id identifier rubyid_from'>from</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_encode'>encode</span><span class='lparen'>(</span><span class='id identifier rubyid_to'>to</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_str'>str</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>encode</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='const'>Iconv</span><span class='period'>.</span><span class='id identifier rubyid_conv'>conv</span><span class='lparen'>(</span><span class='id identifier rubyid_to'>to</span><span class='comma'>,</span><span class='id identifier rubyid_from'>from</span><span class='comma'>,</span><span class='id identifier rubyid_str'>str</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  
+
+</table>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="charset_strlen-class_method">
+  
+    + (<tt>Object</tt>) <strong>charset_strlen</strong>(str, charset = &quot;UTF-8&quot;) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Count characters considering character set</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/cfpropertylist/lib/rbBinaryCFPropertyList.rb', line 222</span>
+
+<span class='kw'>def</span> <span class='const'>Binary</span><span class='period'>.</span><span class='id identifier rubyid_charset_strlen'>charset_strlen</span><span class='lparen'>(</span><span class='id identifier rubyid_str'>str</span><span class='comma'>,</span><span class='id identifier rubyid_charset'>charset</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>UTF-8</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_str'>str</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:encode</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_size'>size</span> <span class='op'>=</span> <span class='id identifier rubyid_str'>str</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_utf8_str'>utf8_str</span> <span class='op'>=</span> <span class='const'>Iconv</span><span class='period'>.</span><span class='id identifier rubyid_conv'>conv</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>UTF-8</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span><span class='id identifier rubyid_charset'>charset</span><span class='comma'>,</span><span class='id identifier rubyid_str'>str</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_size'>size</span> <span class='op'>=</span> <span class='id identifier rubyid_utf8_str'>utf8_str</span><span class='period'>.</span><span class='id identifier rubyid_scan'>scan</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>.</span><span class='regexp_end'>/mu</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># UTF-16 code units in the range D800-DBFF are the beginning of
+</span>  <span class='comment'># a surrogate pair, and count as one additional character for
+</span>  <span class='comment'># length calculation.
+</span>  <span class='kw'>if</span> <span class='id identifier rubyid_charset'>charset</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^UTF-16</span><span class='regexp_end'>/</span></span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_str'>str</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:encode</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_str'>str</span><span class='period'>.</span><span class='id identifier rubyid_bytes'>bytes</span><span class='period'>.</span><span class='id identifier rubyid_to_a'>to_a</span><span class='period'>.</span><span class='id identifier rubyid_each_slice'>each_slice</span><span class='lparen'>(</span><span class='int'>2</span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_pair'>pair</span><span class='op'>|</span> <span class='id identifier rubyid_size'>size</span> <span class='op'>+=</span> <span class='int'>1</span> <span class='kw'>if</span> <span class='lparen'>(</span><span class='int'>0xd8</span><span class='op'>..</span><span class='int'>0xdb</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_pair'>pair</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_str'>str</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each_slice'>each_slice</span><span class='lparen'>(</span><span class='int'>2</span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_pair'>pair</span><span class='op'>|</span> <span class='id identifier rubyid_size'>size</span> <span class='op'>+=</span> <span class='int'>1</span> <span class='kw'>if</span> <span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\xd8</span><span class='tstring_end'>&quot;</span></span><span class='op'>..</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\xdb</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_pair'>pair</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_size'>size</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div><table class="annotated_source_code">
+  <tr>
+    <td colspan="3" style="padding-left: 10px;">
+      <pre class="code"><span class="info file"># File 'lib/facter/util/cfpropertylist/lib/rbBinaryCFPropertyList.rb', line 222</span></pre>
+    </td>
+  </tr>
+  
+    <tr>
+      <td class="comment">
+        <span>  
+      </td>
+      <td class="line-numbers">
+        <pre class="lines" style="padding-right: 0px;">222
+223
+224
+225
+226
+227
+228
+229
+230</pre>
+      </td>
+      <td class="code">
+        <pre class="code"><span class="info file">def Binary.charset_strlen(str,charset=&quot;UTF-8&quot;)
+  if str.respond_to?(:encode)
+    size = str.length
+  else
+    utf8_str = Iconv.conv(&quot;UTF-8&quot;,charset,str)
+    size = utf8_str.scan(/./mu).size
+  end
+</pre>
+      </td>
+    </tr>
+  
+    <tr>
+      <td class="comment">
+        <span><div class="docstring">
+  <div class="discussion">
+    
+<p>UTF-16 code units in the range D800-DBFF are the beginning of a surrogate
+pair, and count as one additional character for length calculation.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>  
+      </td>
+      <td class="line-numbers">
+        <pre class="lines" style="padding-right: 0px;">233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243</pre>
+      </td>
+      <td class="code">
+        <pre class="code"><span class="info file">  if charset =~ /^UTF-16/
+    if str.respond_to?(:encode)
+      str.bytes.to_a.each_slice(2) { |pair| size += 1 if (0xd8..0xdb).include?(pair[0]) }
+    else
+      str.split('').each_slice(2) { |pair| size += 1 if (&quot;\xd8&quot;..&quot;\xdb&quot;).include?(pair[0]) }
+    end
+  end
+
+  size
+end</pre>
+      </td>
+    </tr>
+  
+
+</table>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="pack_int_array_with_size-class_method">
+  
+    + (<tt>Object</tt>) <strong>pack_int_array_with_size</strong>(nbytes, array) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/cfpropertylist/lib/rbBinaryCFPropertyList.rb', line 361</span>
+
+<span class='kw'>def</span> <span class='const'>Binary</span><span class='period'>.</span><span class='id identifier rubyid_pack_int_array_with_size'>pack_int_array_with_size</span><span class='lparen'>(</span><span class='id identifier rubyid_nbytes'>nbytes</span><span class='comma'>,</span> <span class='id identifier rubyid_array'>array</span><span class='rparen'>)</span>
+  <span class='kw'>case</span> <span class='id identifier rubyid_nbytes'>nbytes</span>
+  <span class='kw'>when</span> <span class='int'>1</span> <span class='kw'>then</span> <span class='id identifier rubyid_array'>array</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>C*</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='int'>2</span> <span class='kw'>then</span> <span class='id identifier rubyid_array'>array</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>n*</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='int'>4</span> <span class='kw'>then</span> <span class='id identifier rubyid_array'>array</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>N*</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='int'>8</span>
+    <span class='id identifier rubyid_array'>array</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_int'>int</span><span class='op'>|</span> <span class='lbracket'>[</span><span class='id identifier rubyid_int'>int</span> <span class='op'>&gt;&gt;</span> <span class='int'>32</span><span class='comma'>,</span> <span class='id identifier rubyid_int'>int</span> <span class='op'>&amp;</span> <span class='int'>0xFFFFFFFF</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>NN</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>CFFormatError</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Don't know how to pack </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_nbytes'>nbytes</span><span class='rbrace'>}</span><span class='tstring_content'> byte integer</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div><table class="annotated_source_code">
+  <tr>
+    <td colspan="3" style="padding-left: 10px;">
+      <pre class="code"><span class="info file"># File 'lib/facter/util/cfpropertylist/lib/rbBinaryCFPropertyList.rb', line 361</span></pre>
+    </td>
+  </tr>
+  
+    <tr>
+      <td class="comment">
+        <span>  
+      </td>
+      <td class="line-numbers">
+        <pre class="lines" style="padding-right: 0px;">361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372</pre>
+      </td>
+      <td class="code">
+        <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='const'>Binary</span><span class='period'>.</span><span class='id identifier rubyid_pack_int_array_with_size'>pack_int_array_with_size</span><span class='lparen'>(</span><span class='id identifier rubyid_nbytes'>nbytes</span><span class='comma'>,</span> <span class='id identifier rubyid_array'>array</span><span class='rparen'>)</span>
+  <span class='kw'>case</span> <span class='id identifier rubyid_nbytes'>nbytes</span>
+  <span class='kw'>when</span> <span class='int'>1</span> <span class='kw'>then</span> <span class='id identifier rubyid_array'>array</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>C*</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='int'>2</span> <span class='kw'>then</span> <span class='id identifier rubyid_array'>array</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>n*</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='int'>4</span> <span class='kw'>then</span> <span class='id identifier rubyid_array'>array</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>N*</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='int'>8</span>
+    <span class='id identifier rubyid_array'>array</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_int'>int</span><span class='op'>|</span> <span class='lbracket'>[</span><span class='id identifier rubyid_int'>int</span> <span class='op'>&gt;&gt;</span> <span class='int'>32</span><span class='comma'>,</span> <span class='id identifier rubyid_int'>int</span> <span class='op'>&amp;</span> <span class='int'>0xFFFFFFFF</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>NN</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>CFFormatError</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Don't know how to pack </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_nbytes'>nbytes</span><span class='rbrace'>}</span><span class='tstring_content'> byte integer</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  
+
+</table>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="pack_it_with_size-class_method">
+  
+    + (<tt>Object</tt>) <strong>pack_it_with_size</strong>(nbytes, int) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>pack an <tt>int</tt> of <tt>nbytes</tt> with size</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/cfpropertylist/lib/rbBinaryCFPropertyList.rb', line 349</span>
+
+<span class='kw'>def</span> <span class='const'>Binary</span><span class='period'>.</span><span class='id identifier rubyid_pack_it_with_size'>pack_it_with_size</span><span class='lparen'>(</span><span class='id identifier rubyid_nbytes'>nbytes</span><span class='comma'>,</span><span class='id identifier rubyid_int'>int</span><span class='rparen'>)</span>
+  <span class='kw'>case</span> <span class='id identifier rubyid_nbytes'>nbytes</span>
+  <span class='kw'>when</span> <span class='int'>1</span> <span class='kw'>then</span> <span class='lbracket'>[</span><span class='id identifier rubyid_int'>int</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>c</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='int'>2</span> <span class='kw'>then</span> <span class='lbracket'>[</span><span class='id identifier rubyid_int'>int</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>n</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='int'>4</span> <span class='kw'>then</span> <span class='lbracket'>[</span><span class='id identifier rubyid_int'>int</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>N</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='int'>8</span>
+    <span class='lbracket'>[</span><span class='id identifier rubyid_int'>int</span> <span class='op'>&gt;&gt;</span> <span class='int'>32</span><span class='comma'>,</span> <span class='id identifier rubyid_int'>int</span> <span class='op'>&amp;</span> <span class='int'>0xFFFFFFFF</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>NN</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>CFFormatError</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Don't know how to pack </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_nbytes'>nbytes</span><span class='rbrace'>}</span><span class='tstring_content'> byte integer</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div><table class="annotated_source_code">
+  <tr>
+    <td colspan="3" style="padding-left: 10px;">
+      <pre class="code"><span class="info file"># File 'lib/facter/util/cfpropertylist/lib/rbBinaryCFPropertyList.rb', line 349</span></pre>
+    </td>
+  </tr>
+  
+    <tr>
+      <td class="comment">
+        <span>  
+      </td>
+      <td class="line-numbers">
+        <pre class="lines" style="padding-right: 0px;">349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360</pre>
+      </td>
+      <td class="code">
+        <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='const'>Binary</span><span class='period'>.</span><span class='id identifier rubyid_pack_it_with_size'>pack_it_with_size</span><span class='lparen'>(</span><span class='id identifier rubyid_nbytes'>nbytes</span><span class='comma'>,</span><span class='id identifier rubyid_int'>int</span><span class='rparen'>)</span>
+  <span class='kw'>case</span> <span class='id identifier rubyid_nbytes'>nbytes</span>
+  <span class='kw'>when</span> <span class='int'>1</span> <span class='kw'>then</span> <span class='lbracket'>[</span><span class='id identifier rubyid_int'>int</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>c</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='int'>2</span> <span class='kw'>then</span> <span class='lbracket'>[</span><span class='id identifier rubyid_int'>int</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>n</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='int'>4</span> <span class='kw'>then</span> <span class='lbracket'>[</span><span class='id identifier rubyid_int'>int</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>N</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='int'>8</span>
+    <span class='lbracket'>[</span><span class='id identifier rubyid_int'>int</span> <span class='op'>&gt;&gt;</span> <span class='int'>32</span><span class='comma'>,</span> <span class='id identifier rubyid_int'>int</span> <span class='op'>&amp;</span> <span class='int'>0xFFFFFFFF</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>NN</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>CFFormatError</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Don't know how to pack </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_nbytes'>nbytes</span><span class='rbrace'>}</span><span class='tstring_content'> byte integer</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  
+
+</table>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="type_bytes-class_method">
+  
+    + (<tt>Object</tt>) <strong>type_bytes</strong>(type, length) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Create a type byte for binary format as defined by apple</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/cfpropertylist/lib/rbBinaryCFPropertyList.rb', line 386</span>
+
+<span class='kw'>def</span> <span class='const'>Binary</span><span class='period'>.</span><span class='id identifier rubyid_type_bytes'>type_bytes</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_length'>length</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_length'>length</span> <span class='op'>&lt;</span> <span class='int'>15</span>
+    <span class='lbracket'>[</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span> <span class='op'>&lt;&lt;</span> <span class='int'>4</span><span class='rparen'>)</span> <span class='op'>|</span> <span class='id identifier rubyid_length'>length</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>C</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_bytes'>bytes</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span> <span class='op'>&lt;&lt;</span> <span class='int'>4</span><span class='rparen'>)</span> <span class='op'>|</span> <span class='int'>0xF</span><span class='rbracket'>]</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_length'>length</span> <span class='op'>&lt;=</span> <span class='int'>0xFF</span>
+      <span class='id identifier rubyid_bytes'>bytes</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='int'>0x10</span><span class='comma'>,</span> <span class='id identifier rubyid_length'>length</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>CCC</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>                              <span class='comment'># 1 byte length
+</span>    <span class='kw'>elsif</span> <span class='id identifier rubyid_length'>length</span> <span class='op'>&lt;=</span> <span class='int'>0xFFFF</span>
+      <span class='id identifier rubyid_bytes'>bytes</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='int'>0x11</span><span class='comma'>,</span> <span class='id identifier rubyid_length'>length</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>CCn</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>                              <span class='comment'># 2 byte length
+</span>    <span class='kw'>elsif</span> <span class='id identifier rubyid_length'>length</span> <span class='op'>&lt;=</span> <span class='int'>0xFFFFFFFF</span>
+      <span class='id identifier rubyid_bytes'>bytes</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='int'>0x12</span><span class='comma'>,</span> <span class='id identifier rubyid_length'>length</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>CCN</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>                              <span class='comment'># 4 byte length
+</span>    <span class='kw'>elsif</span> <span class='id identifier rubyid_length'>length</span> <span class='op'>&lt;=</span> <span class='int'>0x7FFFFFFFFFFFFFFF</span>
+      <span class='id identifier rubyid_bytes'>bytes</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='int'>0x13</span><span class='comma'>,</span> <span class='id identifier rubyid_length'>length</span> <span class='op'>&gt;&gt;</span> <span class='int'>32</span><span class='comma'>,</span> <span class='id identifier rubyid_length'>length</span> <span class='op'>&amp;</span> <span class='int'>0xFFFFFFFF</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>CCNN</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>  <span class='comment'># 8 byte length
+</span>    <span class='kw'>else</span>
+      <span class='id identifier rubyid_raise'>raise</span> <span class='const'>CFFormatError</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Integer too large: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_int'>int</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div><table class="annotated_source_code">
+  <tr>
+    <td colspan="3" style="padding-left: 10px;">
+      <pre class="code"><span class="info file"># File 'lib/facter/util/cfpropertylist/lib/rbBinaryCFPropertyList.rb', line 386</span></pre>
+    </td>
+  </tr>
+  
+    <tr>
+      <td class="comment">
+        <span>  
+      </td>
+      <td class="line-numbers">
+        <pre class="lines" style="padding-right: 0px;">386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404</pre>
+      </td>
+      <td class="code">
+        <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='const'>Binary</span><span class='period'>.</span><span class='id identifier rubyid_type_bytes'>type_bytes</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_length'>length</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_length'>length</span> <span class='op'>&lt;</span> <span class='int'>15</span>
+    <span class='lbracket'>[</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span> <span class='op'>&lt;&lt;</span> <span class='int'>4</span><span class='rparen'>)</span> <span class='op'>|</span> <span class='id identifier rubyid_length'>length</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>C</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_bytes'>bytes</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span> <span class='op'>&lt;&lt;</span> <span class='int'>4</span><span class='rparen'>)</span> <span class='op'>|</span> <span class='int'>0xF</span><span class='rbracket'>]</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_length'>length</span> <span class='op'>&lt;=</span> <span class='int'>0xFF</span>
+      <span class='id identifier rubyid_bytes'>bytes</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='int'>0x10</span><span class='comma'>,</span> <span class='id identifier rubyid_length'>length</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>CCC</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>                              <span class='comment'># 1 byte length
+</span>    <span class='kw'>elsif</span> <span class='id identifier rubyid_length'>length</span> <span class='op'>&lt;=</span> <span class='int'>0xFFFF</span>
+      <span class='id identifier rubyid_bytes'>bytes</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='int'>0x11</span><span class='comma'>,</span> <span class='id identifier rubyid_length'>length</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>CCn</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>                              <span class='comment'># 2 byte length
+</span>    <span class='kw'>elsif</span> <span class='id identifier rubyid_length'>length</span> <span class='op'>&lt;=</span> <span class='int'>0xFFFFFFFF</span>
+      <span class='id identifier rubyid_bytes'>bytes</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='int'>0x12</span><span class='comma'>,</span> <span class='id identifier rubyid_length'>length</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>CCN</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>                              <span class='comment'># 4 byte length
+</span>    <span class='kw'>elsif</span> <span class='id identifier rubyid_length'>length</span> <span class='op'>&lt;=</span> <span class='int'>0x7FFFFFFFFFFFFFFF</span>
+      <span class='id identifier rubyid_bytes'>bytes</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='int'>0x13</span><span class='comma'>,</span> <span class='id identifier rubyid_length'>length</span> <span class='op'>&gt;&gt;</span> <span class='int'>32</span><span class='comma'>,</span> <span class='id identifier rubyid_length'>length</span> <span class='op'>&amp;</span> <span class='int'>0xFFFFFFFF</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>CCNN</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>  <span class='comment'># 8 byte length
+</span>    <span class='kw'>else</span>
+      <span class='id identifier rubyid_raise'>raise</span> <span class='const'>CFFormatError</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Integer too large: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_int'>int</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  
+
+</table>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="array_to_binary-instance_method">
+  
+    - (<tt>Object</tt>) <strong>array_to_binary</strong>(val) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Convert array to binary format and add it to the object table</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+529
+530
+531
+532
+533
+534
+535
+536
+537
+538
+539
+540
+541</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/cfpropertylist/lib/rbBinaryCFPropertyList.rb', line 529</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_array_to_binary'>array_to_binary</span><span class='lparen'>(</span><span class='id identifier rubyid_val'>val</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_saved_object_count'>saved_object_count</span> <span class='op'>=</span> <span class='ivar'>@written_object_count</span>
+  <span class='ivar'>@written_object_count</span> <span class='op'>+=</span> <span class='int'>1</span>
+  <span class='comment'>#@object_refs += val.value.size
+</span>
+  <span class='id identifier rubyid_values'>values</span> <span class='op'>=</span> <span class='id identifier rubyid_val'>val</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_v'>v</span><span class='op'>|</span> <span class='id identifier rubyid_v'>v</span><span class='period'>.</span><span class='id identifier rubyid_to_binary'>to_binary</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_bdata'>bdata</span> <span class='op'>=</span> <span class='const'>Binary</span><span class='period'>.</span><span class='id identifier rubyid_type_bytes'>type_bytes</span><span class='lparen'>(</span><span class='int'>0b1010</span><span class='comma'>,</span> <span class='id identifier rubyid_val'>val</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span><span class='rparen'>)</span> <span class='op'>&lt;&lt;</span>
+    <span class='const'>Binary</span><span class='period'>.</span><span class='id identifier rubyid_pack_int_array_with_size'>pack_int_array_with_size</span><span class='lparen'>(</span><span class='id identifier rubyid_object_ref_size'>object_ref_size</span><span class='lparen'>(</span><span class='ivar'>@object_refs</span><span class='rparen'>)</span><span class='comma'>,</span>
+                                    <span class='id identifier rubyid_values'>values</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@object_table</span><span class='lbracket'>[</span><span class='id identifier rubyid_saved_object_count'>saved_object_count</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_bdata'>bdata</span>
+  <span class='id identifier rubyid_saved_object_count'>saved_object_count</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div><table class="annotated_source_code">
+  <tr>
+    <td colspan="3" style="padding-left: 10px;">
+      <pre class="code"><span class="info file"># File 'lib/facter/util/cfpropertylist/lib/rbBinaryCFPropertyList.rb', line 529</span></pre>
+    </td>
+  </tr>
+  
+    <tr>
+      <td class="comment">
+        <span>  
+      </td>
+      <td class="line-numbers">
+        <pre class="lines" style="padding-right: 0px;">529
+530
+531
+532</pre>
+      </td>
+      <td class="code">
+        <pre class="code"><span class="info file">def array_to_binary(val)
+  saved_object_count = @written_object_count
+  @written_object_count += 1</pre>
+      </td>
+    </tr>
+  
+    <tr>
+      <td class="comment">
+        <span>  
+      </td>
+      <td class="line-numbers">
+        <pre class="lines" style="padding-right: 0px;">533
+534
+535
+536
+537
+538
+539
+540
+541
+542</pre>
+      </td>
+      <td class="code">
+        <pre class="code"><span class="info file">
+  values = val.value.map { |v| v.to_binary(self) }
+  bdata = Binary.type_bytes(0b1010, val.value.size) &lt;&lt;
+    Binary.pack_int_array_with_size(object_ref_size(@object_refs),
+                                    values)
+
+  @object_table[saved_object_count] = bdata
+  saved_object_count
+end</pre>
+      </td>
+    </tr>
+  
+
+</table>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="bool_to_binary-instance_method">
+  
+    - (<tt>Object</tt>) <strong>bool_to_binary</strong>(val) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Convert a bool value to binary and add it to the object table</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+512
+513
+514
+515
+516
+517</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/cfpropertylist/lib/rbBinaryCFPropertyList.rb', line 512</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_bool_to_binary'>bool_to_binary</span><span class='lparen'>(</span><span class='id identifier rubyid_val'>val</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@object_table</span><span class='lbracket'>[</span><span class='ivar'>@written_object_count</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_val'>val</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\x9</span><span class='tstring_end'>&quot;</span></span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\x8</span><span class='tstring_end'>&quot;</span></span> <span class='comment'># 0x9 is 1001, type indicator for true; 0x8 is 1000, type indicator for false
+</span>  <span class='ivar'>@written_object_count</span> <span class='op'>+=</span> <span class='int'>1</span>
+  <span class='ivar'>@written_object_count</span> <span class='op'>-</span> <span class='int'>1</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div><table class="annotated_source_code">
+  <tr>
+    <td colspan="3" style="padding-left: 10px;">
+      <pre class="code"><span class="info file"># File 'lib/facter/util/cfpropertylist/lib/rbBinaryCFPropertyList.rb', line 512</span></pre>
+    </td>
+  </tr>
+  
+    <tr>
+      <td class="comment">
+        <span>  
+      </td>
+      <td class="line-numbers">
+        <pre class="lines" style="padding-right: 0px;">512
+513
+514
+515
+516
+517
+518</pre>
+      </td>
+      <td class="code">
+        <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='id identifier rubyid_bool_to_binary'>bool_to_binary</span><span class='lparen'>(</span><span class='id identifier rubyid_val'>val</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@object_table</span><span class='lbracket'>[</span><span class='ivar'>@written_object_count</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_val'>val</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\x9</span><span class='tstring_end'>&quot;</span></span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\x8</span><span class='tstring_end'>&quot;</span></span> <span class='comment'># 0x9 is 1001, type indicator for true; 0x8 is 1000, type indicator for false
+</span>  <span class='ivar'>@written_object_count</span> <span class='op'>+=</span> <span class='int'>1</span>
+  <span class='ivar'>@written_object_count</span> <span class='op'>-</span> <span class='int'>1</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  
+
+</table>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="count_object_refs-instance_method">
+  
+    - (<tt>Object</tt>) <strong>count_object_refs</strong>(object) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417
+418
+419
+420
+421
+422
+423
+424
+425
+426</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/cfpropertylist/lib/rbBinaryCFPropertyList.rb', line 405</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_count_object_refs'>count_object_refs</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span><span class='rparen'>)</span>
+  <span class='kw'>case</span> <span class='id identifier rubyid_object'>object</span>
+  <span class='kw'>when</span> <span class='const'>CFArray</span>
+    <span class='id identifier rubyid_contained_refs'>contained_refs</span> <span class='op'>=</span> <span class='int'>0</span>
+    <span class='id identifier rubyid_object'>object</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_element'>element</span><span class='op'>|</span>
+      <span class='kw'>if</span> <span class='const'>CFArray</span> <span class='op'>===</span> <span class='id identifier rubyid_element'>element</span> <span class='op'>||</span> <span class='const'>CFDictionary</span> <span class='op'>===</span> <span class='id identifier rubyid_element'>element</span>
+        <span class='id identifier rubyid_contained_refs'>contained_refs</span> <span class='op'>+=</span> <span class='id identifier rubyid_count_object_refs'>count_object_refs</span><span class='lparen'>(</span><span class='id identifier rubyid_element'>element</span><span class='rparen'>)</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_object'>object</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='op'>+</span> <span class='id identifier rubyid_contained_refs'>contained_refs</span>
+  <span class='kw'>when</span> <span class='const'>CFDictionary</span>
+    <span class='id identifier rubyid_contained_refs'>contained_refs</span> <span class='op'>=</span> <span class='int'>0</span>
+    <span class='id identifier rubyid_object'>object</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_each_value'>each_value</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_value'>value</span><span class='op'>|</span>
+      <span class='kw'>if</span> <span class='const'>CFArray</span> <span class='op'>===</span> <span class='id identifier rubyid_value'>value</span> <span class='op'>||</span> <span class='const'>CFDictionary</span> <span class='op'>===</span> <span class='id identifier rubyid_value'>value</span>
+        <span class='id identifier rubyid_contained_refs'>contained_refs</span> <span class='op'>+=</span> <span class='id identifier rubyid_count_object_refs'>count_object_refs</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_object'>object</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='op'>*</span> <span class='int'>2</span> <span class='op'>+</span> <span class='id identifier rubyid_contained_refs'>contained_refs</span>
+  <span class='kw'>else</span>
+    <span class='kw'>return</span> <span class='int'>0</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div><table class="annotated_source_code">
+  <tr>
+    <td colspan="3" style="padding-left: 10px;">
+      <pre class="code"><span class="info file"># File 'lib/facter/util/cfpropertylist/lib/rbBinaryCFPropertyList.rb', line 405</span></pre>
+    </td>
+  </tr>
+  
+    <tr>
+      <td class="comment">
+        <span>  
+      </td>
+      <td class="line-numbers">
+        <pre class="lines" style="padding-right: 0px;">405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417
+418
+419
+420
+421
+422
+423
+424
+425
+426
+427</pre>
+      </td>
+      <td class="code">
+        <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='id identifier rubyid_count_object_refs'>count_object_refs</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span><span class='rparen'>)</span>
+  <span class='kw'>case</span> <span class='id identifier rubyid_object'>object</span>
+  <span class='kw'>when</span> <span class='const'>CFArray</span>
+    <span class='id identifier rubyid_contained_refs'>contained_refs</span> <span class='op'>=</span> <span class='int'>0</span>
+    <span class='id identifier rubyid_object'>object</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_element'>element</span><span class='op'>|</span>
+      <span class='kw'>if</span> <span class='const'>CFArray</span> <span class='op'>===</span> <span class='id identifier rubyid_element'>element</span> <span class='op'>||</span> <span class='const'>CFDictionary</span> <span class='op'>===</span> <span class='id identifier rubyid_element'>element</span>
+        <span class='id identifier rubyid_contained_refs'>contained_refs</span> <span class='op'>+=</span> <span class='id identifier rubyid_count_object_refs'>count_object_refs</span><span class='lparen'>(</span><span class='id identifier rubyid_element'>element</span><span class='rparen'>)</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_object'>object</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='op'>+</span> <span class='id identifier rubyid_contained_refs'>contained_refs</span>
+  <span class='kw'>when</span> <span class='const'>CFDictionary</span>
+    <span class='id identifier rubyid_contained_refs'>contained_refs</span> <span class='op'>=</span> <span class='int'>0</span>
+    <span class='id identifier rubyid_object'>object</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_each_value'>each_value</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_value'>value</span><span class='op'>|</span>
+      <span class='kw'>if</span> <span class='const'>CFArray</span> <span class='op'>===</span> <span class='id identifier rubyid_value'>value</span> <span class='op'>||</span> <span class='const'>CFDictionary</span> <span class='op'>===</span> <span class='id identifier rubyid_value'>value</span>
+        <span class='id identifier rubyid_contained_refs'>contained_refs</span> <span class='op'>+=</span> <span class='id identifier rubyid_count_object_refs'>count_object_refs</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_object'>object</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='op'>*</span> <span class='int'>2</span> <span class='op'>+</span> <span class='id identifier rubyid_contained_refs'>contained_refs</span>
+  <span class='kw'>else</span>
+    <span class='kw'>return</span> <span class='int'>0</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  
+
+</table>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="data_to_binary-instance_method">
+  
+    - (<tt>Object</tt>) <strong>data_to_binary</strong>(val) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Convert data value to binary format and add it to the object table</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+520
+521
+522
+523
+524
+525
+526</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/cfpropertylist/lib/rbBinaryCFPropertyList.rb', line 520</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_data_to_binary'>data_to_binary</span><span class='lparen'>(</span><span class='id identifier rubyid_val'>val</span><span class='rparen'>)</span>
+  <span class='ivar'>@object_table</span><span class='lbracket'>[</span><span class='ivar'>@written_object_count</span><span class='rbracket'>]</span> <span class='op'>=</span>
+    <span class='lparen'>(</span><span class='const'>Binary</span><span class='period'>.</span><span class='id identifier rubyid_type_bytes'>type_bytes</span><span class='lparen'>(</span><span class='int'>0b0100</span><span class='comma'>,</span> <span class='id identifier rubyid_val'>val</span><span class='period'>.</span><span class='id identifier rubyid_bytesize'>bytesize</span><span class='rparen'>)</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_val'>val</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@written_object_count</span> <span class='op'>+=</span> <span class='int'>1</span>
+  <span class='ivar'>@written_object_count</span> <span class='op'>-</span> <span class='int'>1</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div><table class="annotated_source_code">
+  <tr>
+    <td colspan="3" style="padding-left: 10px;">
+      <pre class="code"><span class="info file"># File 'lib/facter/util/cfpropertylist/lib/rbBinaryCFPropertyList.rb', line 520</span></pre>
+    </td>
+  </tr>
+  
+    <tr>
+      <td class="comment">
+        <span>  
+      </td>
+      <td class="line-numbers">
+        <pre class="lines" style="padding-right: 0px;">520
+521
+522
+523
+524
+525
+526
+527</pre>
+      </td>
+      <td class="code">
+        <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='id identifier rubyid_data_to_binary'>data_to_binary</span><span class='lparen'>(</span><span class='id identifier rubyid_val'>val</span><span class='rparen'>)</span>
+  <span class='ivar'>@object_table</span><span class='lbracket'>[</span><span class='ivar'>@written_object_count</span><span class='rbracket'>]</span> <span class='op'>=</span>
+    <span class='lparen'>(</span><span class='const'>Binary</span><span class='period'>.</span><span class='id identifier rubyid_type_bytes'>type_bytes</span><span class='lparen'>(</span><span class='int'>0b0100</span><span class='comma'>,</span> <span class='id identifier rubyid_val'>val</span><span class='period'>.</span><span class='id identifier rubyid_bytesize'>bytesize</span><span class='rparen'>)</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_val'>val</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@written_object_count</span> <span class='op'>+=</span> <span class='int'>1</span>
+  <span class='ivar'>@written_object_count</span> <span class='op'>-</span> <span class='int'>1</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  
+
+</table>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="date_to_binary-instance_method">
+  
+    - (<tt>Object</tt>) <strong>date_to_binary</strong>(val) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Convert date value (apple format) to binary and adds it to the object table</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+501
+502
+503
+504
+505
+506
+507
+508
+509</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/cfpropertylist/lib/rbBinaryCFPropertyList.rb', line 501</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_date_to_binary'>date_to_binary</span><span class='lparen'>(</span><span class='id identifier rubyid_val'>val</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_val'>val</span> <span class='op'>=</span> <span class='id identifier rubyid_val'>val</span><span class='period'>.</span><span class='id identifier rubyid_getutc'>getutc</span><span class='period'>.</span><span class='id identifier rubyid_to_f'>to_f</span> <span class='op'>-</span> <span class='const'>CFDate</span><span class='op'>::</span><span class='const'>DATE_DIFF_APPLE_UNIX</span> <span class='comment'># CFDate is a real, number of seconds since 01/01/2001 00:00:00 GMT
+</span>
+  <span class='ivar'>@object_table</span><span class='lbracket'>[</span><span class='ivar'>@written_object_count</span><span class='rbracket'>]</span> <span class='op'>=</span>
+    <span class='lparen'>(</span><span class='const'>Binary</span><span class='period'>.</span><span class='id identifier rubyid_type_bytes'>type_bytes</span><span class='lparen'>(</span><span class='int'>0b0011</span><span class='comma'>,</span> <span class='int'>3</span><span class='rparen'>)</span> <span class='op'>&lt;&lt;</span> <span class='lbracket'>[</span><span class='id identifier rubyid_val'>val</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>d</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_reverse'>reverse</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@written_object_count</span> <span class='op'>+=</span> <span class='int'>1</span>
+  <span class='ivar'>@written_object_count</span> <span class='op'>-</span> <span class='int'>1</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div><table class="annotated_source_code">
+  <tr>
+    <td colspan="3" style="padding-left: 10px;">
+      <pre class="code"><span class="info file"># File 'lib/facter/util/cfpropertylist/lib/rbBinaryCFPropertyList.rb', line 501</span></pre>
+    </td>
+  </tr>
+  
+    <tr>
+      <td class="comment">
+        <span>  
+      </td>
+      <td class="line-numbers">
+        <pre class="lines" style="padding-right: 0px;">501
+502
+503
+504
+505
+506
+507
+508
+509
+510</pre>
+      </td>
+      <td class="code">
+        <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='id identifier rubyid_date_to_binary'>date_to_binary</span><span class='lparen'>(</span><span class='id identifier rubyid_val'>val</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_val'>val</span> <span class='op'>=</span> <span class='id identifier rubyid_val'>val</span><span class='period'>.</span><span class='id identifier rubyid_getutc'>getutc</span><span class='period'>.</span><span class='id identifier rubyid_to_f'>to_f</span> <span class='op'>-</span> <span class='const'>CFDate</span><span class='op'>::</span><span class='const'>DATE_DIFF_APPLE_UNIX</span> <span class='comment'># CFDate is a real, number of seconds since 01/01/2001 00:00:00 GMT
+</span>
+  <span class='ivar'>@object_table</span><span class='lbracket'>[</span><span class='ivar'>@written_object_count</span><span class='rbracket'>]</span> <span class='op'>=</span>
+    <span class='lparen'>(</span><span class='const'>Binary</span><span class='period'>.</span><span class='id identifier rubyid_type_bytes'>type_bytes</span><span class='lparen'>(</span><span class='int'>0b0011</span><span class='comma'>,</span> <span class='int'>3</span><span class='rparen'>)</span> <span class='op'>&lt;&lt;</span> <span class='lbracket'>[</span><span class='id identifier rubyid_val'>val</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>d</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_reverse'>reverse</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@written_object_count</span> <span class='op'>+=</span> <span class='int'>1</span>
+  <span class='ivar'>@written_object_count</span> <span class='op'>-</span> <span class='int'>1</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  
+
+</table>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="dict_to_binary-instance_method">
+  
+    - (<tt>Object</tt>) <strong>dict_to_binary</strong>(val) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Convert dictionary to binary format and add it to the object table</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+544
+545
+546
+547
+548
+549
+550
+551
+552
+553
+554
+555
+556
+557
+558</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/cfpropertylist/lib/rbBinaryCFPropertyList.rb', line 544</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_dict_to_binary'>dict_to_binary</span><span class='lparen'>(</span><span class='id identifier rubyid_val'>val</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_saved_object_count'>saved_object_count</span> <span class='op'>=</span> <span class='ivar'>@written_object_count</span>
+  <span class='ivar'>@written_object_count</span> <span class='op'>+=</span> <span class='int'>1</span>
+
+  <span class='comment'>#@object_refs += val.value.keys.size * 2
+</span>
+  <span class='id identifier rubyid_keys_and_values'>keys_and_values</span> <span class='op'>=</span> <span class='id identifier rubyid_val'>val</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='op'>|</span> <span class='const'>CFString</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_k'>k</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_binary'>to_binary</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_keys_and_values'>keys_and_values</span><span class='period'>.</span><span class='id identifier rubyid_concat'>concat</span><span class='lparen'>(</span><span class='id identifier rubyid_val'>val</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_values'>values</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_v'>v</span><span class='op'>|</span> <span class='id identifier rubyid_v'>v</span><span class='period'>.</span><span class='id identifier rubyid_to_binary'>to_binary</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span> <span class='rbrace'>}</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_bdata'>bdata</span> <span class='op'>=</span> <span class='const'>Binary</span><span class='period'>.</span><span class='id identifier rubyid_type_bytes'>type_bytes</span><span class='lparen'>(</span><span class='int'>0b1101</span><span class='comma'>,</span><span class='id identifier rubyid_val'>val</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span><span class='rparen'>)</span> <span class='op'>&lt;&lt;</span>
+    <span class='const'>Binary</span><span class='period'>.</span><span class='id identifier rubyid_pack_int_array_with_size'>pack_int_array_with_size</span><span class='lparen'>(</span><span class='id identifier rubyid_object_ref_size'>object_ref_size</span><span class='lparen'>(</span><span class='ivar'>@object_refs</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_keys_and_values'>keys_and_values</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@object_table</span><span class='lbracket'>[</span><span class='id identifier rubyid_saved_object_count'>saved_object_count</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_bdata'>bdata</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_saved_object_count'>saved_object_count</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div><table class="annotated_source_code">
+  <tr>
+    <td colspan="3" style="padding-left: 10px;">
+      <pre class="code"><span class="info file"># File 'lib/facter/util/cfpropertylist/lib/rbBinaryCFPropertyList.rb', line 544</span></pre>
+    </td>
+  </tr>
+  
+    <tr>
+      <td class="comment">
+        <span>  
+      </td>
+      <td class="line-numbers">
+        <pre class="lines" style="padding-right: 0px;">544
+545
+546
+547
+548</pre>
+      </td>
+      <td class="code">
+        <pre class="code"><span class="info file">def dict_to_binary(val)
+  saved_object_count = @written_object_count
+  @written_object_count += 1
+</pre>
+      </td>
+    </tr>
+  
+    <tr>
+      <td class="comment">
+        <span>  
+      </td>
+      <td class="line-numbers">
+        <pre class="lines" style="padding-right: 0px;">549
+550
+551
+552
+553
+554
+555
+556
+557
+558
+559</pre>
+      </td>
+      <td class="code">
+        <pre class="code"><span class="info file">
+  keys_and_values = val.value.keys.map { |k| CFString.new(k).to_binary(self) }
+  keys_and_values.concat(val.value.values.map { |v| v.to_binary(self) })
+
+  bdata = Binary.type_bytes(0b1101,val.value.size) &lt;&lt;
+    Binary.pack_int_array_with_size(object_ref_size(@object_refs), keys_and_values)
+
+  @object_table[saved_object_count] = bdata
+  return saved_object_count
+end</pre>
+      </td>
+    </tr>
+  
+
+</table>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="int_to_binary-instance_method">
+  
+    - (<tt>Object</tt>) <strong>int_to_binary</strong>(value) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Codes an integer to binary format</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+459
+460
+461
+462
+463
+464
+465
+466
+467
+468
+469
+470
+471
+472
+473
+474
+475
+476
+477
+478
+479
+480</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/cfpropertylist/lib/rbBinaryCFPropertyList.rb', line 459</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_int_to_binary'>int_to_binary</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_nbytes'>nbytes</span> <span class='op'>=</span> <span class='int'>0</span>
+  <span class='id identifier rubyid_nbytes'>nbytes</span> <span class='op'>=</span> <span class='int'>1</span>  <span class='kw'>if</span> <span class='id identifier rubyid_value'>value</span> <span class='op'>&gt;</span> <span class='int'>0xFF</span> <span class='comment'># 1 byte integer
+</span>  <span class='id identifier rubyid_nbytes'>nbytes</span> <span class='op'>+=</span> <span class='int'>1</span> <span class='kw'>if</span> <span class='id identifier rubyid_value'>value</span> <span class='op'>&gt;</span> <span class='int'>0xFFFF</span> <span class='comment'># 4 byte integer
+</span>  <span class='id identifier rubyid_nbytes'>nbytes</span> <span class='op'>+=</span> <span class='int'>1</span> <span class='kw'>if</span> <span class='id identifier rubyid_value'>value</span> <span class='op'>&gt;</span> <span class='int'>0xFFFFFFFF</span> <span class='comment'># 8 byte integer
+</span>  <span class='id identifier rubyid_nbytes'>nbytes</span> <span class='op'>=</span> <span class='int'>3</span>  <span class='kw'>if</span> <span class='id identifier rubyid_value'>value</span> <span class='op'>&lt;</span> <span class='int'>0</span> <span class='comment'># 8 byte integer, since signed
+</span>
+  <span class='const'>Binary</span><span class='period'>.</span><span class='id identifier rubyid_type_bytes'>type_bytes</span><span class='lparen'>(</span><span class='int'>0b0001</span><span class='comma'>,</span> <span class='id identifier rubyid_nbytes'>nbytes</span><span class='rparen'>)</span> <span class='op'>&lt;&lt;</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_nbytes'>nbytes</span> <span class='op'>&lt;</span> <span class='int'>3</span>
+      <span class='lbracket'>[</span><span class='id identifier rubyid_value'>value</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_nbytes'>nbytes</span> <span class='op'>==</span> <span class='int'>0</span>    <span class='kw'>then</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>C</span><span class='tstring_end'>&quot;</span></span>
+        <span class='kw'>elsif</span> <span class='id identifier rubyid_nbytes'>nbytes</span> <span class='op'>==</span> <span class='int'>1</span> <span class='kw'>then</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>n</span><span class='tstring_end'>&quot;</span></span>
+        <span class='kw'>else</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>N</span><span class='tstring_end'>&quot;</span></span>
+        <span class='kw'>end</span>
+      <span class='rparen'>)</span>
+    <span class='kw'>else</span>
+      <span class='comment'># 64 bit signed integer; we need the higher and the lower 32 bit of the value
+</span>      <span class='id identifier rubyid_high_word'>high_word</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span> <span class='op'>&gt;&gt;</span> <span class='int'>32</span>
+      <span class='id identifier rubyid_low_word'>low_word</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span> <span class='op'>&amp;</span> <span class='int'>0xFFFFFFFF</span>
+      <span class='lbracket'>[</span><span class='id identifier rubyid_high_word'>high_word</span><span class='comma'>,</span><span class='id identifier rubyid_low_word'>low_word</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>NN</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div><table class="annotated_source_code">
+  <tr>
+    <td colspan="3" style="padding-left: 10px;">
+      <pre class="code"><span class="info file"># File 'lib/facter/util/cfpropertylist/lib/rbBinaryCFPropertyList.rb', line 459</span></pre>
+    </td>
+  </tr>
+  
+    <tr>
+      <td class="comment">
+        <span>  
+      </td>
+      <td class="line-numbers">
+        <pre class="lines" style="padding-right: 0px;">459
+460
+461
+462
+463
+464
+465
+466
+467
+468
+469
+470
+471
+472
+473
+474
+475</pre>
+      </td>
+      <td class="code">
+        <pre class="code"><span class="info file">def int_to_binary(value)
+  nbytes = 0
+  nbytes = 1  if value &gt; 0xFF # 1 byte integer
+  nbytes += 1 if value &gt; 0xFFFF # 4 byte integer
+  nbytes += 1 if value &gt; 0xFFFFFFFF # 8 byte integer
+  nbytes = 3  if value &lt; 0 # 8 byte integer, since signed
+
+  Binary.type_bytes(0b0001, nbytes) &lt;&lt;
+    if nbytes &lt; 3
+      [value].pack(
+        if nbytes == 0    then &quot;C&quot;
+        elsif nbytes == 1 then &quot;n&quot;
+        else &quot;N&quot;
+        end
+      )
+    else</pre>
+      </td>
+    </tr>
+  
+    <tr>
+      <td class="comment">
+        <span><div class="docstring">
+  <div class="discussion">
+    
+<p>64 bit signed integer; we need the higher and the lower 32 bit of the value</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>  
+      </td>
+      <td class="line-numbers">
+        <pre class="lines" style="padding-right: 0px;">476
+477
+478
+479
+480
+481</pre>
+      </td>
+      <td class="code">
+        <pre class="code"><span class="info file">      high_word = value &gt;&gt; 32
+      low_word = value &amp; 0xFFFFFFFF
+      [high_word,low_word].pack(&quot;NN&quot;)
+    end
+end</pre>
+      </td>
+    </tr>
+  
+
+</table>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="load-instance_method">
+  
+    - (<tt>Object</tt>) <strong>load</strong>(opts) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Read a binary plist file</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../../CFFormatError.html" title="CFFormatError (class)">CFFormatError</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/cfpropertylist/lib/rbBinaryCFPropertyList.rb', line 7</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_load'>load</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='rparen'>)</span>
+  <span class='ivar'>@unique_table</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+  <span class='ivar'>@count_objects</span> <span class='op'>=</span> <span class='int'>0</span>
+  <span class='ivar'>@object_refs</span> <span class='op'>=</span> <span class='int'>0</span>
+
+  <span class='ivar'>@written_object_count</span> <span class='op'>=</span> <span class='int'>0</span>
+  <span class='ivar'>@object_table</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='ivar'>@object_ref_size</span> <span class='op'>=</span> <span class='int'>0</span>
+
+  <span class='ivar'>@offsets</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+
+  <span class='id identifier rubyid_fd'>fd</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='kw'>if</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='period'>.</span><span class='id identifier rubyid_has_key?'>has_key?</span><span class='lparen'>(</span><span class='symbol'>:file</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_fd'>fd</span> <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_open'>open</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:file</span><span class='rbracket'>]</span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>rb</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_file'>file</span> <span class='op'>=</span> <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:file</span><span class='rbracket'>]</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_fd'>fd</span> <span class='op'>=</span> <span class='const'>StringIO</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:data</span><span class='rbracket'>]</span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>rb</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_file'>file</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;string&gt;</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># first, we read the trailer: 32 byte from the end
+</span>  <span class='id identifier rubyid_fd'>fd</span><span class='period'>.</span><span class='id identifier rubyid_seek'>seek</span><span class='lparen'>(</span><span class='op'>-</span><span class='int'>32</span><span class='comma'>,</span><span class='const'>IO</span><span class='op'>::</span><span class='const'>SEEK_END</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_buff'>buff</span> <span class='op'>=</span> <span class='id identifier rubyid_fd'>fd</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span><span class='lparen'>(</span><span class='int'>32</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_offset_size'>offset_size</span><span class='comma'>,</span> <span class='id identifier rubyid_object_ref_size'>object_ref_size</span><span class='comma'>,</span> <span class='id identifier rubyid_number_of_objects'>number_of_objects</span><span class='comma'>,</span> <span class='id identifier rubyid_top_object'>top_object</span><span class='comma'>,</span> <span class='id identifier rubyid_table_offset'>table_offset</span> <span class='op'>=</span> <span class='id identifier rubyid_buff'>buff</span><span class='period'>.</span><span class='id identifier rubyid_unpack'>unpack</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>x6CCx4Nx4Nx4N</span><span class='tstring_end'>&quot;</span></span>
+
+  <span class='comment'># after that, get the offset table
+</span>  <span class='id identifier rubyid_fd'>fd</span><span class='period'>.</span><span class='id identifier rubyid_seek'>seek</span><span class='lparen'>(</span><span class='id identifier rubyid_table_offset'>table_offset</span><span class='comma'>,</span> <span class='const'>IO</span><span class='op'>::</span><span class='const'>SEEK_SET</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_coded_offset_table'>coded_offset_table</span> <span class='op'>=</span> <span class='id identifier rubyid_fd'>fd</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span><span class='lparen'>(</span><span class='id identifier rubyid_number_of_objects'>number_of_objects</span> <span class='op'>*</span> <span class='id identifier rubyid_offset_size'>offset_size</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='const'>CFFormatError</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_file'>file</span><span class='rbrace'>}</span><span class='tstring_content'>: Format error!</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_coded_offset_table'>coded_offset_table</span><span class='period'>.</span><span class='id identifier rubyid_bytesize'>bytesize</span> <span class='op'>==</span> <span class='id identifier rubyid_number_of_objects'>number_of_objects</span> <span class='op'>*</span> <span class='id identifier rubyid_offset_size'>offset_size</span>
+
+  <span class='ivar'>@count_objects</span> <span class='op'>=</span> <span class='id identifier rubyid_number_of_objects'>number_of_objects</span>
+
+  <span class='comment'># decode offset table
+</span>  <span class='id identifier rubyid_formats'>formats</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>C*</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>n*</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(H6)*</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>N*</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+  <span class='ivar'>@offsets</span> <span class='op'>=</span> <span class='id identifier rubyid_coded_offset_table'>coded_offset_table</span><span class='period'>.</span><span class='id identifier rubyid_unpack'>unpack</span><span class='lparen'>(</span><span class='id identifier rubyid_formats'>formats</span><span class='lbracket'>[</span><span class='id identifier rubyid_offset_size'>offset_size</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='kw'>if</span><span class='lparen'>(</span><span class='id identifier rubyid_offset_size'>offset_size</span> <span class='op'>==</span> <span class='int'>3</span><span class='rparen'>)</span>
+    <span class='int'>0</span><span class='period'>.</span><span class='id identifier rubyid_upto'>upto</span><span class='lparen'>(</span><span class='ivar'>@offsets</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span><span class='op'>-</span><span class='int'>1</span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span> <span class='ivar'>@offsets</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='ivar'>@offsets</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='lparen'>(</span><span class='int'>16</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+  <span class='kw'>end</span>
+
+  <span class='ivar'>@object_ref_size</span> <span class='op'>=</span> <span class='id identifier rubyid_object_ref_size'>object_ref_size</span>
+  <span class='id identifier rubyid_val'>val</span> <span class='op'>=</span> <span class='id identifier rubyid_read_binary_object_at'>read_binary_object_at</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='comma'>,</span><span class='id identifier rubyid_fd'>fd</span><span class='comma'>,</span><span class='id identifier rubyid_top_object'>top_object</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_fd'>fd</span><span class='period'>.</span><span class='id identifier rubyid_close'>close</span>
+  <span class='id identifier rubyid_val'>val</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div><table class="annotated_source_code">
+  <tr>
+    <td colspan="3" style="padding-left: 10px;">
+      <pre class="code"><span class="info file"># File 'lib/facter/util/cfpropertylist/lib/rbBinaryCFPropertyList.rb', line 7</span></pre>
+    </td>
+  </tr>
+  
+    <tr>
+      <td class="comment">
+        <span>  
+      </td>
+      <td class="line-numbers">
+        <pre class="lines" style="padding-right: 0px;">7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27</pre>
+      </td>
+      <td class="code">
+        <pre class="code"><span class="info file">def load(opts)
+  @unique_table = {}
+  @count_objects = 0
+  @object_refs = 0
+
+  @written_object_count = 0
+  @object_table = []
+  @object_ref_size = 0
+
+  @offsets = []
+
+  fd = nil
+  if(opts.has_key?(:file))
+    fd = File.open(opts[:file],&quot;rb&quot;)
+    file = opts[:file]
+  else
+    fd = StringIO.new(opts[:data],&quot;rb&quot;)
+    file = &quot;&lt;string&gt;&quot;
+  end
+</pre>
+      </td>
+    </tr>
+  
+    <tr>
+      <td class="comment">
+        <span><div class="docstring">
+  <div class="discussion">
+    
+<p>first, we read the trailer: 32 byte from the end</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>  
+      </td>
+      <td class="line-numbers">
+        <pre class="lines" style="padding-right: 0px;">28
+29
+30
+31
+32
+33</pre>
+      </td>
+      <td class="code">
+        <pre class="code"><span class="info file">  <span class='id identifier rubyid_fd'>fd</span><span class='period'>.</span><span class='id identifier rubyid_seek'>seek</span><span class='lparen'>(</span><span class='op'>-</span><span class='int'>32</span><span class='comma'>,</span><span class='const'>IO</span><span class='op'>::</span><span class='const'>SEEK_END</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_buff'>buff</span> <span class='op'>=</span> <span class='id identifier rubyid_fd'>fd</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span><span class='lparen'>(</span><span class='int'>32</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_offset_size'>offset_size</span><span class='comma'>,</span> <span class='id identifier rubyid_object_ref_size'>object_ref_size</span><span class='comma'>,</span> <span class='id identifier rubyid_number_of_objects'>number_of_objects</span><span class='comma'>,</span> <span class='id identifier rubyid_top_object'>top_object</span><span class='comma'>,</span> <span class='id identifier rubyid_table_offset'>table_offset</span> <span class='op'>=</span> <span class='id identifier rubyid_buff'>buff</span><span class='period'>.</span><span class='id identifier rubyid_unpack'>unpack</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>x6CCx4Nx4Nx4N</span><span class='tstring_end'>&quot;</span></span>
+</pre>
+      </td>
+    </tr>
+  
+    <tr>
+      <td class="comment">
+        <span><div class="docstring">
+  <div class="discussion">
+    
+<p>after that, get the offset table</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>  
+      </td>
+      <td class="line-numbers">
+        <pre class="lines" style="padding-right: 0px;">34
+35
+36
+37
+38
+39
+40</pre>
+      </td>
+      <td class="code">
+        <pre class="code"><span class="info file">  <span class='id identifier rubyid_fd'>fd</span><span class='period'>.</span><span class='id identifier rubyid_seek'>seek</span><span class='lparen'>(</span><span class='id identifier rubyid_table_offset'>table_offset</span><span class='comma'>,</span> <span class='const'>IO</span><span class='op'>::</span><span class='const'>SEEK_SET</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_coded_offset_table'>coded_offset_table</span> <span class='op'>=</span> <span class='id identifier rubyid_fd'>fd</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span><span class='lparen'>(</span><span class='id identifier rubyid_number_of_objects'>number_of_objects</span> <span class='op'>*</span> <span class='id identifier rubyid_offset_size'>offset_size</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='const'>CFFormatError</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_file'>file</span><span class='rbrace'>}</span><span class='tstring_content'>: Format error!</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_coded_offset_table'>coded_offset_table</span><span class='period'>.</span><span class='id identifier rubyid_bytesize'>bytesize</span> <span class='op'>==</span> <span class='id identifier rubyid_number_of_objects'>number_of_objects</span> <span class='op'>*</span> <span class='id identifier rubyid_offset_size'>offset_size</span>
+
+  <span class='ivar'>@count_objects</span> <span class='op'>=</span> <span class='id identifier rubyid_number_of_objects'>number_of_objects</span>
+</pre>
+      </td>
+    </tr>
+  
+    <tr>
+      <td class="comment">
+        <span><div class="docstring">
+  <div class="discussion">
+    
+<p>decode offset table</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>  
+      </td>
+      <td class="line-numbers">
+        <pre class="lines" style="padding-right: 0px;">41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53</pre>
+      </td>
+      <td class="code">
+        <pre class="code"><span class="info file">  formats = [&quot;&quot;,&quot;C*&quot;,&quot;n*&quot;,&quot;(H6)*&quot;,&quot;N*&quot;]
+  @offsets = coded_offset_table.unpack(formats[offset_size])
+  if(offset_size == 3)
+    0.upto(@offsets.size-1) { |i| @offsets[i] = @offsets[i].to_i(16) }
+  end
+
+  @object_ref_size = object_ref_size
+  val = read_binary_object_at(file,fd,top_object)
+
+  fd.close
+  val
+end</pre>
+      </td>
+    </tr>
+  
+
+</table>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="num_to_binary-instance_method">
+  
+    - (<tt>Object</tt>) <strong>num_to_binary</strong>(value) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Converts a numeric value to binary and adds it to the object table</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+488
+489
+490
+491
+492
+493
+494
+495
+496
+497
+498</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/cfpropertylist/lib/rbBinaryCFPropertyList.rb', line 488</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_num_to_binary'>num_to_binary</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
+  <span class='ivar'>@object_table</span><span class='lbracket'>[</span><span class='ivar'>@written_object_count</span><span class='rbracket'>]</span> <span class='op'>=</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>CFInteger</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_int_to_binary'>int_to_binary</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_real_to_binary'>real_to_binary</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+
+  <span class='ivar'>@written_object_count</span> <span class='op'>+=</span> <span class='int'>1</span>
+  <span class='ivar'>@written_object_count</span> <span class='op'>-</span> <span class='int'>1</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div><table class="annotated_source_code">
+  <tr>
+    <td colspan="3" style="padding-left: 10px;">
+      <pre class="code"><span class="info file"># File 'lib/facter/util/cfpropertylist/lib/rbBinaryCFPropertyList.rb', line 488</span></pre>
+    </td>
+  </tr>
+  
+    <tr>
+      <td class="comment">
+        <span>  
+      </td>
+      <td class="line-numbers">
+        <pre class="lines" style="padding-right: 0px;">488
+489
+490
+491
+492
+493
+494
+495
+496
+497
+498
+499</pre>
+      </td>
+      <td class="code">
+        <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='id identifier rubyid_num_to_binary'>num_to_binary</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
+  <span class='ivar'>@object_table</span><span class='lbracket'>[</span><span class='ivar'>@written_object_count</span><span class='rbracket'>]</span> <span class='op'>=</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>CFInteger</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_int_to_binary'>int_to_binary</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_real_to_binary'>real_to_binary</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+
+  <span class='ivar'>@written_object_count</span> <span class='op'>+=</span> <span class='int'>1</span>
+  <span class='ivar'>@written_object_count</span> <span class='op'>-</span> <span class='int'>1</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  
+
+</table>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="object_ref_size-instance_method">
+  
+    - (<tt>Object</tt>) <strong>object_ref_size</strong>(object_refs) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+102
+103
+104</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/cfpropertylist/lib/rbBinaryCFPropertyList.rb', line 102</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_object_ref_size'>object_ref_size</span> <span class='id identifier rubyid_object_refs'>object_refs</span>
+  <span class='const'>Binary</span><span class='period'>.</span><span class='id identifier rubyid_bytes_needed'>bytes_needed</span><span class='lparen'>(</span><span class='id identifier rubyid_object_refs'>object_refs</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div><table class="annotated_source_code">
+  <tr>
+    <td colspan="3" style="padding-left: 10px;">
+      <pre class="code"><span class="info file"># File 'lib/facter/util/cfpropertylist/lib/rbBinaryCFPropertyList.rb', line 102</span></pre>
+    </td>
+  </tr>
+  
+    <tr>
+      <td class="comment">
+        <span>  
+      </td>
+      <td class="line-numbers">
+        <pre class="lines" style="padding-right: 0px;">102
+103
+104
+105</pre>
+      </td>
+      <td class="code">
+        <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='id identifier rubyid_object_ref_size'>object_ref_size</span> <span class='id identifier rubyid_object_refs'>object_refs</span>
+  <span class='const'>Binary</span><span class='period'>.</span><span class='id identifier rubyid_bytes_needed'>bytes_needed</span><span class='lparen'>(</span><span class='id identifier rubyid_object_refs'>object_refs</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  
+
+</table>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="read_fd-instance_method">
+  
+    - (<tt>Object</tt>) <strong>read_fd</strong>(fd, length) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+203
+204
+205</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/cfpropertylist/lib/rbBinaryCFPropertyList.rb', line 203</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_read_fd'>read_fd</span> <span class='id identifier rubyid_fd'>fd</span><span class='comma'>,</span> <span class='id identifier rubyid_length'>length</span>
+  <span class='id identifier rubyid_length'>length</span> <span class='op'>&gt;</span> <span class='int'>0</span> <span class='op'>?</span> <span class='id identifier rubyid_fd'>fd</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span><span class='lparen'>(</span><span class='id identifier rubyid_length'>length</span><span class='rparen'>)</span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div><table class="annotated_source_code">
+  <tr>
+    <td colspan="3" style="padding-left: 10px;">
+      <pre class="code"><span class="info file"># File 'lib/facter/util/cfpropertylist/lib/rbBinaryCFPropertyList.rb', line 203</span></pre>
+    </td>
+  </tr>
+  
+    <tr>
+      <td class="comment">
+        <span>  
+      </td>
+      <td class="line-numbers">
+        <pre class="lines" style="padding-right: 0px;">203
+204
+205
+206</pre>
+      </td>
+      <td class="code">
+        <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='id identifier rubyid_read_fd'>read_fd</span> <span class='id identifier rubyid_fd'>fd</span><span class='comma'>,</span> <span class='id identifier rubyid_length'>length</span>
+  <span class='id identifier rubyid_length'>length</span> <span class='op'>&gt;</span> <span class='int'>0</span> <span class='op'>?</span> <span class='id identifier rubyid_fd'>fd</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span><span class='lparen'>(</span><span class='id identifier rubyid_length'>length</span><span class='rparen'>)</span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  
+
+</table>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="real_to_binary-instance_method">
+  
+    - (<tt>Object</tt>) <strong>real_to_binary</strong>(val) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Codes a real value to binary format</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+483
+484
+485</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/cfpropertylist/lib/rbBinaryCFPropertyList.rb', line 483</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_real_to_binary'>real_to_binary</span><span class='lparen'>(</span><span class='id identifier rubyid_val'>val</span><span class='rparen'>)</span>
+  <span class='const'>Binary</span><span class='period'>.</span><span class='id identifier rubyid_type_bytes'>type_bytes</span><span class='lparen'>(</span><span class='int'>0b0010</span><span class='comma'>,</span><span class='int'>3</span><span class='rparen'>)</span> <span class='op'>&lt;&lt;</span> <span class='lbracket'>[</span><span class='id identifier rubyid_val'>val</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>d</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_reverse'>reverse</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div><table class="annotated_source_code">
+  <tr>
+    <td colspan="3" style="padding-left: 10px;">
+      <pre class="code"><span class="info file"># File 'lib/facter/util/cfpropertylist/lib/rbBinaryCFPropertyList.rb', line 483</span></pre>
+    </td>
+  </tr>
+  
+    <tr>
+      <td class="comment">
+        <span>  
+      </td>
+      <td class="line-numbers">
+        <pre class="lines" style="padding-right: 0px;">483
+484
+485
+486</pre>
+      </td>
+      <td class="code">
+        <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='id identifier rubyid_real_to_binary'>real_to_binary</span><span class='lparen'>(</span><span class='id identifier rubyid_val'>val</span><span class='rparen'>)</span>
+  <span class='const'>Binary</span><span class='period'>.</span><span class='id identifier rubyid_type_bytes'>type_bytes</span><span class='lparen'>(</span><span class='int'>0b0010</span><span class='comma'>,</span><span class='int'>3</span><span class='rparen'>)</span> <span class='op'>&lt;&lt;</span> <span class='lbracket'>[</span><span class='id identifier rubyid_val'>val</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>d</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_reverse'>reverse</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  
+
+</table>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="string_to_binary-instance_method">
+  
+    - (<tt>Object</tt>) <strong>string_to_binary</strong>(val) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Uniques and transforms a string value to binary format and adds it to the
+object table</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+437
+438
+439
+440
+441
+442
+443
+444
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454
+455
+456</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/cfpropertylist/lib/rbBinaryCFPropertyList.rb', line 437</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_string_to_binary'>string_to_binary</span><span class='lparen'>(</span><span class='id identifier rubyid_val'>val</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_val'>val</span> <span class='op'>=</span> <span class='id identifier rubyid_val'>val</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+
+  <span class='ivar'>@unique_table</span><span class='lbracket'>[</span><span class='id identifier rubyid_val'>val</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='kw'>begin</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='const'>Binary</span><span class='period'>.</span><span class='id identifier rubyid_ascii_string?'>ascii_string?</span><span class='lparen'>(</span><span class='id identifier rubyid_val'>val</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_utf8_strlen'>utf8_strlen</span> <span class='op'>=</span> <span class='const'>Binary</span><span class='period'>.</span><span class='id identifier rubyid_charset_strlen'>charset_strlen</span><span class='lparen'>(</span><span class='id identifier rubyid_val'>val</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>UTF-8</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_val'>val</span> <span class='op'>=</span> <span class='const'>Binary</span><span class='period'>.</span><span class='id identifier rubyid_charset_convert'>charset_convert</span><span class='lparen'>(</span><span class='id identifier rubyid_val'>val</span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>UTF-8</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>UTF-16BE</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_bdata'>bdata</span> <span class='op'>=</span> <span class='const'>Binary</span><span class='period'>.</span><span class='id identifier rubyid_type_bytes'>type_bytes</span><span class='lparen'>(</span><span class='int'>0b0110</span><span class='comma'>,</span> <span class='const'>Binary</span><span class='period'>.</span><span class='id identifier rubyid_charset_strlen'>charset_strlen</span><span class='lparen'>(</span><span class='id identifier rubyid_val'>val</span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>UTF-16BE</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+      <span class='id identifier rubyid_val'>val</span><span class='period'>.</span><span class='id identifier rubyid_force_encoding'>force_encoding</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ASCII-8BIT</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_val'>val</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>encode</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+      <span class='ivar'>@object_table</span><span class='lbracket'>[</span><span class='ivar'>@written_object_count</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_bdata'>bdata</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_val'>val</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_utf8_strlen'>utf8_strlen</span> <span class='op'>=</span> <span class='id identifier rubyid_val'>val</span><span class='period'>.</span><span class='id identifier rubyid_bytesize'>bytesize</span>
+      <span class='id identifier rubyid_bdata'>bdata</span> <span class='op'>=</span> <span class='const'>Binary</span><span class='period'>.</span><span class='id identifier rubyid_type_bytes'>type_bytes</span><span class='lparen'>(</span><span class='int'>0b0101</span><span class='comma'>,</span><span class='id identifier rubyid_val'>val</span><span class='period'>.</span><span class='id identifier rubyid_bytesize'>bytesize</span><span class='rparen'>)</span>
+      <span class='ivar'>@object_table</span><span class='lbracket'>[</span><span class='ivar'>@written_object_count</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_bdata'>bdata</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_val'>val</span>
+    <span class='kw'>end</span>
+    <span class='ivar'>@written_object_count</span> <span class='op'>+=</span> <span class='int'>1</span>
+    <span class='ivar'>@written_object_count</span> <span class='op'>-</span> <span class='int'>1</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div><table class="annotated_source_code">
+  <tr>
+    <td colspan="3" style="padding-left: 10px;">
+      <pre class="code"><span class="info file"># File 'lib/facter/util/cfpropertylist/lib/rbBinaryCFPropertyList.rb', line 437</span></pre>
+    </td>
+  </tr>
+  
+    <tr>
+      <td class="comment">
+        <span>  
+      </td>
+      <td class="line-numbers">
+        <pre class="lines" style="padding-right: 0px;">437
+438
+439
+440
+441
+442
+443
+444
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454
+455
+456
+457</pre>
+      </td>
+      <td class="code">
+        <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='id identifier rubyid_string_to_binary'>string_to_binary</span><span class='lparen'>(</span><span class='id identifier rubyid_val'>val</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_val'>val</span> <span class='op'>=</span> <span class='id identifier rubyid_val'>val</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+
+  <span class='ivar'>@unique_table</span><span class='lbracket'>[</span><span class='id identifier rubyid_val'>val</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='kw'>begin</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='const'>Binary</span><span class='period'>.</span><span class='id identifier rubyid_ascii_string?'>ascii_string?</span><span class='lparen'>(</span><span class='id identifier rubyid_val'>val</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_utf8_strlen'>utf8_strlen</span> <span class='op'>=</span> <span class='const'>Binary</span><span class='period'>.</span><span class='id identifier rubyid_charset_strlen'>charset_strlen</span><span class='lparen'>(</span><span class='id identifier rubyid_val'>val</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>UTF-8</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_val'>val</span> <span class='op'>=</span> <span class='const'>Binary</span><span class='period'>.</span><span class='id identifier rubyid_charset_convert'>charset_convert</span><span class='lparen'>(</span><span class='id identifier rubyid_val'>val</span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>UTF-8</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>UTF-16BE</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_bdata'>bdata</span> <span class='op'>=</span> <span class='const'>Binary</span><span class='period'>.</span><span class='id identifier rubyid_type_bytes'>type_bytes</span><span class='lparen'>(</span><span class='int'>0b0110</span><span class='comma'>,</span> <span class='const'>Binary</span><span class='period'>.</span><span class='id identifier rubyid_charset_strlen'>charset_strlen</span><span class='lparen'>(</span><span class='id identifier rubyid_val'>val</span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>UTF-16BE</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+      <span class='id identifier rubyid_val'>val</span><span class='period'>.</span><span class='id identifier rubyid_force_encoding'>force_encoding</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ASCII-8BIT</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_val'>val</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>encode</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+      <span class='ivar'>@object_table</span><span class='lbracket'>[</span><span class='ivar'>@written_object_count</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_bdata'>bdata</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_val'>val</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_utf8_strlen'>utf8_strlen</span> <span class='op'>=</span> <span class='id identifier rubyid_val'>val</span><span class='period'>.</span><span class='id identifier rubyid_bytesize'>bytesize</span>
+      <span class='id identifier rubyid_bdata'>bdata</span> <span class='op'>=</span> <span class='const'>Binary</span><span class='period'>.</span><span class='id identifier rubyid_type_bytes'>type_bytes</span><span class='lparen'>(</span><span class='int'>0b0101</span><span class='comma'>,</span><span class='id identifier rubyid_val'>val</span><span class='period'>.</span><span class='id identifier rubyid_bytesize'>bytesize</span><span class='rparen'>)</span>
+      <span class='ivar'>@object_table</span><span class='lbracket'>[</span><span class='ivar'>@written_object_count</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_bdata'>bdata</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_val'>val</span>
+    <span class='kw'>end</span>
+    <span class='ivar'>@written_object_count</span> <span class='op'>+=</span> <span class='int'>1</span>
+    <span class='ivar'>@written_object_count</span> <span class='op'>-</span> <span class='int'>1</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  
+
+</table>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_str-instance_method">
+  
+    - (<tt>Object</tt>) <strong>to_str</strong>(opts = {}) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Convert Facter::Util::CFPropertyList to binary format; since we have to
+count our objects we simply unique CFDictionary and CFArray</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/cfpropertylist/lib/rbBinaryCFPropertyList.rb', line 56</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_to_str'>to_str</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='ivar'>@unique_table</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+  <span class='ivar'>@count_objects</span> <span class='op'>=</span> <span class='int'>0</span>
+  <span class='ivar'>@object_refs</span> <span class='op'>=</span> <span class='int'>0</span>
+
+  <span class='ivar'>@written_object_count</span> <span class='op'>=</span> <span class='int'>0</span>
+  <span class='ivar'>@object_table</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+
+  <span class='ivar'>@offsets</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+
+  <span class='id identifier rubyid_binary_str'>binary_str</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bplist00</span><span class='tstring_end'>&quot;</span></span>
+
+  <span class='ivar'>@object_refs</span> <span class='op'>=</span> <span class='id identifier rubyid_count_object_refs'>count_object_refs</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:root</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:root</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_binary'>to_binary</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_next_offset'>next_offset</span> <span class='op'>=</span> <span class='int'>8</span>
+  <span class='id identifier rubyid_offsets'>offsets</span> <span class='op'>=</span> <span class='ivar'>@object_table</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_object'>object</span><span class='op'>|</span>
+    <span class='id identifier rubyid_offset'>offset</span> <span class='op'>=</span> <span class='id identifier rubyid_next_offset'>next_offset</span>
+    <span class='id identifier rubyid_next_offset'>next_offset</span> <span class='op'>+=</span> <span class='id identifier rubyid_object'>object</span><span class='period'>.</span><span class='id identifier rubyid_bytesize'>bytesize</span>
+    <span class='id identifier rubyid_offset'>offset</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_binary_str'>binary_str</span> <span class='op'>&lt;&lt;</span> <span class='ivar'>@object_table</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span>
+
+  <span class='id identifier rubyid_table_offset'>table_offset</span> <span class='op'>=</span> <span class='id identifier rubyid_next_offset'>next_offset</span>
+  <span class='id identifier rubyid_offset_size'>offset_size</span> <span class='op'>=</span> <span class='const'>Binary</span><span class='period'>.</span><span class='id identifier rubyid_bytes_needed'>bytes_needed</span><span class='lparen'>(</span><span class='id identifier rubyid_table_offset'>table_offset</span><span class='rparen'>)</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_offset_size'>offset_size</span> <span class='op'>&lt;</span> <span class='int'>8</span>
+    <span class='comment'># Fast path: encode the entire offset array at once.
+</span>    <span class='id identifier rubyid_binary_str'>binary_str</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_offsets'>offsets</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='lparen'>(</span><span class='qwords_beg'>%w(</span><span class='tstring_content'>C</span><span class='words_sep'> </span><span class='tstring_content'>n</span><span class='words_sep'> </span><span class='tstring_content'>N</span><span class='words_sep'> </span><span class='tstring_content'>N</span><span class='words_sep'>)</span><span class='lbracket'>[</span><span class='id identifier rubyid_offset_size'>offset_size</span> <span class='op'>-</span> <span class='int'>1</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>*</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='comment'># Slow path: host may be little or big endian, must pack each offset
+</span>    <span class='comment'># separately.
+</span>    <span class='id identifier rubyid_offsets'>offsets</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_offset'>offset</span><span class='op'>|</span>
+      <span class='id identifier rubyid_binary_str'>binary_str</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'>Binary</span><span class='period'>.</span><span class='id identifier rubyid_pack_it_with_size'>pack_it_with_size</span><span class='lparen'>(</span><span class='id identifier rubyid_offset_size'>offset_size</span><span class='comma'>,</span><span class='id identifier rubyid_offset'>offset</span><span class='rparen'>)</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_binary_str'>binary_str</span> <span class='op'>&lt;&lt;</span> <span class='lbracket'>[</span><span class='id identifier rubyid_offset_size'>offset_size</span><span class='comma'>,</span> <span class='id identifier rubyid_object_ref_size'>object_ref_size</span><span class='lparen'>(</span><span class='ivar'>@object_refs</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>x6CC</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_binary_str'>binary_str</span> <span class='op'>&lt;&lt;</span> <span class='lbracket'>[</span><span class='ivar'>@object_table</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>x4N</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_binary_str'>binary_str</span> <span class='op'>&lt;&lt;</span> <span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>x4N</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_binary_str'>binary_str</span> <span class='op'>&lt;&lt;</span> <span class='lbracket'>[</span><span class='id identifier rubyid_table_offset'>table_offset</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>x4N</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_binary_str'>binary_str</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div><table class="annotated_source_code">
+  <tr>
+    <td colspan="3" style="padding-left: 10px;">
+      <pre class="code"><span class="info file"># File 'lib/facter/util/cfpropertylist/lib/rbBinaryCFPropertyList.rb', line 56</span></pre>
+    </td>
+  </tr>
+  
+    <tr>
+      <td class="comment">
+        <span>  
+      </td>
+      <td class="line-numbers">
+        <pre class="lines" style="padding-right: 0px;">56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84</pre>
+      </td>
+      <td class="code">
+        <pre class="code"><span class="info file">def to_str(opts={})
+  @unique_table = {}
+  @count_objects = 0
+  @object_refs = 0
+
+  @written_object_count = 0
+  @object_table = []
+
+  @offsets = []
+
+  binary_str = &quot;bplist00&quot;
+
+  @object_refs = count_object_refs(opts[:root])
+
+  opts[:root].to_binary(self)
+
+  next_offset = 8
+  offsets = @object_table.map do |object|
+    offset = next_offset
+    next_offset += object.bytesize
+    offset
+  end
+  binary_str &lt;&lt; @object_table.join
+
+  table_offset = next_offset
+  offset_size = Binary.bytes_needed(table_offset)
+
+  if offset_size &lt; 8</pre>
+      </td>
+    </tr>
+  
+    <tr>
+      <td class="comment">
+        <span><div class="docstring">
+  <div class="discussion">
+    
+<p>Fast path: encode the entire offset array at once.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>  
+      </td>
+      <td class="line-numbers">
+        <pre class="lines" style="padding-right: 0px;">85
+86
+87</pre>
+      </td>
+      <td class="code">
+        <pre class="code"><span class="info file">    binary_str &lt;&lt; offsets.pack((%w(C n N N)[offset_size - 1]) + '*')
+  else</pre>
+      </td>
+    </tr>
+  
+    <tr>
+      <td class="comment">
+        <span><div class="docstring">
+  <div class="discussion">
+    
+<p>Slow path: host may be little or big endian, must pack each offset
+separately.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>  
+      </td>
+      <td class="line-numbers">
+        <pre class="lines" style="padding-right: 0px;">89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101</pre>
+      </td>
+      <td class="code">
+        <pre class="code"><span class="info file">    offsets.each do |offset|
+      binary_str &lt;&lt; &quot;#{Binary.pack_it_with_size(offset_size,offset)}&quot;
+    end
+  end
+
+  binary_str &lt;&lt; [offset_size, object_ref_size(@object_refs)].pack(&quot;x6CC&quot;)
+  binary_str &lt;&lt; [@object_table.size].pack(&quot;x4N&quot;)
+  binary_str &lt;&lt; [0].pack(&quot;x4N&quot;)
+  binary_str &lt;&lt; [table_offset].pack(&quot;x4N&quot;)
+
+  binary_str
+end</pre>
+      </td>
+    </tr>
+  
+
+</table>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on Tue May 22 18:49:37 2012 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.1 (ruby-1.9.3).
+</div>
+
+  </body>
+</html>

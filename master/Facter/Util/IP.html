@@ -6,7 +6,7 @@
 <title>
   Module: Facter::Util::IP
   
-    &mdash; Documentation by YARD 0.7.5
+    &mdash; Documentation by YARD 0.8.1
   
 </title>
 
@@ -17,9 +17,11 @@
   <link rel="stylesheet" href="../../css/docco.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  relpath = '../..';
-  if (relpath != '') relpath += '/';
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../../';
+  framesUrl = "../../frames.html#!" + escape(window.location.href);
 </script>
+
 
   <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
 
@@ -30,36 +32,41 @@
 
   </head>
   <body>
-    <script type="text/javascript" charset="utf-8">
-      if (window.top.frames.main) document.body.className = 'frames';
-    </script>
-    
     <div id="header">
       <div id="menu">
   
-    <a href="../../_index.html">Index (I)</a> &raquo; 
+    <a href="../../_index.html">Index (I)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../../Facter.html" title="Facter (module)">Facter</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Util.html" title="Facter::Util (module)">Util</a></span></span>
      &raquo; 
     <span class="title">IP</span>
   
-  
+
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
       <div id="search">
   
-    <a id="class_list_link" href="#">Class List</a>
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+      Class List
+    </a>
   
-    <a id="method_list_link" href="#">Method List</a>
+    <a class="full_list_link" id="method_list_link"
+        href="../../method_list.html">
+      Method List
+    </a>
   
-    <a id="file_list_link" href="#">File List</a>
+    <a class="full_list_link" id="file_list_link"
+        href="../../file_list.html">
+      File List
+    </a>
   
 </div>
       <div class="clear"></div>
     </div>
-    
+
     <iframe id="search_frame"></iframe>
-    
+
     <div id="content"><h1>Module: Facter::Util::IP
   
   
@@ -83,10 +90,9 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>
-A base module for collecting IP-related information from all kinds of
-platforms.
-</p>
+    
+<p>A base module for collecting IP-related information from all kinds of
+platforms.</p>
 
 
   </div>
@@ -102,10 +108,9 @@ platforms.
         <dt id="REGEX_MAP-constant" class="">REGEX_MAP =
           <div class="docstring">
   <div class="discussion">
-    <p>
-A map of all the different regexes that work for a given platform or set of
-platforms.
-</p>
+    
+<p>A map of all the different regexes that work for a given platform or set of
+platforms.</p>
 
 
   </div>
@@ -178,11 +183,11 @@ platforms.
   
   
   
+  
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Convert an interface name into purely alphanumeric characters.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Convert an interface name into purely alphanumeric characters.</p>
 </div></span>
   
 </li>
@@ -196,6 +201,7 @@ Convert an interface name into purely alphanumeric characters.
 
     
   </span>
+  
   
   
   
@@ -223,6 +229,7 @@ Convert an interface name into purely alphanumeric characters.
   
   
   
+  
 
   
     <span class="summary_desc"><div class='inline'></div></span>
@@ -238,6 +245,7 @@ Convert an interface name into purely alphanumeric characters.
 
     
   </span>
+  
   
   
   
@@ -265,6 +273,7 @@ Convert an interface name into purely alphanumeric characters.
   
   
   
+  
 
   
     <span class="summary_desc"><div class='inline'></div></span>
@@ -280,6 +289,7 @@ Convert an interface name into purely alphanumeric characters.
 
     
   </span>
+  
   
   
   
@@ -307,6 +317,7 @@ Convert an interface name into purely alphanumeric characters.
   
   
   
+  
 
   
     <span class="summary_desc"><div class='inline'></div></span>
@@ -322,6 +333,7 @@ Convert an interface name into purely alphanumeric characters.
 
     
   </span>
+  
   
   
   
@@ -349,6 +361,7 @@ Convert an interface name into purely alphanumeric characters.
   
   
   
+  
 
   
     <span class="summary_desc"><div class='inline'></div></span>
@@ -364,6 +377,7 @@ Convert an interface name into purely alphanumeric characters.
 
     
   </span>
+  
   
   
   
@@ -391,6 +405,7 @@ Convert an interface name into purely alphanumeric characters.
   
   
   
+  
 
   
     <span class="summary_desc"><div class='inline'></div></span>
@@ -405,20 +420,21 @@ Convert an interface name into purely alphanumeric characters.
 
   <div id="class_method_details" class="method_details_list">
     <h2>Class Method Details</h2>
-    
+
     
       <div class="method_details first">
-  <p class="signature first" id="alphafy-class_method">
+  <h3 class="signature first" id="alphafy-class_method">
   
     + (<tt>Object</tt>) <strong>alphafy</strong>(interface) 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-Convert an interface name into purely alphanumeric characters.
-</p>
+    
+<p>Convert an interface name into purely alphanumeric characters.</p>
 
 
   </div>
@@ -473,13 +489,15 @@ Convert an interface name into purely alphanumeric characters.
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="convert_from_hex?-class_method">
+  <h3 class="signature " id="convert_from_hex?-class_method">
   
     + (<tt>Boolean</tt>) <strong>convert_from_hex?</strong>(kernel) 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     
 
@@ -487,7 +505,7 @@ Convert an interface name into purely alphanumeric characters.
 </div>
 <div class="tags">
   
-<h3>Returns:</h3>
+<p class="tag_title">Returns:</p>
 <ul class="return">
   
     <li>
@@ -552,13 +570,15 @@ Convert an interface name into purely alphanumeric characters.
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="get_all_interface_output-class_method">
+  <h3 class="signature " id="get_all_interface_output-class_method">
   
     + (<tt>Object</tt>) <strong>get_all_interface_output</strong> 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -649,13 +669,15 @@ Convert an interface name into purely alphanumeric characters.
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="get_arp_value-class_method">
+  <h3 class="signature " id="get_arp_value-class_method">
   
     + (<tt>Object</tt>) <strong>get_arp_value</strong>(interface) 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -714,13 +736,15 @@ Convert an interface name into purely alphanumeric characters.
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="get_bonding_master-class_method">
+  <h3 class="signature " id="get_bonding_master-class_method">
   
     + (<tt>Object</tt>) <strong>get_bonding_master</strong>(interface) 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -813,10 +837,9 @@ Convert an interface name into purely alphanumeric characters.
       <td class="comment">
         <span><div class="docstring">
   <div class="discussion">
-    <p>
-We need ip instead of ifconfig because it will show us the bonding master
-device.
-</p>
+    
+<p>We need ip instead of ifconfig because it will show us the bonding master
+device.</p>
 
 
   </div>
@@ -843,11 +866,10 @@ device.
       <td class="comment">
         <span><div class="docstring">
   <div class="discussion">
-    <p>
-A bonding interface can never be an alias interface. Alias interfaces do
+    
+<p>A bonding interface can never be an alias interface. Alias interfaces do
 have a colon in their name and the ip link show command throws an error
-message when we pass it an alias interface.
-</p>
+message when we pass it an alias interface.</p>
 
 
   </div>
@@ -892,13 +914,15 @@ end</pre>
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="get_interface_value-class_method">
+  <h3 class="signature " id="get_interface_value-class_method">
   
     + (<tt>Object</tt>) <strong>get_interface_value</strong>(interface, label) 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -1021,10 +1045,9 @@ end</pre>
       <td class="comment">
         <span><div class="docstring">
   <div class="discussion">
-    <p>
-If it&#8217;s not directly in the map or aliased in the map, then we
-don&#8217;t know how to deal with it.
-</p>
+    
+<p>If it's not directly in the map or aliased in the map, then we don't know
+how to deal with it.</p>
 
 
   </div>
@@ -1053,9 +1076,8 @@ don&#8217;t know how to deal with it.
       <td class="comment">
         <span><div class="docstring">
   <div class="discussion">
-    <p>
-Pull the correct regex out of the map.
-</p>
+    
+<p>Pull the correct regex out of the map.</p>
 
 
   </div>
@@ -1080,11 +1102,10 @@ Pull the correct regex out of the map.
       <td class="comment">
         <span><div class="docstring">
   <div class="discussion">
-    <p>
-Linux changes the MAC address reported via ifconfig when an ethernet
+    
+<p>Linux changes the MAC address reported via ifconfig when an ethernet
 interface becomes a slave of a bonding device to the master MAC address. We
-have to dig a bit to get the original/real MAC address of the interface.
-</p>
+have to dig a bit to get the original/real MAC address of the interface.</p>
 
 
   </div>
@@ -1151,13 +1172,15 @@ end</pre>
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="get_interfaces-class_method">
+  <h3 class="signature " id="get_interfaces-class_method">
   
     + (<tt>Object</tt>) <strong>get_interfaces</strong> 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -1224,10 +1247,9 @@ end</pre>
       <td class="comment">
         <span><div class="docstring">
   <div class="discussion">
-    <p>
-windows interface names contain spaces and are quoted and can appear
-multiple times as ipv4 and ipv6
-</p>
+    
+<p>windows interface names contain spaces and are quoted and can appear
+multiple times as ipv4 and ipv6</p>
 
 
   </div>
@@ -1252,12 +1274,11 @@ multiple times as ipv4 and ipv6
       <td class="comment">
         <span><div class="docstring">
   <div class="discussion">
-    <p>
-Our regex appears to be stupid, in that it leaves colons sitting at the end
+    
+<p>Our regex appears to be stupid, in that it leaves colons sitting at the end
 of interfaces.  So, we have to trim those trailing characters.  I tried
 making the regex better but supporting all platforms with a single regex is
-probably a bit too much.
-</p>
+probably a bit too much.</p>
 
 
   </div>
@@ -1282,13 +1303,15 @@ end</pre>
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="get_network_value-class_method">
+  <h3 class="signature " id="get_network_value-class_method">
   
     + (<tt>Object</tt>) <strong>get_network_value</strong>(interface) 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -1371,13 +1394,15 @@ end</pre>
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="get_output_for_interface_and_label-class_method">
+  <h3 class="signature " id="get_output_for_interface_and_label-class_method">
   
     + (<tt>Object</tt>) <strong>get_output_for_interface_and_label</strong>(interface, label) 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -1452,13 +1477,15 @@ end</pre>
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="get_single_interface_output-class_method">
+  <h3 class="signature " id="get_single_interface_output-class_method">
   
     + (<tt>Object</tt>) <strong>get_single_interface_output</strong>(interface) 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -1557,13 +1584,15 @@ end</pre>
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="supported_platforms-class_method">
+  <h3 class="signature " id="supported_platforms-class_method">
   
     + (<tt>Object</tt>) <strong>supported_platforms</strong> 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -1644,11 +1673,11 @@ end</pre>
   </div>
 
 </div>
-    
+
     <div id="footer">
-  Generated on Tue Mar  6 18:16:46 2012 by 
+  Generated on Tue May 22 18:49:34 2012 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.7.5 (ruby-1.9.2).
+  0.8.1 (ruby-1.9.3).
 </div>
 
   </body>

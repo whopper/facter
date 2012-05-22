@@ -6,7 +6,7 @@
 <title>
   Module: Facter
   
-    &mdash; Documentation by YARD 0.7.5
+    &mdash; Documentation by YARD 0.8.1
   
 </title>
 
@@ -17,9 +17,11 @@
   <link rel="stylesheet" href="css/docco.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
   relpath = '';
-  if (relpath != '') relpath += '/';
+  framesUrl = "frames.html#!" + escape(window.location.href);
 </script>
+
 
   <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
 
@@ -30,36 +32,41 @@
 
   </head>
   <body>
-    <script type="text/javascript" charset="utf-8">
-      if (window.top.frames.main) document.body.className = 'frames';
-    </script>
-    
     <div id="header">
       <div id="menu">
   
-    <a href="_index.html">Index (F)</a> &raquo; 
+    <a href="_index.html">Index (F)</a> &raquo;
     
     
     <span class="title">Facter</span>
   
-  
+
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
       <div id="search">
   
-    <a id="class_list_link" href="#">Class List</a>
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
   
-    <a id="method_list_link" href="#">Method List</a>
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
   
-    <a id="file_list_link" href="#">File List</a>
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
   
 </div>
       <div class="clear"></div>
     </div>
-    
+
     <iframe id="search_frame"></iframe>
-    
+
     <div id="content"><h1>Module: Facter
   
   
@@ -89,9 +96,8 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>
-A util module for facter containing helper methods
-</p>
+    
+<p>A util module for facter containing helper methods</p>
 
 
   </div>
@@ -101,11 +107,11 @@ A util module for facter containing helper methods
 
 </div><h2>Defined Under Namespace</h2>
 <p class="children">
-   
+  
     
       <strong class="modules">Modules:</strong> <span class='object_link'><a href="Facter/Application.html" title="Facter::Application (module)">Application</a></span>, <span class='object_link'><a href="Facter/Manufacturer.html" title="Facter::Manufacturer (module)">Manufacturer</a></span>, <span class='object_link'><a href="Facter/Memory.html" title="Facter::Memory (module)">Memory</a></span>, <span class='object_link'><a href="Facter/NetMask.html" title="Facter::NetMask (module)">NetMask</a></span>, <span class='object_link'><a href="Facter/Util.html" title="Facter::Util (module)">Util</a></span>
     
-   
+  
     
   
 </p>
@@ -117,19 +123,19 @@ A util module for facter containing helper methods
         <dt id="FACTERVERSION-constant" class="">FACTERVERSION =
           
         </dt>
-        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>1.6.6</span><span class='tstring_end'>'</span></span></pre></dd>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>2.0.0</span><span class='tstring_end'>'</span></span></pre></dd>
       
         <dt id="GREEN-constant" class="">GREEN =
           <div class="docstring">
   <div class="discussion">
-    <h2>Synopsis</h2>
-<p>
-Generally, treat <tt>Facter</tt> as a hash:
-</p>
+    
+<h2>Synopsis</h2>
+
+<p>Generally, treat <tt>Facter</tt> as a hash:</p>
+
 <h2>Example</h2>
-<p>
-require &#8216;facter&#8217; puts Facter[&#8216;operatingsystem&#8217;]
-</p>
+
+<p>require 'facter' puts <a href="http://'operatingsystem'">Facter</a></p>
 
 
   </div>
@@ -157,6 +163,11 @@ require &#8216;facter&#8217; puts Facter[&#8216;operatingsystem&#8217;]
         <dd><pre class="code"><span class='int'>0</span></pre></dd>
       
         <dt id="messages-classvariable" class="">@@messages =
+          
+        </dt>
+        <dd><pre class="code"><span class='lbrace'>{</span><span class='rbrace'>}</span></pre></dd>
+      
+        <dt id="debug_messages-classvariable" class="">@@debug_messages =
           
         </dt>
         <dd><pre class="code"><span class='lbrace'>{</span><span class='rbrace'>}</span></pre></dd>
@@ -192,11 +203,11 @@ require &#8216;facter&#8217; puts Facter[&#8216;operatingsystem&#8217;]
   
   
   
+  
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Return a fact object by name.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Return a fact object by name.</p>
 </div></span>
   
 </li>
@@ -216,11 +227,11 @@ Return a fact object by name.
   
   
   
+  
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Add a resolution mechanism for a named fact.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Add a resolution mechanism for a named fact.</p>
 </div></span>
   
 </li>
@@ -240,11 +251,11 @@ Add a resolution mechanism for a named fact.
   
   
   
+  
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Clear all facts.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Clear all facts.</p>
 </div></span>
   
 </li>
@@ -264,11 +275,11 @@ Clear all facts.
   
   
   
+  
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Clear all messages.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Clear all messages.</p>
 </div></span>
   
 </li>
@@ -288,11 +299,11 @@ Clear all messages.
   
   
   
+  
 
   
-    <span class="summary_desc"><div class='inline'><p>
-module methods.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>module methods.</p>
 </div></span>
   
 </li>
@@ -312,11 +323,11 @@ module methods.
   
   
   
+  
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Add some debugging.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Add some debugging.</p>
 </div></span>
   
 </li>
@@ -336,11 +347,11 @@ Add some debugging.
   
   
   
+  
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Set debugging on or off.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Set debugging on or off.</p>
 </div></span>
   
 </li>
@@ -360,9 +371,34 @@ Set debugging on or off.
   
   
   
+  
 
   
     <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#debugonce-class_method" title="debugonce (class method)">+ (Object) <strong>debugonce</strong>(msg) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Debug once.</p>
+</div></span>
   
 </li>
 
@@ -375,6 +411,7 @@ Set debugging on or off.
 
     
   </span>
+  
   
   
   
@@ -402,11 +439,11 @@ Set debugging on or off.
   
   
   
+  
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Load all of the default facts, and then everything from disk.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Load all of the default facts, and then everything from disk.</p>
 </div></span>
   
 </li>
@@ -426,12 +463,12 @@ Load all of the default facts, and then everything from disk.
   
   
   
+  
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Allow users to call fact names directly on the Facter class, either
-retrieving the value or comparing it to an existing value.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Allow users to call fact names directly on the Facter class, either
+retrieving the value or comparing it to an existing value.</p>
 </div></span>
   
 </li>
@@ -451,11 +488,11 @@ retrieving the value or comparing it to an existing value.
   
   
   
+  
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Remove them all.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Remove them all.</p>
 </div></span>
   
 </li>
@@ -475,11 +512,11 @@ Remove them all.
   
   
   
+  
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Register a directory to search through.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Register a directory to search through.</p>
 </div></span>
   
 </li>
@@ -499,11 +536,11 @@ Register a directory to search through.
   
   
   
+  
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Return our registered search directories.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Return our registered search directories.</p>
 </div></span>
   
 </li>
@@ -523,11 +560,11 @@ Return our registered search directories.
   
   
   
+  
 
   
-    <span class="summary_desc"><div class='inline'><p>
-show the timing information.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>show the timing information.</p>
 </div></span>
   
 </li>
@@ -547,11 +584,11 @@ show the timing information.
   
   
   
+  
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Set timing on or off.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Set timing on or off.</p>
 </div></span>
   
 </li>
@@ -565,6 +602,7 @@ Set timing on or off.
 
     
   </span>
+  
   
   
   
@@ -592,11 +630,11 @@ Set timing on or off.
   
   
   
+  
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Return the version of the library.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Return the version of the library.</p>
 </div></span>
   
 </li>
@@ -610,6 +648,7 @@ Return the version of the library.
 
     
   </span>
+  
   
   
   
@@ -637,11 +676,11 @@ Return the version of the library.
   
   
   
+  
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Warn once.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Warn once.</p>
 </div></span>
   
 </li>
@@ -656,21 +695,22 @@ Warn once.
 
   <div id="class_method_details" class="method_details_list">
     <h2>Class Method Details</h2>
-    
+
     
       <div class="method_details first">
-  <p class="signature first" id="[]-class_method">
+  <h3 class="signature first" id="[]-class_method">
   
     + (<tt>Object</tt>) <strong>[]</strong>(name) 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-Return a fact object by name.  If you use this, you still have to call
-&#8216;value&#8217; on it to retrieve the actual value.
-</p>
+    
+<p>Return a fact object by name.  If you use this, you still have to call
+'value' on it to retrieve the actual value.</p>
 
 
   </div>
@@ -684,12 +724,12 @@ Return a fact object by name.  If you use this, you still have to call
       <pre class="lines">
 
 
-87
-88
-89</pre>
+97
+98
+99</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 87</span>
+      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 97</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='op'>[]</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_collection'>collection</span><span class='period'>.</span><span class='id identifier rubyid_fact'>fact</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
@@ -700,7 +740,7 @@ Return a fact object by name.  If you use this, you still have to call
 </div><table class="annotated_source_code">
   <tr>
     <td colspan="3" style="padding-left: 10px;">
-      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 87</span></pre>
+      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 97</span></pre>
     </td>
   </tr>
   
@@ -709,10 +749,10 @@ Return a fact object by name.  If you use this, you still have to call
         <span>  
       </td>
       <td class="line-numbers">
-        <pre class="lines" style="padding-right: 0px;">87
-88
-89
-90</pre>
+        <pre class="lines" style="padding-right: 0px;">97
+98
+99
+100</pre>
       </td>
       <td class="code">
         <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='op'>[]</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
@@ -725,18 +765,19 @@ Return a fact object by name.  If you use this, you still have to call
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="add-class_method">
+  <h3 class="signature " id="add-class_method">
   
     + (<tt>Object</tt>) <strong>add</strong>(name, options = {}, &amp;block) 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-Add a resolution mechanism for a named fact.  This does not distinguish
-between adding a new fact and adding a new way to resolve a fact.
-</p>
+    
+<p>Add a resolution mechanism for a named fact.  This does not distinguish
+between adding a new fact and adding a new way to resolve a fact.</p>
 
 
   </div>
@@ -750,12 +791,12 @@ between adding a new fact and adding a new way to resolve a fact.
       <pre class="lines">
 
 
-109
-110
-111</pre>
+119
+120
+121</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 109</span>
+      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 119</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_collection'>collection</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
@@ -766,7 +807,7 @@ between adding a new fact and adding a new way to resolve a fact.
 </div><table class="annotated_source_code">
   <tr>
     <td colspan="3" style="padding-left: 10px;">
-      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 109</span></pre>
+      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 119</span></pre>
     </td>
   </tr>
   
@@ -775,10 +816,10 @@ between adding a new fact and adding a new way to resolve a fact.
         <span>  
       </td>
       <td class="line-numbers">
-        <pre class="lines" style="padding-right: 0px;">109
-110
-111
-112</pre>
+        <pre class="lines" style="padding-right: 0px;">119
+120
+121
+122</pre>
       </td>
       <td class="code">
         <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
@@ -791,17 +832,18 @@ between adding a new fact and adding a new way to resolve a fact.
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="clear-class_method">
+  <h3 class="signature " id="clear-class_method">
   
     + (<tt>Object</tt>) <strong>clear</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-Clear all facts.  Mostly used for testing.
-</p>
+    
+<p>Clear all facts.  Mostly used for testing.</p>
 
 
   </div>
@@ -815,13 +857,13 @@ Clear all facts.  Mostly used for testing.
       <pre class="lines">
 
 
-154
-155
-156
-157</pre>
+164
+165
+166
+167</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 154</span>
+      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 164</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_clear'>clear</span>
   <span class='const'>Facter</span><span class='period'>.</span><span class='id identifier rubyid_flush'>flush</span>
@@ -833,7 +875,7 @@ Clear all facts.  Mostly used for testing.
 </div><table class="annotated_source_code">
   <tr>
     <td colspan="3" style="padding-left: 10px;">
-      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 154</span></pre>
+      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 164</span></pre>
     </td>
   </tr>
   
@@ -842,11 +884,11 @@ Clear all facts.  Mostly used for testing.
         <span>  
       </td>
       <td class="line-numbers">
-        <pre class="lines" style="padding-right: 0px;">154
-155
-156
-157
-158</pre>
+        <pre class="lines" style="padding-right: 0px;">164
+165
+166
+167
+168</pre>
       </td>
       <td class="code">
         <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_clear'>clear</span>
@@ -860,19 +902,19 @@ Clear all facts.  Mostly used for testing.
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="clear_messages-class_method">
+  <h3 class="signature " id="clear_messages-class_method">
   
     + (<tt>Object</tt>) <strong>clear_messages</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-Clear all messages. Used only in testing. Can&#8217;t add to self.clear
-because we don&#8217;t want to warn multiple times for items that are
-warnonce&#8217;d
-</p>
+    
+<p>Clear all messages. Used only in testing. Can't add to self.clear because
+we don't want to warn multiple times for items that are warnonce'd</p>
 
 
   </div>
@@ -886,12 +928,12 @@ warnonce&#8217;d
       <pre class="lines">
 
 
-161
-162
-163</pre>
+171
+172
+173</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 161</span>
+      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 171</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_clear_messages'>clear_messages</span>
   <span class='cvar'>@@messages</span><span class='period'>.</span><span class='id identifier rubyid_clear'>clear</span>
@@ -902,7 +944,7 @@ warnonce&#8217;d
 </div><table class="annotated_source_code">
   <tr>
     <td colspan="3" style="padding-left: 10px;">
-      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 161</span></pre>
+      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 171</span></pre>
     </td>
   </tr>
   
@@ -911,10 +953,10 @@ warnonce&#8217;d
         <span>  
       </td>
       <td class="line-numbers">
-        <pre class="lines" style="padding-right: 0px;">161
-162
-163
-164</pre>
+        <pre class="lines" style="padding-right: 0px;">171
+172
+173
+174</pre>
       </td>
       <td class="code">
         <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_clear_messages'>clear_messages</span>
@@ -927,17 +969,18 @@ warnonce&#8217;d
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="collection-class_method">
+  <h3 class="signature " id="collection-class_method">
   
     + (<tt>Object</tt>) <strong>collection</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-module methods
-</p>
+    
+<p>module methods</p>
 
 
   </div>
@@ -951,15 +994,15 @@ module methods
       <pre class="lines">
 
 
-50
-51
 52
 53
 54
-55</pre>
+55
+56
+57</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 50</span>
+      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 52</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_collection'>collection</span>
   <span class='kw'>unless</span> <span class='kw'>defined?</span><span class='lparen'>(</span><span class='ivar'>@collection</span><span class='rparen'>)</span> <span class='kw'>and</span> <span class='ivar'>@collection</span>
@@ -973,7 +1016,7 @@ module methods
 </div><table class="annotated_source_code">
   <tr>
     <td colspan="3" style="padding-left: 10px;">
-      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 50</span></pre>
+      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 52</span></pre>
     </td>
   </tr>
   
@@ -982,13 +1025,13 @@ module methods
         <span>  
       </td>
       <td class="line-numbers">
-        <pre class="lines" style="padding-right: 0px;">50
-51
-52
+        <pre class="lines" style="padding-right: 0px;">52
 53
 54
 55
-56</pre>
+56
+57
+58</pre>
       </td>
       <td class="code">
         <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_collection'>collection</span>
@@ -1004,17 +1047,18 @@ module methods
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="debug-class_method">
+  <h3 class="signature " id="debug-class_method">
   
     + (<tt>Object</tt>) <strong>debug</strong>(string) 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-Add some debugging
-</p>
+    
+<p>Add some debugging</p>
 
 
   </div>
@@ -1028,17 +1072,17 @@ Add some debugging
       <pre class="lines">
 
 
-63
-64
 65
 66
 67
 68
 69
-70</pre>
+70
+71
+72</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 63</span>
+      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 65</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_string'>string</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -1054,7 +1098,7 @@ Add some debugging
 </div><table class="annotated_source_code">
   <tr>
     <td colspan="3" style="padding-left: 10px;">
-      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 63</span></pre>
+      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 65</span></pre>
     </td>
   </tr>
   
@@ -1063,15 +1107,15 @@ Add some debugging
         <span>  
       </td>
       <td class="line-numbers">
-        <pre class="lines" style="padding-right: 0px;">63
-64
-65
+        <pre class="lines" style="padding-right: 0px;">65
 66
 67
 68
 69
 70
-71</pre>
+71
+72
+73</pre>
       </td>
       <td class="code">
         <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span>
@@ -1089,17 +1133,18 @@ Add some debugging
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="debugging-class_method">
+  <h3 class="signature " id="debugging-class_method">
   
     + (<tt>Object</tt>) <strong>debugging</strong>(bit) 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-Set debugging on or off.
-</p>
+    
+<p>Set debugging on or off.</p>
 
 
   </div>
@@ -1113,16 +1158,6 @@ Set debugging on or off.
       <pre class="lines">
 
 
-166
-167
-168
-169
-170
-171
-172
-173
-174
-175
 176
 177
 178
@@ -1136,10 +1171,20 @@ Set debugging on or off.
 186
 187
 188
-189</pre>
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 166</span>
+      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 176</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_debugging'>debugging</span><span class='lparen'>(</span><span class='id identifier rubyid_bit'>bit</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_bit'>bit</span>
@@ -1171,7 +1216,7 @@ Set debugging on or off.
 </div><table class="annotated_source_code">
   <tr>
     <td colspan="3" style="padding-left: 10px;">
-      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 166</span></pre>
+      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 176</span></pre>
     </td>
   </tr>
   
@@ -1180,17 +1225,7 @@ Set debugging on or off.
         <span>  
       </td>
       <td class="line-numbers">
-        <pre class="lines" style="padding-right: 0px;">166
-167
-168
-169
-170
-171
-172
-173
-174
-175
-176
+        <pre class="lines" style="padding-right: 0px;">176
 177
 178
 179
@@ -1204,7 +1239,17 @@ Set debugging on or off.
 187
 188
 189
-190</pre>
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200</pre>
       </td>
       <td class="code">
         <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_debugging'>debugging</span><span class='lparen'>(</span><span class='id identifier rubyid_bit'>bit</span><span class='rparen'>)</span>
@@ -1238,13 +1283,15 @@ Set debugging on or off.
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="debugging?-class_method">
+  <h3 class="signature " id="debugging?-class_method">
   
     + (<tt>Boolean</tt>) <strong>debugging?</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     
 
@@ -1252,7 +1299,7 @@ Set debugging on or off.
 </div>
 <div class="tags">
   
-<h3>Returns:</h3>
+<p class="tag_title">Returns:</p>
 <ul class="return">
   
     <li>
@@ -1272,12 +1319,12 @@ Set debugging on or off.
       <pre class="lines">
 
 
-72
-73
-74</pre>
+82
+83
+84</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 72</span>
+      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 82</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_debugging?'>debugging?</span>
   <span class='cvar'>@@debug</span> <span class='op'>!=</span> <span class='int'>0</span>
@@ -1288,7 +1335,7 @@ Set debugging on or off.
 </div><table class="annotated_source_code">
   <tr>
     <td colspan="3" style="padding-left: 10px;">
-      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 72</span></pre>
+      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 82</span></pre>
     </td>
   </tr>
   
@@ -1297,10 +1344,10 @@ Set debugging on or off.
         <span>  
       </td>
       <td class="line-numbers">
-        <pre class="lines" style="padding-right: 0px;">72
-73
-74
-75</pre>
+        <pre class="lines" style="padding-right: 0px;">82
+83
+84
+85</pre>
       </td>
       <td class="code">
         <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_debugging?'>debugging?</span>
@@ -1313,29 +1360,109 @@ Set debugging on or off.
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="each-class_method">
+  <h3 class="signature " id="debugonce-class_method">
   
-    + (<tt>Object</tt>) <strong>each</strong> 
+    + (<tt>Object</tt>) <strong>debugonce</strong>(msg) 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Debug once.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-113
-114
-115
-116
-117
-118
-119
-120</pre>
+75
+76
+77
+78
+79
+80</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 113</span>
+      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 75</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_debugonce'>debugonce</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_msg'>msg</span> <span class='kw'>and</span> <span class='kw'>not</span> <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span> <span class='kw'>and</span> <span class='cvar'>@@debug_messages</span><span class='lbracket'>[</span><span class='id identifier rubyid_msg'>msg</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='cvar'>@@debug_messages</span><span class='lbracket'>[</span><span class='id identifier rubyid_msg'>msg</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='rparen'>)</span> 
+  <span class='kw'>end</span> 
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div><table class="annotated_source_code">
+  <tr>
+    <td colspan="3" style="padding-left: 10px;">
+      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 75</span></pre>
+    </td>
+  </tr>
+  
+    <tr>
+      <td class="comment">
+        <span>  
+      </td>
+      <td class="line-numbers">
+        <pre class="lines" style="padding-right: 0px;">75
+76
+77
+78
+79
+80
+81</pre>
+      </td>
+      <td class="code">
+        <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_debugonce'>debugonce</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_msg'>msg</span> <span class='kw'>and</span> <span class='kw'>not</span> <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span> <span class='kw'>and</span> <span class='cvar'>@@debug_messages</span><span class='lbracket'>[</span><span class='id identifier rubyid_msg'>msg</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='cvar'>@@debug_messages</span><span class='lbracket'>[</span><span class='id identifier rubyid_msg'>msg</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='rparen'>)</span> 
+  <span class='kw'>end</span> 
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  
+
+</table>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="each-class_method">
+  
+    + (<tt>Object</tt>) <strong>each</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+123
+124
+125
+126
+127
+128
+129
+130</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 123</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span>
   <span class='comment'># Make sure all facts are loaded.
@@ -1351,7 +1478,7 @@ Set debugging on or off.
 </div><table class="annotated_source_code">
   <tr>
     <td colspan="3" style="padding-left: 10px;">
-      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 113</span></pre>
+      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 123</span></pre>
     </td>
   </tr>
   
@@ -1360,8 +1487,8 @@ Set debugging on or off.
         <span>  
       </td>
       <td class="line-numbers">
-        <pre class="lines" style="padding-right: 0px;">113
-114</pre>
+        <pre class="lines" style="padding-right: 0px;">123
+124</pre>
       </td>
       <td class="code">
         <pre class="code"><span class="info file">def self.each</pre>
@@ -1372,9 +1499,8 @@ Set debugging on or off.
       <td class="comment">
         <span><div class="docstring">
   <div class="discussion">
-    <p>
-Make sure all facts are loaded.
-</p>
+    
+<p>Make sure all facts are loaded.</p>
 
 
   </div>
@@ -1385,13 +1511,13 @@ Make sure all facts are loaded.
 </div>  
       </td>
       <td class="line-numbers">
-        <pre class="lines" style="padding-right: 0px;">115
-116
-117
-118
-119
-120
-121</pre>
+        <pre class="lines" style="padding-right: 0px;">125
+126
+127
+128
+129
+130
+131</pre>
       </td>
       <td class="code">
         <pre class="code"><span class="info file">  collection.load_all
@@ -1407,17 +1533,18 @@ end</pre>
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="loadfacts-class_method">
+  <h3 class="signature " id="loadfacts-class_method">
   
     + (<tt>Object</tt>) <strong>loadfacts</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-Load all of the default facts, and then everything from disk.
-</p>
+    
+<p>Load all of the default facts, and then everything from disk.</p>
 
 
   </div>
@@ -1431,12 +1558,12 @@ Load all of the default facts, and then everything from disk.
       <pre class="lines">
 
 
-229
-230
-231</pre>
+239
+240
+241</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 229</span>
+      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 239</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_loadfacts'>loadfacts</span>
   <span class='id identifier rubyid_collection'>collection</span><span class='period'>.</span><span class='id identifier rubyid_load_all'>load_all</span>
@@ -1447,7 +1574,7 @@ Load all of the default facts, and then everything from disk.
 </div><table class="annotated_source_code">
   <tr>
     <td colspan="3" style="padding-left: 10px;">
-      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 229</span></pre>
+      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 239</span></pre>
     </td>
   </tr>
   
@@ -1456,10 +1583,10 @@ Load all of the default facts, and then everything from disk.
         <span>  
       </td>
       <td class="line-numbers">
-        <pre class="lines" style="padding-right: 0px;">229
-230
-231
-232</pre>
+        <pre class="lines" style="padding-right: 0px;">239
+240
+241
+242</pre>
       </td>
       <td class="code">
         <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_loadfacts'>loadfacts</span>
@@ -1472,18 +1599,19 @@ Load all of the default facts, and then everything from disk.
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="method_missing-class_method">
+  <h3 class="signature " id="method_missing-class_method">
   
     + (<tt>Object</tt>) <strong>method_missing</strong>(name, *args) 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-Allow users to call fact names directly on the Facter class, either
-retrieving the value or comparing it to an existing value.
-</p>
+    
+<p>Allow users to call fact names directly on the Facter class, either
+retrieving the value or comparing it to an existing value.</p>
 
 
   </div>
@@ -1497,16 +1625,6 @@ retrieving the value or comparing it to an existing value.
       <pre class="lines">
 
 
-125
-126
-127
-128
-129
-130
-131
-132
-133
-134
 135
 136
 137
@@ -1522,10 +1640,20 @@ retrieving the value or comparing it to an existing value.
 147
 148
 149
-150</pre>
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 125</span>
+      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 135</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_method_missing'>method_missing</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_question'>question</span> <span class='op'>=</span> <span class='kw'>false</span>
@@ -1559,7 +1687,7 @@ retrieving the value or comparing it to an existing value.
 </div><table class="annotated_source_code">
   <tr>
     <td colspan="3" style="padding-left: 10px;">
-      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 125</span></pre>
+      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 135</span></pre>
     </td>
   </tr>
   
@@ -1568,23 +1696,23 @@ retrieving the value or comparing it to an existing value.
         <span>  
       </td>
       <td class="line-numbers">
-        <pre class="lines" style="padding-right: 0px;">125
-126
-127
-128
-129
-130
-131
-132
-133
-134
-135
+        <pre class="lines" style="padding-right: 0px;">135
 136
 137
 138
 139
 140
-141</pre>
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151</pre>
       </td>
       <td class="code">
         <pre class="code"><span class="info file">def method_missing(name, *args)
@@ -1610,9 +1738,8 @@ retrieving the value or comparing it to an existing value.
       <td class="comment">
         <span><div class="docstring">
   <div class="discussion">
-    <p>
-If we got this far, there was no match.
-</p>
+    
+<p>If we got this far, there was no match.</p>
 
 
   </div>
@@ -1623,12 +1750,12 @@ If we got this far, there was no match.
 </div>  
       </td>
       <td class="line-numbers">
-        <pre class="lines" style="padding-right: 0px;">142
-143
-144
-145
-146
-147</pre>
+        <pre class="lines" style="padding-right: 0px;">152
+153
+154
+155
+156
+157</pre>
       </td>
       <td class="code">
         <pre class="code"><span class="info file">      return false
@@ -1643,9 +1770,8 @@ If we got this far, there was no match.
       <td class="comment">
         <span><div class="docstring">
   <div class="discussion">
-    <p>
-Else, fail like a normal missing method.
-</p>
+    
+<p>Else, fail like a normal missing method.</p>
 
 
   </div>
@@ -1656,10 +1782,10 @@ Else, fail like a normal missing method.
 </div>  
       </td>
       <td class="line-numbers">
-        <pre class="lines" style="padding-right: 0px;">148
-149
-150
-151</pre>
+        <pre class="lines" style="padding-right: 0px;">158
+159
+160
+161</pre>
       </td>
       <td class="code">
         <pre class="code"><span class="info file">    raise NoMethodError, &quot;Could not find fact '%s'&quot; % name
@@ -1672,17 +1798,18 @@ end</pre>
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="reset-class_method">
+  <h3 class="signature " id="reset-class_method">
   
     + (<tt>Object</tt>) <strong>reset</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-Remove them all.
-</p>
+    
+<p>Remove them all.</p>
 
 
   </div>
@@ -1696,12 +1823,12 @@ Remove them all.
       <pre class="lines">
 
 
-224
-225
-226</pre>
+234
+235
+236</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 224</span>
+      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 234</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_reset'>reset</span>
   <span class='ivar'>@collection</span> <span class='op'>=</span> <span class='kw'>nil</span>
@@ -1712,7 +1839,7 @@ Remove them all.
 </div><table class="annotated_source_code">
   <tr>
     <td colspan="3" style="padding-left: 10px;">
-      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 224</span></pre>
+      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 234</span></pre>
     </td>
   </tr>
   
@@ -1721,10 +1848,10 @@ Remove them all.
         <span>  
       </td>
       <td class="line-numbers">
-        <pre class="lines" style="padding-right: 0px;">224
-225
-226
-227</pre>
+        <pre class="lines" style="padding-right: 0px;">234
+235
+236
+237</pre>
       </td>
       <td class="code">
         <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_reset'>reset</span>
@@ -1737,17 +1864,18 @@ Remove them all.
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="search-class_method">
+  <h3 class="signature " id="search-class_method">
   
     + (<tt>Object</tt>) <strong>search</strong>(*dirs) 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-Register a directory to search through.
-</p>
+    
+<p>Register a directory to search through.</p>
 
 
   </div>
@@ -1761,12 +1889,12 @@ Register a directory to search through.
       <pre class="lines">
 
 
-236
-237
-238</pre>
+246
+247
+248</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 236</span>
+      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 246</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_search'>search</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_dirs'>dirs</span><span class='rparen'>)</span>
   <span class='ivar'>@search_path</span> <span class='op'>+=</span> <span class='id identifier rubyid_dirs'>dirs</span>
@@ -1777,7 +1905,7 @@ Register a directory to search through.
 </div><table class="annotated_source_code">
   <tr>
     <td colspan="3" style="padding-left: 10px;">
-      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 236</span></pre>
+      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 246</span></pre>
     </td>
   </tr>
   
@@ -1786,10 +1914,10 @@ Register a directory to search through.
         <span>  
       </td>
       <td class="line-numbers">
-        <pre class="lines" style="padding-right: 0px;">236
-237
-238
-239</pre>
+        <pre class="lines" style="padding-right: 0px;">246
+247
+248
+249</pre>
       </td>
       <td class="code">
         <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_search'>search</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_dirs'>dirs</span><span class='rparen'>)</span>
@@ -1802,17 +1930,18 @@ Register a directory to search through.
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="search_path-class_method">
+  <h3 class="signature " id="search_path-class_method">
   
     + (<tt>Object</tt>) <strong>search_path</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-Return our registered search directories.
-</p>
+    
+<p>Return our registered search directories.</p>
 
 
   </div>
@@ -1826,12 +1955,12 @@ Return our registered search directories.
       <pre class="lines">
 
 
-241
-242
-243</pre>
+251
+252
+253</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 241</span>
+      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 251</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_search_path'>search_path</span>
   <span class='ivar'>@search_path</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
@@ -1842,7 +1971,7 @@ Return our registered search directories.
 </div><table class="annotated_source_code">
   <tr>
     <td colspan="3" style="padding-left: 10px;">
-      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 241</span></pre>
+      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 251</span></pre>
     </td>
   </tr>
   
@@ -1851,10 +1980,10 @@ Return our registered search directories.
         <span>  
       </td>
       <td class="line-numbers">
-        <pre class="lines" style="padding-right: 0px;">241
-242
-243
-244</pre>
+        <pre class="lines" style="padding-right: 0px;">251
+252
+253
+254</pre>
       </td>
       <td class="code">
         <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_search_path'>search_path</span>
@@ -1867,17 +1996,18 @@ Return our registered search directories.
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="show_time-class_method">
+  <h3 class="signature " id="show_time-class_method">
   
     + (<tt>Object</tt>) <strong>show_time</strong>(string) 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-show the timing information
-</p>
+    
+<p>show the timing information</p>
 
 
   </div>
@@ -1891,12 +2021,12 @@ show the timing information
       <pre class="lines">
 
 
-77
-78
-79</pre>
+87
+88
+89</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 77</span>
+      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 87</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_show_time'>show_time</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'>GREEN</span><span class='rbrace'>}</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_string'>string</span><span class='rbrace'>}</span><span class='embexpr_beg'>#{</span><span class='const'>RESET</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_string'>string</span> <span class='kw'>and</span> <span class='const'>Facter</span><span class='period'>.</span><span class='id identifier rubyid_timing?'>timing?</span>
@@ -1907,7 +2037,7 @@ show the timing information
 </div><table class="annotated_source_code">
   <tr>
     <td colspan="3" style="padding-left: 10px;">
-      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 77</span></pre>
+      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 87</span></pre>
     </td>
   </tr>
   
@@ -1916,10 +2046,10 @@ show the timing information
         <span>  
       </td>
       <td class="line-numbers">
-        <pre class="lines" style="padding-right: 0px;">77
-78
-79
-80</pre>
+        <pre class="lines" style="padding-right: 0px;">87
+88
+89
+90</pre>
       </td>
       <td class="code">
         <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_show_time'>show_time</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span>
@@ -1932,17 +2062,18 @@ show the timing information
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="timing-class_method">
+  <h3 class="signature " id="timing-class_method">
   
     + (<tt>Object</tt>) <strong>timing</strong>(bit) 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-Set timing on or off.
-</p>
+    
+<p>Set timing on or off.</p>
 
 
   </div>
@@ -1956,24 +2087,24 @@ Set timing on or off.
       <pre class="lines">
 
 
-192
-193
-194
-195
-196
-197
-198
-199
-200
-201
 202
 203
 204
 205
-206</pre>
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 192</span>
+      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 202</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_timing'>timing</span><span class='lparen'>(</span><span class='id identifier rubyid_bit'>bit</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_bit'>bit</span>
@@ -1996,7 +2127,7 @@ Set timing on or off.
 </div><table class="annotated_source_code">
   <tr>
     <td colspan="3" style="padding-left: 10px;">
-      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 192</span></pre>
+      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 202</span></pre>
     </td>
   </tr>
   
@@ -2005,22 +2136,22 @@ Set timing on or off.
         <span>  
       </td>
       <td class="line-numbers">
-        <pre class="lines" style="padding-right: 0px;">192
-193
-194
-195
-196
-197
-198
-199
-200
-201
-202
+        <pre class="lines" style="padding-right: 0px;">202
 203
 204
 205
 206
-207</pre>
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217</pre>
       </td>
       <td class="code">
         <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_timing'>timing</span><span class='lparen'>(</span><span class='id identifier rubyid_bit'>bit</span><span class='rparen'>)</span>
@@ -2045,13 +2176,15 @@ Set timing on or off.
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="timing?-class_method">
+  <h3 class="signature " id="timing?-class_method">
   
     + (<tt>Boolean</tt>) <strong>timing?</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     
 
@@ -2059,7 +2192,7 @@ Set timing on or off.
 </div>
 <div class="tags">
   
-<h3>Returns:</h3>
+<p class="tag_title">Returns:</p>
 <ul class="return">
   
     <li>
@@ -2079,12 +2212,12 @@ Set timing on or off.
       <pre class="lines">
 
 
-81
-82
-83</pre>
+91
+92
+93</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 81</span>
+      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 91</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_timing?'>timing?</span>
   <span class='cvar'>@@timing</span> <span class='op'>!=</span> <span class='int'>0</span>
@@ -2095,7 +2228,7 @@ Set timing on or off.
 </div><table class="annotated_source_code">
   <tr>
     <td colspan="3" style="padding-left: 10px;">
-      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 81</span></pre>
+      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 91</span></pre>
     </td>
   </tr>
   
@@ -2104,10 +2237,10 @@ Set timing on or off.
         <span>  
       </td>
       <td class="line-numbers">
-        <pre class="lines" style="padding-right: 0px;">81
-82
-83
-84</pre>
+        <pre class="lines" style="padding-right: 0px;">91
+92
+93
+94</pre>
       </td>
       <td class="code">
         <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_timing?'>timing?</span>
@@ -2120,17 +2253,18 @@ Set timing on or off.
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="version-class_method">
+  <h3 class="signature " id="version-class_method">
   
     + (<tt>Object</tt>) <strong>version</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-Return the version of the library.
-</p>
+    
+<p>Return the version of the library.</p>
 
 
   </div>
@@ -2144,12 +2278,12 @@ Return the version of the library.
       <pre class="lines">
 
 
-58
-59
-60</pre>
+60
+61
+62</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 58</span>
+      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 60</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_version'>version</span>
   <span class='kw'>return</span> <span class='const'>FACTERVERSION</span>
@@ -2160,7 +2294,7 @@ Return the version of the library.
 </div><table class="annotated_source_code">
   <tr>
     <td colspan="3" style="padding-left: 10px;">
-      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 58</span></pre>
+      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 60</span></pre>
     </td>
   </tr>
   
@@ -2169,10 +2303,10 @@ Return the version of the library.
         <span>  
       </td>
       <td class="line-numbers">
-        <pre class="lines" style="padding-right: 0px;">58
-59
-60
-61</pre>
+        <pre class="lines" style="padding-right: 0px;">60
+61
+62
+63</pre>
       </td>
       <td class="code">
         <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_version'>version</span>
@@ -2185,27 +2319,29 @@ Return the version of the library.
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="warn-class_method">
+  <h3 class="signature " id="warn-class_method">
   
     + (<tt>Object</tt>) <strong>warn</strong>(msg) 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-208
-209
-210
-211
-212
-213</pre>
+218
+219
+220
+221
+222
+223</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 208</span>
+      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 218</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_warn'>warn</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='const'>Facter</span><span class='period'>.</span><span class='id identifier rubyid_debugging?'>debugging?</span> <span class='kw'>and</span> <span class='id identifier rubyid_msg'>msg</span> <span class='kw'>and</span> <span class='kw'>not</span> <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
@@ -2219,7 +2355,7 @@ Return the version of the library.
 </div><table class="annotated_source_code">
   <tr>
     <td colspan="3" style="padding-left: 10px;">
-      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 208</span></pre>
+      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 218</span></pre>
     </td>
   </tr>
   
@@ -2228,13 +2364,13 @@ Return the version of the library.
         <span>  
       </td>
       <td class="line-numbers">
-        <pre class="lines" style="padding-right: 0px;">208
-209
-210
-211
-212
-213
-214</pre>
+        <pre class="lines" style="padding-right: 0px;">218
+219
+220
+221
+222
+223
+224</pre>
       </td>
       <td class="code">
         <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_warn'>warn</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='rparen'>)</span>
@@ -2250,17 +2386,18 @@ Return the version of the library.
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="warnonce-class_method">
+  <h3 class="signature " id="warnonce-class_method">
   
     + (<tt>Object</tt>) <strong>warnonce</strong>(msg) 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-Warn once.
-</p>
+    
+<p>Warn once.</p>
 
 
   </div>
@@ -2274,15 +2411,15 @@ Warn once.
       <pre class="lines">
 
 
-216
-217
-218
-219
-220
-221</pre>
+226
+227
+228
+229
+230
+231</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 216</span>
+      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 226</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_warnonce'>warnonce</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_msg'>msg</span> <span class='kw'>and</span> <span class='kw'>not</span> <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span> <span class='kw'>and</span> <span class='cvar'>@@messages</span><span class='lbracket'>[</span><span class='id identifier rubyid_msg'>msg</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -2296,7 +2433,7 @@ Warn once.
 </div><table class="annotated_source_code">
   <tr>
     <td colspan="3" style="padding-left: 10px;">
-      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 216</span></pre>
+      <pre class="code"><span class="info file"># File 'lib/facter.rb', line 226</span></pre>
     </td>
   </tr>
   
@@ -2305,13 +2442,13 @@ Warn once.
         <span>  
       </td>
       <td class="line-numbers">
-        <pre class="lines" style="padding-right: 0px;">216
-217
-218
-219
-220
-221
-222</pre>
+        <pre class="lines" style="padding-right: 0px;">226
+227
+228
+229
+230
+231
+232</pre>
       </td>
       <td class="code">
         <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_warnonce'>warnonce</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='rparen'>)</span>
@@ -2329,11 +2466,11 @@ Warn once.
   </div>
 
 </div>
-    
+
     <div id="footer">
-  Generated on Tue Mar  6 18:16:46 2012 by 
+  Generated on Tue May 22 18:49:34 2012 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.7.5 (ruby-1.9.2).
+  0.8.1 (ruby-1.9.3).
 </div>
 
   </body>

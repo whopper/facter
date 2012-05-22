@@ -6,7 +6,7 @@
 <title>
   Class: Facter::Util::Fact
   
-    &mdash; Documentation by YARD 0.7.5
+    &mdash; Documentation by YARD 0.8.1
   
 </title>
 
@@ -17,9 +17,11 @@
   <link rel="stylesheet" href="../../css/docco.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  relpath = '../..';
-  if (relpath != '') relpath += '/';
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../../';
+  framesUrl = "../../frames.html#!" + escape(window.location.href);
 </script>
+
 
   <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
 
@@ -30,36 +32,41 @@
 
   </head>
   <body>
-    <script type="text/javascript" charset="utf-8">
-      if (window.top.frames.main) document.body.className = 'frames';
-    </script>
-    
     <div id="header">
       <div id="menu">
   
-    <a href="../../_index.html">Index (F)</a> &raquo; 
+    <a href="../../_index.html">Index (F)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../../Facter.html" title="Facter (module)">Facter</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Util.html" title="Facter::Util (module)">Util</a></span></span>
      &raquo; 
     <span class="title">Fact</span>
   
-  
+
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
       <div id="search">
   
-    <a id="class_list_link" href="#">Class List</a>
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+      Class List
+    </a>
   
-    <a id="method_list_link" href="#">Method List</a>
+    <a class="full_list_link" id="method_list_link"
+        href="../../method_list.html">
+      Method List
+    </a>
   
-    <a id="file_list_link" href="#">File List</a>
+    <a class="full_list_link" id="file_list_link"
+        href="../../file_list.html">
+      File List
+    </a>
   
 </div>
       <div class="clear"></div>
     </div>
-    
+
     <iframe id="search_frame"></iframe>
-    
+
     <div id="content"><h1>Class: Facter::Util::Fact
   
   
@@ -125,6 +132,7 @@
   </span>
   
   
+  
     
     
   
@@ -134,9 +142,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Returns the value of attribute ldapname.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute ldapname.</p>
 </div></span>
   
 </li>
@@ -152,6 +159,7 @@ Returns the value of attribute ldapname.
   </span>
   
   
+  
     
     
   
@@ -161,9 +169,8 @@ Returns the value of attribute ldapname.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Returns the value of attribute name.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute name.</p>
 </div></span>
   
 </li>
@@ -196,11 +203,11 @@ Returns the value of attribute name.
   
   
   
+  
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Add a new resolution mechanism.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Add a new resolution mechanism.</p>
 </div></span>
   
 </li>
@@ -220,11 +227,11 @@ Add a new resolution mechanism.
   
   
   
+  
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Flush any cached values.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Flush any cached values.</p>
 </div></span>
   
 </li>
@@ -239,6 +246,7 @@ Flush any cached values.
     
   </span>
   
+  
     <span class="note title constructor">constructor</span>
   
   
@@ -248,9 +256,8 @@ Flush any cached values.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Create a new fact, with no resolution mechanisms.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Create a new fact, with no resolution mechanisms.</p>
 </div></span>
   
 </li>
@@ -270,11 +277,11 @@ Create a new fact, with no resolution mechanisms.
   
   
   
+  
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Return the value for a given fact.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Return the value for a given fact.</p>
 </div></span>
   
 </li>
@@ -287,17 +294,18 @@ Return the value for a given fact.
   <h2>Constructor Details</h2>
   
     <div class="method_details first">
-  <p class="signature first" id="initialize-instance_method">
+  <h3 class="signature first" id="initialize-instance_method">
   
     - (<tt><span class='object_link'><a href="" title="Facter::Util::Fact (class)">Fact</a></span></tt>) <strong>initialize</strong>(name, options = {}) 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-Create a new fact, with no resolution mechanisms.
-</p>
+    
+<p>Create a new fact, with no resolution mechanisms.</p>
 
 
   </div>
@@ -386,11 +394,10 @@ Create a new fact, with no resolution mechanisms.
       <td class="comment">
         <span><div class="docstring">
   <div class="discussion">
-    <p>
-LAK:NOTE: This is slow for many options, but generally we won&#8217;t have
-any and at worst we&#8217;ll have one.  If we add more, this should be made
-more efficient.
-</p>
+    
+<p>LAK:NOTE: This is slow for many options, but generally we won't have any
+and at worst we'll have one.  If we add more, this should be made more
+efficient.</p>
 
 
   </div>
@@ -449,17 +456,18 @@ end</pre>
       <span id="ldapname=-instance_method"></span>
       <span id="ldapname-instance_method"></span>
       <div class="method_details first">
-  <p class="signature first" id="ldapname-instance_method">
+  <h3 class="signature first" id="ldapname-instance_method">
   
     - (<tt>Object</tt>) <strong>ldapname</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-Returns the value of attribute ldapname
-</p>
+    
+<p>Returns the value of attribute ldapname</p>
 
 
   </div>
@@ -517,17 +525,18 @@ Returns the value of attribute ldapname
       <span id="name=-instance_method"></span>
       <span id="name-instance_method"></span>
       <div class="method_details ">
-  <p class="signature " id="name-instance_method">
+  <h3 class="signature " id="name-instance_method">
   
     - (<tt>Object</tt>) <strong>name</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-Returns the value of attribute name
-</p>
+    
+<p>Returns the value of attribute name</p>
 
 
   </div>
@@ -586,21 +595,22 @@ Returns the value of attribute name
 
   <div id="instance_method_details" class="method_details_list">
     <h2>Instance Method Details</h2>
-    
+
     
       <div class="method_details first">
-  <p class="signature first" id="add-instance_method">
+  <h3 class="signature first" id="add-instance_method">
   
     - (<tt>Object</tt>) <strong>add</strong>(value = nil, &amp;block) 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-Add a new resolution mechanism.  This requires a block, which will then be
-evaluated in the context of the new mechanism.
-</p>
+    
+<p>Add a new resolution mechanism.  This requires a block, which will then be
+evaluated in the context of the new mechanism.</p>
 
 
   </div>
@@ -691,10 +701,9 @@ evaluated in the context of the new mechanism.
       <td class="comment">
         <span><div class="docstring">
   <div class="discussion">
-    <p>
-Immediately sort the resolutions, so that we always have a sorted list for
-looking up values.
-</p>
+    
+<p>Immediately sort the resolutions, so that we always have a sorted list for
+looking up values.</p>
 
 
   </div>
@@ -731,17 +740,18 @@ end</pre>
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="flush-instance_method">
+  <h3 class="signature " id="flush-instance_method">
   
     - (<tt>Object</tt>) <strong>flush</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-Flush any cached values.
-</p>
+    
+<p>Flush any cached values.</p>
 
 
   </div>
@@ -800,18 +810,19 @@ Flush any cached values.
 </table>
     
       <div class="method_details ">
-  <p class="signature " id="value-instance_method">
+  <h3 class="signature " id="value-instance_method">
   
     - (<tt>Object</tt>) <strong>value</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>
-Return the value for a given fact.  Searches through all of the mechanisms
-and returns either the first value or nil.
-</p>
+    
+<p>Return the value for a given fact.  Searches through all of the mechanisms
+and returns either the first value or nil.</p>
 
 
   </div>
@@ -976,9 +987,8 @@ and returns either the first value or nil.
       <td class="comment">
         <span><div class="docstring">
   <div class="discussion">
-    <p>
-nothing
-</p>
+    
+<p>nothing</p>
 
 
   </div>
@@ -1013,11 +1023,11 @@ end</pre>
   </div>
 
 </div>
-    
+
     <div id="footer">
-  Generated on Tue Mar  6 18:16:46 2012 by 
+  Generated on Tue May 22 18:49:35 2012 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.7.5 (ruby-1.9.2).
+  0.8.1 (ruby-1.9.3).
 </div>
 
   </body>
