@@ -431,12 +431,12 @@ around a hash of facts.</p>
       <pre class="lines">
 
 
-89
-90
-91</pre>
+93
+94
+95</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/facter/util/collection.rb', line 89</span>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/collection.rb', line 93</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span>
   <span class='ivar'>@facts</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
@@ -447,7 +447,7 @@ around a hash of facts.</p>
 </div><table class="annotated_source_code">
   <tr>
     <td colspan="3" style="padding-left: 10px;">
-      <pre class="code"><span class="info file"># File 'lib/facter/util/collection.rb', line 89</span></pre>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/collection.rb', line 93</span></pre>
     </td>
   </tr>
   
@@ -456,10 +456,10 @@ around a hash of facts.</p>
         <span>  
       </td>
       <td class="line-numbers">
-        <pre class="lines" style="padding-right: 0px;">89
-90
-91
-92</pre>
+        <pre class="lines" style="padding-right: 0px;">93
+94
+95
+96</pre>
       </td>
       <td class="code">
         <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span>
@@ -950,7 +950,11 @@ end</pre>
 79
 80
 81
-82</pre>
+82
+83
+84
+85
+86</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/facter/util/collection.rb', line 72</span>
@@ -964,6 +968,10 @@ end</pre>
   <span class='comment'># Try HARDER
 </span>  <span class='id identifier rubyid_loader'>loader</span><span class='period'>.</span><span class='id identifier rubyid_load_all'>load_all</span> <span class='kw'>unless</span> <span class='ivar'>@facts</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span>
 
+  <span class='kw'>if</span> <span class='ivar'>@facts</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span> 
+    <span class='const'>Facter</span><span class='period'>.</span><span class='id identifier rubyid_warnonce'>warnonce</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>No facts loaded from </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_loader'>loader</span><span class='period'>.</span><span class='id identifier rubyid_search_path'>search_path</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='const'>File</span><span class='op'>::</span><span class='const'>PATH_SEPARATOR</span><span class='rparen'>)</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+    
   <span class='ivar'>@facts</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1039,11 +1047,19 @@ end</pre>
 80
 81
 82
-83</pre>
+83
+84
+85
+86
+87</pre>
       </td>
       <td class="code">
         <pre class="code"><span class="info file">  loader.load_all unless @facts[name]
 
+  if @facts.empty? 
+    Facter.warnonce(&quot;No facts loaded from #{loader.search_path.join(File::PATH_SEPARATOR)}&quot;)
+  end
+    
   @facts[name]
 end</pre>
       </td>
@@ -1078,12 +1094,12 @@ end</pre>
       <pre class="lines">
 
 
-85
-86
-87</pre>
+89
+90
+91</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/facter/util/collection.rb', line 85</span>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/collection.rb', line 89</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_flush'>flush</span>
   <span class='ivar'>@facts</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_fact'>fact</span><span class='op'>|</span> <span class='id identifier rubyid_fact'>fact</span><span class='period'>.</span><span class='id identifier rubyid_flush'>flush</span> <span class='rbrace'>}</span>
@@ -1094,7 +1110,7 @@ end</pre>
 </div><table class="annotated_source_code">
   <tr>
     <td colspan="3" style="padding-left: 10px;">
-      <pre class="code"><span class="info file"># File 'lib/facter/util/collection.rb', line 85</span></pre>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/collection.rb', line 89</span></pre>
     </td>
   </tr>
   
@@ -1103,10 +1119,10 @@ end</pre>
         <span>  
       </td>
       <td class="line-numbers">
-        <pre class="lines" style="padding-right: 0px;">85
-86
-87
-88</pre>
+        <pre class="lines" style="padding-right: 0px;">89
+90
+91
+92</pre>
       </td>
       <td class="code">
         <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='id identifier rubyid_flush'>flush</span>
@@ -1144,12 +1160,12 @@ end</pre>
       <pre class="lines">
 
 
-94
-95
-96</pre>
+98
+99
+100</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/facter/util/collection.rb', line 94</span>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/collection.rb', line 98</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_list'>list</span>
   <span class='kw'>return</span> <span class='ivar'>@facts</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span>
@@ -1160,7 +1176,7 @@ end</pre>
 </div><table class="annotated_source_code">
   <tr>
     <td colspan="3" style="padding-left: 10px;">
-      <pre class="code"><span class="info file"># File 'lib/facter/util/collection.rb', line 94</span></pre>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/collection.rb', line 98</span></pre>
     </td>
   </tr>
   
@@ -1169,10 +1185,10 @@ end</pre>
         <span>  
       </td>
       <td class="line-numbers">
-        <pre class="lines" style="padding-right: 0px;">94
-95
-96
-97</pre>
+        <pre class="lines" style="padding-right: 0px;">98
+99
+100
+101</pre>
       </td>
       <td class="code">
         <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='id identifier rubyid_list'>list</span>
@@ -1210,12 +1226,12 @@ end</pre>
       <pre class="lines">
 
 
-99
-100
-101</pre>
+103
+104
+105</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/facter/util/collection.rb', line 99</span>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/collection.rb', line 103</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_load_all'>load_all</span>
   <span class='id identifier rubyid_loader'>loader</span><span class='period'>.</span><span class='id identifier rubyid_load_all'>load_all</span>
@@ -1226,7 +1242,7 @@ end</pre>
 </div><table class="annotated_source_code">
   <tr>
     <td colspan="3" style="padding-left: 10px;">
-      <pre class="code"><span class="info file"># File 'lib/facter/util/collection.rb', line 99</span></pre>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/collection.rb', line 103</span></pre>
     </td>
   </tr>
   
@@ -1235,10 +1251,10 @@ end</pre>
         <span>  
       </td>
       <td class="line-numbers">
-        <pre class="lines" style="padding-right: 0px;">99
-100
-101
-102</pre>
+        <pre class="lines" style="padding-right: 0px;">103
+104
+105
+106</pre>
       </td>
       <td class="code">
         <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='id identifier rubyid_load_all'>load_all</span>
@@ -1276,15 +1292,15 @@ end</pre>
       <pre class="lines">
 
 
-104
-105
-106
-107
 108
-109</pre>
+109
+110
+111
+112
+113</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/facter/util/collection.rb', line 104</span>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/collection.rb', line 108</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_loader'>loader</span>
   <span class='kw'>unless</span> <span class='kw'>defined?</span><span class='lparen'>(</span><span class='ivar'>@loader</span><span class='rparen'>)</span>
@@ -1298,7 +1314,7 @@ end</pre>
 </div><table class="annotated_source_code">
   <tr>
     <td colspan="3" style="padding-left: 10px;">
-      <pre class="code"><span class="info file"># File 'lib/facter/util/collection.rb', line 104</span></pre>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/collection.rb', line 108</span></pre>
     </td>
   </tr>
   
@@ -1307,13 +1323,13 @@ end</pre>
         <span>  
       </td>
       <td class="line-numbers">
-        <pre class="lines" style="padding-right: 0px;">104
-105
-106
-107
-108
+        <pre class="lines" style="padding-right: 0px;">108
 109
-110</pre>
+110
+111
+112
+113
+114</pre>
       </td>
       <td class="code">
         <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='id identifier rubyid_loader'>loader</span>
@@ -1354,19 +1370,19 @@ end</pre>
       <pre class="lines">
 
 
-112
-113
-114
-115
 116
 117
 118
 119
 120
-121</pre>
+121
+122
+123
+124
+125</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/facter/util/collection.rb', line 112</span>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/collection.rb', line 116</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_hash'>to_hash</span>
   <span class='ivar'>@facts</span><span class='period'>.</span><span class='id identifier rubyid_inject'>inject</span><span class='lparen'>(</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_h'>h</span><span class='comma'>,</span> <span class='id identifier rubyid_ary'>ary</span><span class='op'>|</span>
@@ -1384,7 +1400,7 @@ end</pre>
 </div><table class="annotated_source_code">
   <tr>
     <td colspan="3" style="padding-left: 10px;">
-      <pre class="code"><span class="info file"># File 'lib/facter/util/collection.rb', line 112</span></pre>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/collection.rb', line 116</span></pre>
     </td>
   </tr>
   
@@ -1393,11 +1409,11 @@ end</pre>
         <span>  
       </td>
       <td class="line-numbers">
-        <pre class="lines" style="padding-right: 0px;">112
-113
-114
-115
-116</pre>
+        <pre class="lines" style="padding-right: 0px;">116
+117
+118
+119
+120</pre>
       </td>
       <td class="code">
         <pre class="code"><span class="info file">def to_hash
@@ -1423,12 +1439,12 @@ end</pre>
 </div>  
       </td>
       <td class="line-numbers">
-        <pre class="lines" style="padding-right: 0px;">117
-118
-119
-120
-121
-122</pre>
+        <pre class="lines" style="padding-right: 0px;">121
+122
+123
+124
+125
+126</pre>
       </td>
       <td class="code">
         <pre class="code"><span class="info file">      h[ary[0].to_s] = value
@@ -1457,14 +1473,14 @@ end</pre>
       <pre class="lines">
 
 
-123
-124
-125
-126
-127</pre>
+127
+128
+129
+130
+131</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/facter/util/collection.rb', line 123</span>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/collection.rb', line 127</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_value'>value</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_fact'>fact</span> <span class='op'>=</span> <span class='id identifier rubyid_fact'>fact</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
@@ -1477,7 +1493,7 @@ end</pre>
 </div><table class="annotated_source_code">
   <tr>
     <td colspan="3" style="padding-left: 10px;">
-      <pre class="code"><span class="info file"># File 'lib/facter/util/collection.rb', line 123</span></pre>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/collection.rb', line 127</span></pre>
     </td>
   </tr>
   
@@ -1486,12 +1502,12 @@ end</pre>
         <span>  
       </td>
       <td class="line-numbers">
-        <pre class="lines" style="padding-right: 0px;">123
-124
-125
-126
-127
-128</pre>
+        <pre class="lines" style="padding-right: 0px;">127
+128
+129
+130
+131
+132</pre>
       </td>
       <td class="code">
         <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='id identifier rubyid_value'>value</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
@@ -1510,7 +1526,7 @@ end</pre>
 </div>
 
     <div id="footer">
-  Generated on Tue May 22 18:49:35 2012 by
+  Generated on Tue May 22 19:01:24 2012 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.1 (ruby-1.9.3).
 </div>
