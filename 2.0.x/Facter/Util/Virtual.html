@@ -1,0 +1,1519 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Module: Facter::Util::Virtual
+  
+    &mdash; Documentation by YARD 0.8.1
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/docco.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../../';
+  framesUrl = "../../frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/docco.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../_index.html">Index (V)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Facter.html" title="Facter (module)">Facter</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Util.html" title="Facter::Util (module)">Util</a></span></span>
+     &raquo; 
+    <span class="title">Virtual</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Module: Facter::Util::Virtual
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">lib/facter/util/virtual.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#hpvm%3F-class_method" title="hpvm? (class method)">+ (Boolean) <strong>hpvm?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#jail%3F-class_method" title="jail? (class method)">+ (Boolean) <strong>jail?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#kvm%3F-class_method" title="kvm? (class method)">+ (Boolean) <strong>kvm?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#kvm_type-class_method" title="kvm_type (class method)">+ (Object) <strong>kvm_type</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#openvz%3F-class_method" title="openvz? (class method)">+ (Boolean) <strong>openvz?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#openvz_cloudlinux%3F-class_method" title="openvz_cloudlinux? (class method)">+ (Boolean) <strong>openvz_cloudlinux?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Cloudlinux uses OpenVZ to a degree, but always has an empty /proc/vz/ and
+has /proc/lve/list present.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#openvz_type-class_method" title="openvz_type (class method)">+ (Object) <strong>openvz_type</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>So one can either have #6728 work on OpenVZ or Cloudlinux.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#virtualbox%3F-class_method" title="virtualbox? (class method)">+ (Boolean) <strong>virtualbox?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#vserver%3F-class_method" title="vserver? (class method)">+ (Boolean) <strong>vserver?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#vserver_type-class_method" title="vserver_type (class method)">+ (Object) <strong>vserver_type</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#xen%3F-class_method" title="xen? (class method)">+ (Boolean) <strong>xen?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#zlinux%3F-class_method" title="zlinux? (class method)">+ (Boolean) <strong>zlinux?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#zone%3F-class_method" title="zone? (class method)">+ (Boolean) <strong>zone?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="hpvm?-class_method">
+  
+    + (<tt>Boolean</tt>) <strong>hpvm?</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+83
+84
+85</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/virtual.rb', line 83</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_hpvm?'>hpvm?</span>
+  <span class='const'>Facter</span><span class='op'>::</span><span class='const'>Util</span><span class='op'>::</span><span class='const'>Resolution</span><span class='period'>.</span><span class='id identifier rubyid_exec'>exec</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/usr/bin/getconf MACHINE_MODEL</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_chomp'>chomp</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>Virtual Machine</span><span class='regexp_end'>/</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div><table class="annotated_source_code">
+  <tr>
+    <td colspan="3" style="padding-left: 10px;">
+      <pre class="code"><span class="info file"># File 'lib/facter/util/virtual.rb', line 83</span></pre>
+    </td>
+  </tr>
+  
+    <tr>
+      <td class="comment">
+        <span>  
+      </td>
+      <td class="line-numbers">
+        <pre class="lines" style="padding-right: 0px;">83
+84
+85
+86</pre>
+      </td>
+      <td class="code">
+        <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_hpvm?'>hpvm?</span>
+  <span class='const'>Facter</span><span class='op'>::</span><span class='const'>Util</span><span class='op'>::</span><span class='const'>Resolution</span><span class='period'>.</span><span class='id identifier rubyid_exec'>exec</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/usr/bin/getconf MACHINE_MODEL</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_chomp'>chomp</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>Virtual Machine</span><span class='regexp_end'>/</span></span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  
+
+</table>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="jail?-class_method">
+  
+    + (<tt>Boolean</tt>) <strong>jail?</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+75
+76
+77
+78
+79
+80
+81</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/virtual.rb', line 75</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_jail?'>jail?</span>
+  <span class='id identifier rubyid_path'>path</span> <span class='op'>=</span> <span class='kw'>case</span> <span class='const'>Facter</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span><span class='lparen'>(</span><span class='symbol'>:kernel</span><span class='rparen'>)</span>
+    <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>FreeBSD</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>then</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/sbin</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>GNU/kFreeBSD</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>then</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/bin</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+  <span class='const'>Facter</span><span class='op'>::</span><span class='const'>Util</span><span class='op'>::</span><span class='const'>Resolution</span><span class='period'>.</span><span class='id identifier rubyid_exec'>exec</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_path'>path</span><span class='rbrace'>}</span><span class='tstring_content'>/sysctl -n security.jail.jailed</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div><table class="annotated_source_code">
+  <tr>
+    <td colspan="3" style="padding-left: 10px;">
+      <pre class="code"><span class="info file"># File 'lib/facter/util/virtual.rb', line 75</span></pre>
+    </td>
+  </tr>
+  
+    <tr>
+      <td class="comment">
+        <span>  
+      </td>
+      <td class="line-numbers">
+        <pre class="lines" style="padding-right: 0px;">75
+76
+77
+78
+79
+80
+81
+82</pre>
+      </td>
+      <td class="code">
+        <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_jail?'>jail?</span>
+  <span class='id identifier rubyid_path'>path</span> <span class='op'>=</span> <span class='kw'>case</span> <span class='const'>Facter</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span><span class='lparen'>(</span><span class='symbol'>:kernel</span><span class='rparen'>)</span>
+    <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>FreeBSD</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>then</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/sbin</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>GNU/kFreeBSD</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>then</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/bin</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+  <span class='const'>Facter</span><span class='op'>::</span><span class='const'>Util</span><span class='op'>::</span><span class='const'>Resolution</span><span class='period'>.</span><span class='id identifier rubyid_exec'>exec</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_path'>path</span><span class='rbrace'>}</span><span class='tstring_content'>/sysctl -n security.jail.jailed</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  
+
+</table>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="kvm?-class_method">
+  
+    + (<tt>Boolean</tt>) <strong>kvm?</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+55
+56
+57
+58
+59
+60
+61
+62</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/virtual.rb', line 55</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_kvm?'>kvm?</span>
+   <span class='id identifier rubyid_txt'>txt</span> <span class='op'>=</span> <span class='kw'>if</span> <span class='const'>FileTest</span><span class='period'>.</span><span class='id identifier rubyid_exists?'>exists?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/proc/cpuinfo</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+     <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/proc/cpuinfo</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+   <span class='kw'>elsif</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>FreeBSD</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>OpenBSD</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span> <span class='const'>Facter</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span><span class='lparen'>(</span><span class='symbol'>:kernel</span><span class='rparen'>)</span>
+     <span class='const'>Facter</span><span class='op'>::</span><span class='const'>Util</span><span class='op'>::</span><span class='const'>Resolution</span><span class='period'>.</span><span class='id identifier rubyid_exec'>exec</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/sbin/sysctl -n hw.model</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+   <span class='kw'>end</span>
+   <span class='lparen'>(</span><span class='id identifier rubyid_txt'>txt</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>QEMU Virtual CPU</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span> <span class='op'>?</span> <span class='kw'>true</span> <span class='op'>:</span> <span class='kw'>false</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div><table class="annotated_source_code">
+  <tr>
+    <td colspan="3" style="padding-left: 10px;">
+      <pre class="code"><span class="info file"># File 'lib/facter/util/virtual.rb', line 55</span></pre>
+    </td>
+  </tr>
+  
+    <tr>
+      <td class="comment">
+        <span>  
+      </td>
+      <td class="line-numbers">
+        <pre class="lines" style="padding-right: 0px;">55
+56
+57
+58
+59
+60
+61
+62
+63</pre>
+      </td>
+      <td class="code">
+        <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_kvm?'>kvm?</span>
+   <span class='id identifier rubyid_txt'>txt</span> <span class='op'>=</span> <span class='kw'>if</span> <span class='const'>FileTest</span><span class='period'>.</span><span class='id identifier rubyid_exists?'>exists?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/proc/cpuinfo</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+     <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/proc/cpuinfo</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+   <span class='kw'>elsif</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>FreeBSD</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>OpenBSD</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span> <span class='const'>Facter</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span><span class='lparen'>(</span><span class='symbol'>:kernel</span><span class='rparen'>)</span>
+     <span class='const'>Facter</span><span class='op'>::</span><span class='const'>Util</span><span class='op'>::</span><span class='const'>Resolution</span><span class='period'>.</span><span class='id identifier rubyid_exec'>exec</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/sbin/sysctl -n hw.model</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+   <span class='kw'>end</span>
+   <span class='lparen'>(</span><span class='id identifier rubyid_txt'>txt</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>QEMU Virtual CPU</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span> <span class='op'>?</span> <span class='kw'>true</span> <span class='op'>:</span> <span class='kw'>false</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  
+
+</table>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="kvm_type-class_method">
+  
+    + (<tt>Object</tt>) <strong>kvm_type</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+68
+69
+70
+71
+72
+73</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/virtual.rb', line 68</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_kvm_type'>kvm_type</span>
+  <span class='comment'># TODO Tell the difference between kvm and qemu
+</span>  <span class='comment'># Can't work out a way to do this at the moment that doesn't
+</span>  <span class='comment'># require a special binary
+</span>  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>kvm</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div><table class="annotated_source_code">
+  <tr>
+    <td colspan="3" style="padding-left: 10px;">
+      <pre class="code"><span class="info file"># File 'lib/facter/util/virtual.rb', line 68</span></pre>
+    </td>
+  </tr>
+  
+    <tr>
+      <td class="comment">
+        <span>  
+      </td>
+      <td class="line-numbers">
+        <pre class="lines" style="padding-right: 0px;">68
+69</pre>
+      </td>
+      <td class="code">
+        <pre class="code"><span class="info file">def self.kvm_type</pre>
+      </td>
+    </tr>
+  
+    <tr>
+      <td class="comment">
+        <span><div class="docstring">
+  <div class="discussion">
+    
+<p>TODO Tell the difference between kvm and qemu Can't work out a way to do
+this at the moment that doesn't require a special binary</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>  
+      </td>
+      <td class="line-numbers">
+        <pre class="lines" style="padding-right: 0px;">72
+73
+74</pre>
+      </td>
+      <td class="code">
+        <pre class="code"><span class="info file">  &quot;kvm&quot;
+end</pre>
+      </td>
+    </tr>
+  
+
+</table>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="openvz?-class_method">
+  
+    + (<tt>Boolean</tt>) <strong>openvz?</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+2
+3
+4</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/virtual.rb', line 2</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_openvz?'>openvz?</span>
+  <span class='const'>FileTest</span><span class='period'>.</span><span class='id identifier rubyid_directory?'>directory?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/proc/vz</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>and</span> <span class='kw'>not</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_openvz_cloudlinux?'>openvz_cloudlinux?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div><table class="annotated_source_code">
+  <tr>
+    <td colspan="3" style="padding-left: 10px;">
+      <pre class="code"><span class="info file"># File 'lib/facter/util/virtual.rb', line 2</span></pre>
+    </td>
+  </tr>
+  
+    <tr>
+      <td class="comment">
+        <span>  
+      </td>
+      <td class="line-numbers">
+        <pre class="lines" style="padding-right: 0px;">2
+3
+4
+5</pre>
+      </td>
+      <td class="code">
+        <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_openvz?'>openvz?</span>
+  <span class='const'>FileTest</span><span class='period'>.</span><span class='id identifier rubyid_directory?'>directory?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/proc/vz</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>and</span> <span class='kw'>not</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_openvz_cloudlinux?'>openvz_cloudlinux?</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  
+
+</table>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="openvz_cloudlinux?-class_method">
+  
+    + (<tt>Boolean</tt>) <strong>openvz_cloudlinux?</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Cloudlinux uses OpenVZ to a degree, but always has an empty /proc/vz/ and
+has /proc/lve/list present</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+21
+22
+23</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/virtual.rb', line 21</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_openvz_cloudlinux?'>openvz_cloudlinux?</span>
+  <span class='const'>FileTest</span><span class='period'>.</span><span class='id identifier rubyid_file?'>file?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/proc/lve/list</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>or</span> <span class='const'>Dir</span><span class='period'>.</span><span class='id identifier rubyid_glob'>glob</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/proc/vz/*</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div><table class="annotated_source_code">
+  <tr>
+    <td colspan="3" style="padding-left: 10px;">
+      <pre class="code"><span class="info file"># File 'lib/facter/util/virtual.rb', line 21</span></pre>
+    </td>
+  </tr>
+  
+    <tr>
+      <td class="comment">
+        <span>  
+      </td>
+      <td class="line-numbers">
+        <pre class="lines" style="padding-right: 0px;">21
+22
+23
+24</pre>
+      </td>
+      <td class="code">
+        <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_openvz_cloudlinux?'>openvz_cloudlinux?</span>
+  <span class='const'>FileTest</span><span class='period'>.</span><span class='id identifier rubyid_file?'>file?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/proc/lve/list</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>or</span> <span class='const'>Dir</span><span class='period'>.</span><span class='id identifier rubyid_glob'>glob</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/proc/vz/*</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  
+
+</table>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="openvz_type-class_method">
+  
+    + (<tt>Object</tt>) <strong>openvz_type</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>So one can either have #6728 work on OpenVZ or Cloudlinux. Whoo.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/virtual.rb', line 7</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_openvz_type'>openvz_type</span>
+  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_openvz?'>openvz?</span>
+  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='const'>FileTest</span><span class='period'>.</span><span class='id identifier rubyid_exists?'>exists?</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/proc/self/status</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_envid'>envid</span> <span class='op'>=</span> <span class='const'>Facter</span><span class='op'>::</span><span class='const'>Util</span><span class='op'>::</span><span class='const'>Resolution</span><span class='period'>.</span><span class='id identifier rubyid_exec'>exec</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>grep &quot;envID&quot; /proc/self/status</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_envid'>envid</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^envID:\s+0$</span><span class='regexp_end'>/i</span></span>
+  <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>openvzhn</span><span class='tstring_end'>'</span></span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_envid'>envid</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^envID:\s+(\d+)$</span><span class='regexp_end'>/i</span></span>
+  <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>openvzve</span><span class='tstring_end'>'</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div><table class="annotated_source_code">
+  <tr>
+    <td colspan="3" style="padding-left: 10px;">
+      <pre class="code"><span class="info file"># File 'lib/facter/util/virtual.rb', line 7</span></pre>
+    </td>
+  </tr>
+  
+    <tr>
+      <td class="comment">
+        <span>  
+      </td>
+      <td class="line-numbers">
+        <pre class="lines" style="padding-right: 0px;">7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre>
+      </td>
+      <td class="code">
+        <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_openvz_type'>openvz_type</span>
+  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_openvz?'>openvz?</span>
+  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='const'>FileTest</span><span class='period'>.</span><span class='id identifier rubyid_exists?'>exists?</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/proc/self/status</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_envid'>envid</span> <span class='op'>=</span> <span class='const'>Facter</span><span class='op'>::</span><span class='const'>Util</span><span class='op'>::</span><span class='const'>Resolution</span><span class='period'>.</span><span class='id identifier rubyid_exec'>exec</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>grep &quot;envID&quot; /proc/self/status</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_envid'>envid</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^envID:\s+0$</span><span class='regexp_end'>/i</span></span>
+  <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>openvzhn</span><span class='tstring_end'>'</span></span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_envid'>envid</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^envID:\s+(\d+)$</span><span class='regexp_end'>/i</span></span>
+  <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>openvzve</span><span class='tstring_end'>'</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  
+
+</table>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="virtualbox?-class_method">
+  
+    + (<tt>Boolean</tt>) <strong>virtualbox?</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+64
+65
+66</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/virtual.rb', line 64</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_virtualbox?'>virtualbox?</span>
+  <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/sys/devices/virtual/dmi/id/product_name</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>VirtualBox</span><span class='regexp_end'>/</span></span> <span class='kw'>rescue</span> <span class='kw'>false</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div><table class="annotated_source_code">
+  <tr>
+    <td colspan="3" style="padding-left: 10px;">
+      <pre class="code"><span class="info file"># File 'lib/facter/util/virtual.rb', line 64</span></pre>
+    </td>
+  </tr>
+  
+    <tr>
+      <td class="comment">
+        <span>  
+      </td>
+      <td class="line-numbers">
+        <pre class="lines" style="padding-right: 0px;">64
+65
+66
+67</pre>
+      </td>
+      <td class="code">
+        <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_virtualbox?'>virtualbox?</span>
+  <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/sys/devices/virtual/dmi/id/product_name</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>VirtualBox</span><span class='regexp_end'>/</span></span> <span class='kw'>rescue</span> <span class='kw'>false</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  
+
+</table>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="vserver?-class_method">
+  
+    + (<tt>Boolean</tt>) <strong>vserver?</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+32
+33
+34
+35
+36
+37</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/virtual.rb', line 32</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_vserver?'>vserver?</span>
+  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='const'>FileTest</span><span class='period'>.</span><span class='id identifier rubyid_exists?'>exists?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/proc/self/status</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_txt'>txt</span> <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/proc/self/status</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id identifier rubyid_txt'>txt</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^(s_context|VxID):[[:blank:]]*[0-9]</span><span class='regexp_end'>/</span></span>
+  <span class='kw'>return</span> <span class='kw'>false</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div><table class="annotated_source_code">
+  <tr>
+    <td colspan="3" style="padding-left: 10px;">
+      <pre class="code"><span class="info file"># File 'lib/facter/util/virtual.rb', line 32</span></pre>
+    </td>
+  </tr>
+  
+    <tr>
+      <td class="comment">
+        <span>  
+      </td>
+      <td class="line-numbers">
+        <pre class="lines" style="padding-right: 0px;">32
+33
+34
+35
+36
+37
+38</pre>
+      </td>
+      <td class="code">
+        <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_vserver?'>vserver?</span>
+  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='const'>FileTest</span><span class='period'>.</span><span class='id identifier rubyid_exists?'>exists?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/proc/self/status</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_txt'>txt</span> <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/proc/self/status</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id identifier rubyid_txt'>txt</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^(s_context|VxID):[[:blank:]]*[0-9]</span><span class='regexp_end'>/</span></span>
+  <span class='kw'>return</span> <span class='kw'>false</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  
+
+</table>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="vserver_type-class_method">
+  
+    + (<tt>Object</tt>) <strong>vserver_type</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+39
+40
+41
+42
+43
+44
+45
+46
+47</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/virtual.rb', line 39</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_vserver_type'>vserver_type</span>
+  <span class='kw'>if</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_vserver?'>vserver?</span>
+    <span class='kw'>if</span> <span class='const'>FileTest</span><span class='period'>.</span><span class='id identifier rubyid_exists?'>exists?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/proc/virtual</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>vserver_host</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>else</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>vserver</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div><table class="annotated_source_code">
+  <tr>
+    <td colspan="3" style="padding-left: 10px;">
+      <pre class="code"><span class="info file"># File 'lib/facter/util/virtual.rb', line 39</span></pre>
+    </td>
+  </tr>
+  
+    <tr>
+      <td class="comment">
+        <span>  
+      </td>
+      <td class="line-numbers">
+        <pre class="lines" style="padding-right: 0px;">39
+40
+41
+42
+43
+44
+45
+46
+47
+48</pre>
+      </td>
+      <td class="code">
+        <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_vserver_type'>vserver_type</span>
+  <span class='kw'>if</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_vserver?'>vserver?</span>
+    <span class='kw'>if</span> <span class='const'>FileTest</span><span class='period'>.</span><span class='id identifier rubyid_exists?'>exists?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/proc/virtual</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>vserver_host</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>else</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>vserver</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  
+
+</table>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="xen?-class_method">
+  
+    + (<tt>Boolean</tt>) <strong>xen?</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+49
+50
+51
+52
+53</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/virtual.rb', line 49</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_xen?'>xen?</span>
+  <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/proc/sys/xen</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/sys/bus/xen</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/proc/xen</span><span class='tstring_end'>&quot;</span></span> <span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_detect'>detect</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_f'>f</span><span class='op'>|</span>
+    <span class='const'>FileTest</span><span class='period'>.</span><span class='id identifier rubyid_exists?'>exists?</span><span class='lparen'>(</span><span class='id identifier rubyid_f'>f</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div><table class="annotated_source_code">
+  <tr>
+    <td colspan="3" style="padding-left: 10px;">
+      <pre class="code"><span class="info file"># File 'lib/facter/util/virtual.rb', line 49</span></pre>
+    </td>
+  </tr>
+  
+    <tr>
+      <td class="comment">
+        <span>  
+      </td>
+      <td class="line-numbers">
+        <pre class="lines" style="padding-right: 0px;">49
+50
+51
+52
+53
+54</pre>
+      </td>
+      <td class="code">
+        <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_xen?'>xen?</span>
+  <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/proc/sys/xen</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/sys/bus/xen</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/proc/xen</span><span class='tstring_end'>&quot;</span></span> <span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_detect'>detect</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_f'>f</span><span class='op'>|</span>
+    <span class='const'>FileTest</span><span class='period'>.</span><span class='id identifier rubyid_exists?'>exists?</span><span class='lparen'>(</span><span class='id identifier rubyid_f'>f</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  
+
+</table>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="zlinux?-class_method">
+  
+    + (<tt>Boolean</tt>) <strong>zlinux?</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+87
+88
+89</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/virtual.rb', line 87</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_zlinux?'>zlinux?</span>
+ <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>zlinux</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div><table class="annotated_source_code">
+  <tr>
+    <td colspan="3" style="padding-left: 10px;">
+      <pre class="code"><span class="info file"># File 'lib/facter/util/virtual.rb', line 87</span></pre>
+    </td>
+  </tr>
+  
+    <tr>
+      <td class="comment">
+        <span>  
+      </td>
+      <td class="line-numbers">
+        <pre class="lines" style="padding-right: 0px;">87
+88
+89
+90</pre>
+      </td>
+      <td class="code">
+        <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_zlinux?'>zlinux?</span>
+ <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>zlinux</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  
+
+</table>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="zone?-class_method">
+  
+    + (<tt>Boolean</tt>) <strong>zone?</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+25
+26
+27
+28
+29
+30</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/facter/util/virtual.rb', line 25</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_zone?'>zone?</span>
+  <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='const'>FileTest</span><span class='period'>.</span><span class='id identifier rubyid_directory?'>directory?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/.SUNWnative</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_z'>z</span> <span class='op'>=</span> <span class='const'>Facter</span><span class='op'>::</span><span class='const'>Util</span><span class='op'>::</span><span class='const'>Resolution</span><span class='period'>.</span><span class='id identifier rubyid_exec'>exec</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/sbin/zonename</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_z'>z</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_z'>z</span><span class='period'>.</span><span class='id identifier rubyid_chomp'>chomp</span> <span class='op'>!=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>global</span><span class='tstring_end'>'</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div><table class="annotated_source_code">
+  <tr>
+    <td colspan="3" style="padding-left: 10px;">
+      <pre class="code"><span class="info file"># File 'lib/facter/util/virtual.rb', line 25</span></pre>
+    </td>
+  </tr>
+  
+    <tr>
+      <td class="comment">
+        <span>  
+      </td>
+      <td class="line-numbers">
+        <pre class="lines" style="padding-right: 0px;">25
+26
+27
+28
+29
+30
+31</pre>
+      </td>
+      <td class="code">
+        <pre class="code"><span class="info file"><span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_zone?'>zone?</span>
+  <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='const'>FileTest</span><span class='period'>.</span><span class='id identifier rubyid_directory?'>directory?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/.SUNWnative</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_z'>z</span> <span class='op'>=</span> <span class='const'>Facter</span><span class='op'>::</span><span class='const'>Util</span><span class='op'>::</span><span class='const'>Resolution</span><span class='period'>.</span><span class='id identifier rubyid_exec'>exec</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/sbin/zonename</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_z'>z</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_z'>z</span><span class='period'>.</span><span class='id identifier rubyid_chomp'>chomp</span> <span class='op'>!=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>global</span><span class='tstring_end'>'</span></span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  
+
+</table>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on Tue May 22 18:36:38 2012 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.1 (ruby-1.9.3).
+</div>
+
+  </body>
+</html>
