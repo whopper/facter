@@ -38,7 +38,8 @@ describe "Virtual fact" do
   end
 
   it "should be hpvm on HP-UX when in HP-VM" do
-    Facter.fact(:kernel).stubs(:value).returns("HP-UX")
+    Facter.fact(:kernel).stubs(:value).returns("hp-ux")
+    Facter.fact(:operatingsystem).stubs(:value).returns("hp-ux")
     Facter::Util::Virtual.stubs(:hpvm?).returns(true)
     Facter.fact(:virtual).value.should == "hpvm"
   end
