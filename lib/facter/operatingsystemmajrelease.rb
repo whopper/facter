@@ -3,9 +3,10 @@
 # Purpose: Returns the major release of the operating system.
 #
 # Resolution:
-#   Splits down the operatingsystemrelease fact at decimal point for
-#   osfamily RedHat derivatives and Debian.
-#   Uses operatingsystemrelease to the first non decimal character for
+#   Uses the operatingsystemmajrelease key of the operatingsystem_hash
+#   structured fact, which itself splits down its operatingsystemrelease
+#   key at decimal point for osfamily RedHat derivatives and Debian.
+#   Uses operatingsystemrelease key to the first non decimal character for
 #   operatingsystem Solaris
 #
 # This should be the same as lsbmajdistrelease, but on minimal systems there
@@ -30,18 +31,9 @@ Facter.add(:operatingsystemmajrelease) do
     :RedHat,
     :Scientific,
     :SLC,
-    :CumulusLinux
+    :CumulusLinux,
+    :solaris
   ]
-  setcode do
-    Facter.value('operatingsystemrelease').split('.').first
-  end
-end
 
-Facter.add(:operatingsystemmajrelease) do
-  confine :operatingsystem => :solaris
-  setcode do
-    if match = Facter.value(:operatingsystemrelease).match(/^(\d+)/)
-      match.captures[0]
-    end
-  end
+  setcode { Facter.fact("operatingsystem_hash").value["release"]["operatingsystemmajrelease"] }
 end

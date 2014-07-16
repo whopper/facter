@@ -4,10 +4,27 @@ require 'spec_helper'
 require 'facter'
 
 describe "LSB distribution major release fact" do
-    it "should be derived from lsb_release" do
-        Facter.fact(:kernel).stubs(:value).returns("Linux")
-        Facter.stubs(:value).with(:lsbdistrelease).returns("10.10")
+  let(:operatingsystem_hash) { { "operatingsystem" => "SomeOS",
+                                 "osfamily"        => "SomeFamily",
+                                 "release"         => {
+                                    "operatingsystemrelease"    => "1.2.3",
+                                    "operatingsystemmajrelease" => "1"
+                                 },
+                                 "lsb"             => {
+                                    "lsbdistcodename"    => "SomeCodeName",
+                                    "lsbdistid"          => "SomeID",
+                                    "lsbdistdescription" => "SomeDesc",
+                                    "lsbdistrelease"     => "1.2.3",
+                                    "lsbrelease"         => "1.2.3",
+                                    "lsbmajdistrelease"  => "1"
+                                 },
+                               }
+                             }
 
-        Facter.fact(:lsbmajdistrelease).value.should == "10"
-    end
+  it "should use the 'lsbmajdistrelease' key from the 'operatingsystem_hash' fact" do
+    Facter.fact(:kernel).stubs(:value).returns("Linux")
+    Facter.fact("operatingsystem_hash").stubs(:value).returns(operatingsystem_hash)
+    Facter.fact(:lsbmajdistrelease).value.should eq "1"
+  end
+
 end

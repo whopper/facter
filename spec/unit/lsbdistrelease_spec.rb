@@ -3,23 +3,27 @@
 require 'spec_helper'
 
 describe "lsbdistrelease fact" do
+  let(:operatingsystem_hash) { { "operatingsystem" => "SomeOS",
+                                 "osfamily"        => "SomeFamily",
+                                 "release"         => {
+                                    "operatingsystemrelease"    => "1.2.3",
+                                    "operatingsystemmajrelease" => "1"
+                                 },
+                                 "lsb"             => {
+                                    "lsbdistcodename"    => "SomeCodeName",
+                                    "lsbdistid"          => "SomeID",
+                                    "lsbdistdescription" => "SomeDesc",
+                                    "lsbdistrelease"     => "1.2.3",
+                                    "lsbrelease"         => "1.2.3",
+                                    "lsbmajdistrelease"  => "1"
+                                 },
+                               }
+                             }
 
-  [ "Linux", "GNU/kFreeBSD"].each do |kernel|
-    describe "on #{kernel}" do
-      before :each do
-        Facter.fact(:kernel).stubs(:value).returns kernel
-      end
-
-      it "should return the release through lsb_release -r -s 2>/dev/null" do
-        Facter::Core::Execution.stubs(:execute).with('lsb_release -r -s 2>/dev/null', anything).returns '2.1'
-        Facter.fact(:lsbdistrelease).value.should == '2.1'
-      end
-
-      it "should return nil if lsb_release is not installed" do
-        Facter::Core::Execution.stubs(:execute).with('lsb_release -r -s 2>/dev/null', anything).returns nil
-        Facter.fact(:lsbdistrelease).value.should be_nil
-      end
-    end
+  it "should use the 'lsbdistrelease' key from the 'operatingsystem_hash' fact" do
+    Facter.fact(:kernel).stubs(:value).returns("Linux")
+    Facter.fact("operatingsystem_hash").stubs(:value).returns(operatingsystem_hash)
+    Facter.fact(:lsbdistrelease).value.should eq "1.2.3"
   end
 
 end

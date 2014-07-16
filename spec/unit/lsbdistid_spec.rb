@@ -2,24 +2,27 @@
 
 require 'spec_helper'
 
-describe "lsbdistid fact" do
+describe "lsbdistcodename fact" do
+  let(:operatingsystem_hash) { { "operatingsystem" => "SomeOS",
+                                 "osfamily"        => "SomeFamily",
+                                 "release"         => {
+                                    "operatingsystemrelease"    => "1.2.3",
+                                    "operatingsystemmajrelease" => "1"
+                                 },
+                                 "lsb"             => {
+                                    "lsbdistcodename"    => "SomeCodeName",
+                                    "lsbdistid"          => "SomeID",
+                                    "lsbdistdescription" => "SomeDesc",
+                                    "lsbdistrelease"     => "1.2.3",
+                                    "lsbrelease"         => "1.2.3",
+                                    "lsbmajdistrelease"  => "1"
+                                 },
+                               }
+                             }
 
-  [ "Linux", "GNU/kFreeBSD"].each do |kernel|
-    describe "on #{kernel}" do
-      before :each do
-        Facter.fact(:kernel).stubs(:value).returns kernel
-      end
-
-      it "returns the id through lsb_release -i -s 2>/dev/null" do
-        Facter::Core::Execution.impl.stubs(:execute).with('lsb_release -i -s 2>/dev/null', anything).returns 'Gentoo'
-        expect(Facter.fact(:lsbdistid).value).to eq 'Gentoo'
-      end
-
-      it "returns nil if lsb_release is not installed" do
-        Facter::Core::Execution.impl.stubs(:expand_command).with('lsb_release -i -s 2>/dev/null').returns nil
-        expect(Facter.fact(:lsbdistid).value).to be_nil
-      end
-    end
+  it "should use the 'lsbdistcodename' key from the 'operatingsystem_hash' fact" do
+    Facter.fact(:kernel).stubs(:value).returns("Linux")
+    Facter.fact("operatingsystem_hash").stubs(:value).returns(operatingsystem_hash)
+    Facter.fact(:lsbdistid).value.should eq "SomeID"
   end
-
 end
