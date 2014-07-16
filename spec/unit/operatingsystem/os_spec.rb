@@ -4,9 +4,10 @@ require 'spec_helper'
 require 'facter/operatingsystem/os'
 
 describe Facter::Operatingsystem do
+
   it "should return an object of type Linux for linux kernels that are not Cumulus Linux" do
     Facter.fact(:kernel).stubs(:value).returns("Linux")
-    Facter::Util::Operatingsystem.expects(:os_release).returns({'NAME' => 'Some Linux'})
+    Facter::Util::Operatingsystem.expects(:os_release).at_least_once.returns({'NAME' => 'Some Linux'})
     object = described_class.implementation
     object.should be_a_kind_of(Facter::Operatingsystem::Linux)
   end
@@ -217,19 +218,18 @@ end
 
 describe Facter::Operatingsystem::Linux do
   subject { described_class.new }
-
-  before :each do
-    Facter.stubs(:value).with(:lsbdistid).returns(nil)
-  end
+  let(:lsb_obj) { stub 'lsb object' }
 
   describe "Operating system fact" do
     describe "When lsbdistid is available" do
-      before :each do
-        Facter.collection.internal_loader.load(:lsb)
+      before :all do
+        Facter::Operatingsystem::Lsb.stubs(:new).returns lsb_obj
+        subject.instance_variable_set :@lsb_obj, lsb_obj
       end
 
       it "on Ubuntu should use the lsbdistid fact" do
-        Facter.stubs(:value).with(:lsbdistid).returns("Ubuntu")
+        lsb_obj.expects(:get_lsbdistid).returns("Ubuntu")
+        subject.expects(:get_lsbdistid).returns("Ubuntu")
         os = subject.get_operatingsystem
         expect(os).to eq "Ubuntu"
       end

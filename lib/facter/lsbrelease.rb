@@ -13,5 +13,5 @@
 
 Facter.add(:lsbrelease) do
   confine :kernel => [ :linux, :"gnu/kfreebsd" ]
-  setcode { Facter.fact("operatingsystem_hash").value["lsb"]["lsbrelease"] }
+  setcode { Facter["operatingsystem_hash"].value["lsb"]["lsbrelease"] }
 end

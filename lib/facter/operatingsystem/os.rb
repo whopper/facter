@@ -117,7 +117,8 @@ module Facter
 
     class Linux < GNU
       def get_operatingsystem
-        if lsbdistid = Facter.value(:lsbdistid)
+        puts @lsb_obj.inspect
+        if lsbdistid = get_lsbdistid
           if lsbdistid == "Ubuntu"
             operatingsystem = "Ubuntu"
           elsif lsbdistid == "LinuxMint"

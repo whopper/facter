@@ -35,5 +35,5 @@ Facter.add(:operatingsystemmajrelease) do
     :solaris
   ]
 
-  setcode { Facter.fact("operatingsystem_hash").value["release"]["operatingsystemmajrelease"] }
+  setcode { Facter["operatingsystem_hash"].value["release"]["operatingsystemmajrelease"] }
 end

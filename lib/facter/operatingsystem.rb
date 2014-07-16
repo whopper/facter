@@ -16,5 +16,5 @@
 #
 
 Facter.add(:operatingsystem) do
-  setcode { Facter.fact("operatingsystem_hash").value["operatingsystem"] }
+  setcode { Facter["operatingsystem_hash"].value["operatingsystem"] }
 end
