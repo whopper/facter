@@ -91,7 +91,9 @@ describe "The macaddress fact" do
 
     before :each do
       Facter.fact(:kernel).stubs(:value).returns('windows')
+      Facter.fact(:operatingsystem_hash).stubs(:value).returns({"operatingsystem" => "windows"})
       Facter.fact(:operatingsystem).stubs(:value).returns('windows')
+
       Facter::Util::Registry.stubs(:hklm_read).returns(nic_bindings)
     end
 
