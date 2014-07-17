@@ -1,4 +1,4 @@
-# Fact: operatingsystem_hash
+# Fact: operatingsystem_hash# {{{
 #
 #  Purpose:
 #     Return various facts related to the machine's operating system.
@@ -24,7 +24,7 @@
 #     Lsb facts only work on Linux (and the kfreebsd derivative) systems.
 #     Requires the `lsb_release` program, which may not be installed by default.
 #     It is only as accurate as the ourput of lsb_release.
-#
+## }}}
 
 require 'facter/operatingsystem/os'
 
@@ -50,11 +50,11 @@ Facter.add("operatingsystem_hash", :type => :aggregate) do
   chunk(:release) do
     release_hash = {}
     release_hash["release"] = {}
-    if osrelease = os.get_operatingsystem_release
+    if osrelease = os.get_operatingsystemrelease
       release_hash["release"]["operatingsystemrelease"] = osrelease
     end
 
-    if osmajrelease = os.get_operatingsystem_maj_release
+    if osmajrelease = os.get_operatingsystemmajrelease
       release_hash["release"]["operatingsystemmajrelease"] = osmajrelease
     end
     release_hash
@@ -62,30 +62,11 @@ Facter.add("operatingsystem_hash", :type => :aggregate) do
 
   chunk(:lsb) do
     lsb_hash = {}
-    lsb_hash["lsb"] = {}
-    if lsbdistid = os.get_lsbdistid
-      lsb_hash["lsb"]["lsbdistid"] = lsbdistid
+
+    if lsbdata = os.get_lsb_facts_hash
+      lsb_hash["lsb"] = lsbdata
+      lsb_hash unless lsb_hash["lsb"].empty?
     end
 
-    if lsbdistcodename = os.get_lsbdistcodename
-      lsb_hash["lsb"]["lsbdistcodename"] = lsbdistcodename
-    end
-
-    if lsbdistdescription = os.get_lsbdistdescription
-      lsb_hash["lsb"]["lsbdistdescription"] = lsbdistdescription
-    end
-
-    if lsbrelease = os.get_lsbrelease
-      lsb_hash["lsb"]["lsbrelease"] = lsbrelease
-    end
-
-    if lsbdistrelease = os.get_lsbdistrelease
-      lsb_hash["lsb"]["lsbdistrelease"] = lsbdistrelease
-    end
-
-    if lsbmajdistrelease = os.get_lsbmajdistrelease
-      lsb_hash["lsb"]["lsbmajdistrelease"] = lsbmajdistrelease
-    end
-    lsb_hash unless lsb_hash["lsb"].empty?
   end
 end

@@ -6,6 +6,14 @@ require 'facter/operatingsystem/os'
 describe "operatingsystem_hash" do
   subject { Facter.fact("operatingsystem_hash") }
   let(:os) { stub 'OS object' }
+  let(:lsb_hash) { { "lsbdistcodename"    => "trusty",
+                     "lsbdistid"          => "Ubuntu",
+                     "lsbdistdescription" => "Ubuntu 14.04 LTS",
+                     "lsbdistrelease"     => "14.04",
+                     "lsbrelease"         => "14.04",
+                     "lsbmajdistrelease"  => "14"
+                   }
+                }
 
   describe "in Linux with lsb facts available" do
     before do
@@ -15,16 +23,10 @@ describe "operatingsystem_hash" do
     before :each do
       Facter.fact(:kernel).stubs(:value).returns("Linux")
       os.expects(:get_operatingsystem).returns("Ubuntu")
-      os.instance_variable_set :@operatingsystem, "Ubuntu"
       os.expects(:get_osfamily).returns("Debian")
-      os.expects(:get_operatingsystem_release).returns("14.04")
-      os.expects(:get_operatingsystem_maj_release).returns("14")
-      os.expects(:get_lsbdistid).returns("Ubuntu")
-      os.expects(:get_lsbdistcodename).returns("trusty")
-      os.expects(:get_lsbdistdescription).returns("Ubuntu 14.04 LTS")
-      os.expects(:get_lsbrelease).returns("14.04")
-      os.expects(:get_lsbdistrelease).returns("14.04")
-      os.expects(:get_lsbmajdistrelease).returns("14")
+      os.expects(:get_operatingsystemrelease).returns("14.04")
+      os.expects(:get_operatingsystemmajrelease).returns("14")
+      os.expects(:get_lsb_facts_hash).returns(lsb_hash)
     end
 
     it "should include an operatingsystem key with the operatingsystem name" do
@@ -77,16 +79,10 @@ describe "operatingsystem_hash" do
     before :each do
       Facter.fact(:kernel).stubs(:value).returns("Darwin")
       os.expects(:get_operatingsystem).returns("Darwin")
-      os.instance_variable_set :@operatingsystem, "Darwin"
       os.expects(:get_osfamily).returns("Darwin")
-      os.expects(:get_operatingsystem_release).returns("13.3.0")
-      os.expects(:get_operatingsystem_maj_release).returns("13")
-      os.expects(:get_lsbdistid).returns(nil)
-      os.expects(:get_lsbdistcodename).returns(nil)
-      os.expects(:get_lsbdistdescription).returns(nil)
-      os.expects(:get_lsbrelease).returns(nil)
-      os.expects(:get_lsbdistrelease).returns(nil)
-      os.expects(:get_lsbmajdistrelease).returns(nil)
+      os.expects(:get_operatingsystemrelease).returns("13.3.0")
+      os.expects(:get_operatingsystemmajrelease).returns("13")
+      os.expects(:get_lsb_facts_hash).returns(nil)
     end
 
     it "should include an operatingsystem key with the operatingsystem name" do
