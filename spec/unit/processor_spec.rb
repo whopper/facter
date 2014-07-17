@@ -229,8 +229,8 @@ describe "Processor facts" do
 
   describe "on solaris" do
     before :each do
-      Facter::Util::Processor.stubs(:kernel_fact_value).returns :sunos
-      Facter.fact(:kernel).stubs(:value).returns(:sunos)
+      Facter::Util::Processor.stubs(:kernel_fact_value).returns("sunos")
+      Facter.fact(:kernel).stubs(:value).returns("sunos")
       Facter.collection.internal_loader.load(:processor)
     end
 
