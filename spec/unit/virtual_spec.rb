@@ -24,6 +24,7 @@ describe "Virtual fact" do
 
   it "should be zone on Solaris when a zone" do
     Facter.fact(:kernel).stubs(:value).returns("SunOS")
+    Facter.fact(:operatingsystem).stubs(:value).returns("Solaris")
     Facter::Util::Virtual.stubs(:zone?).returns(true)
     Facter::Util::Virtual.stubs(:vserver?).returns(false)
     Facter::Util::Virtual.stubs(:xen?).returns(false)
