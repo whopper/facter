@@ -18,7 +18,6 @@ describe "os" do
 
   let(:release_hash) { { "major" => 1,
                          "minor" => 2,
-                         "patch" => 3,
                          "full"  => "1.2.3"
                        }
                      }
@@ -55,10 +54,6 @@ describe "os" do
 
     it "should include a minor key with the major release" do
       expect(subject.value["release"]["minor"]).to eq 2
-    end
-
-    it "should include a patch key with the patch release" do
-      expect(subject.value["release"]["patch"]).to eq 3
     end
 
     it "should include a distid key with the distid" do
@@ -118,10 +113,6 @@ describe "os" do
 
     it "should include a minor with the minor release" do
       expect(subject.value["release"]["minor"]).to eq 2
-    end
-
-    it "should include a patch with the patch release" do
-      expect(subject.value["release"]["patch"]).to eq 3
     end
 
     it "should not include an lsb key" do
