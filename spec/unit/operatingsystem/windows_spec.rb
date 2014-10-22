@@ -21,6 +21,8 @@ describe Facter::Operatingsystem::Windows do
       ['6.2.9200', 1] => "8",
       ['6.2.9200', 2] => "2012",
       ['6.2.9200', 3] => "2012",
+      ['6.3.9600', 1] => "8",
+      ['6.4.1234', 1] => "10",
     }.each do |os_values, expected_output|
       it "should be #{expected_output}  with Version #{os_values[0]}  and ProductType #{os_values[1]}" do
         os = mock('os', :version => os_values[0], :producttype => os_values[1])

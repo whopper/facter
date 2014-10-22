@@ -9,6 +9,14 @@ module Facter
         Facter::Util::WMI.execquery("SELECT version, producttype FROM Win32_OperatingSystem").each do |os|
           result =
             case os.version
+            when /^6\.4/
+              if os.producttype == 1
+                "10"
+              end
+            when /^6\.3/
+              if os.producttype == 1
+                "8"
+              end
             when /^6\.2/
               os.producttype == 1 ? "8" : "2012"
             when /^6\.1/
