@@ -41,7 +41,11 @@ namespace facter { namespace util {
         close();
 
         // Don't actually perform a load to determine if it is already loaded
+#ifdef _AIX
+        _handle = dlopen(name.c_str(), RTLD_LAZY);
+#else
         _handle = dlopen(name.c_str(), RTLD_LAZY | RTLD_NOLOAD);
+#endif
         if (!_handle) {
             // Load now
             _handle = dlopen(name.c_str(), RTLD_LAZY);

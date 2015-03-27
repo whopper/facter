@@ -96,7 +96,6 @@ if (UNIX)
         "src/facts/posix/collection.cc"
         "src/facts/posix/identity_resolver.cc"
         "src/facts/posix/kernel_resolver.cc"
-        "src/facts/posix/load_average_resolver.cc"
         "src/facts/posix/networking_resolver.cc"
         "src/facts/posix/operatingsystem_resolver.cc"
         "src/facts/posix/processor_resolver.cc"
@@ -134,7 +133,11 @@ if (WIN32)
 endif()
 
 # Set the platform-specific sources
-if ("${CMAKE_SYSTEM_NAME}" MATCHES "Darwin")
+if ("${CMAKE_SYSTEM_NAME}" MATCHES "AIX")
+    set(LIBFACTER_PLATFORM_SOURCES
+        "src/facts/aix/collection.cc"
+    )
+elseif ("${CMAKE_SYSTEM_NAME}" MATCHES "Darwin")
     set(LIBFACTER_PLATFORM_SOURCES
         "src/facts/bsd/filesystem_resolver.cc"
         "src/facts/bsd/networking_resolver.cc"
@@ -147,10 +150,12 @@ if ("${CMAKE_SYSTEM_NAME}" MATCHES "Darwin")
         "src/facts/osx/processor_resolver.cc"
         "src/facts/osx/system_profiler_resolver.cc"
         "src/facts/osx/virtualization_resolver.cc"
+        "src/facts/posix/load_average_resolver.cc"
         "src/util/bsd/scoped_ifaddrs.cc"
     )
 elseif ("${CMAKE_SYSTEM_NAME}" MATCHES "SunOS")
     set(LIBFACTER_PLATFORM_SOURCES
+        "src/facts/posix/load_average_resolver.cc"
         "src/util/solaris/k_stat.cc"
         "src/util/solaris/scoped_kstat.cc"
         "src/facts/solaris/collection.cc"
@@ -186,6 +191,7 @@ elseif ("${CMAKE_SYSTEM_NAME}" MATCHES "Linux")
         "src/facts/linux/collection.cc"
         "src/facts/linux/processor_resolver.cc"
         "src/facts/linux/virtualization_resolver.cc"
+        "src/facts/posix/load_average_resolver.cc"
         "src/util/bsd/scoped_ifaddrs.cc"
     )
     set(LIBFACTER_PLATFORM_LIBRARIES
@@ -198,6 +204,7 @@ elseif ("${CMAKE_SYSTEM_NAME}" MATCHES "FreeBSD")
         "src/facts/bsd/filesystem_resolver.cc"
         "src/facts/bsd/networking_resolver.cc"
         "src/facts/bsd/uptime_resolver.cc"
+        "src/facts/posix/load_average_resolver.cc"
         "src/util/bsd/scoped_ifaddrs.cc"
     )
 elseif ("${CMAKE_SYSTEM_NAME}" MATCHES "Windows")
