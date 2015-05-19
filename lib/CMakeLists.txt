@@ -95,7 +95,6 @@ if (UNIX)
         "src/execution/posix/execution.cc"
         "src/facts/posix/collection.cc"
         "src/facts/posix/identity_resolver.cc"
-        "src/facts/posix/kernel_resolver.cc"
         "src/facts/posix/networking_resolver.cc"
         "src/facts/posix/operatingsystem_resolver.cc"
         "src/facts/posix/processor_resolver.cc"
@@ -110,6 +109,12 @@ if (UNIX)
     )
     if (OPENSSL_FOUND)
         set(LIBFACTER_STANDARD_SOURCES ${LIBFACTER_STANDARD_SOURCES} "src/util/posix/scoped_bio.cc")
+    endif()
+
+    if (NOT AIX)
+        set(LIBFACTER_STANDARD_SOURCES ${LIBFACTER_STANDARD_SOURCES}
+            "src/facts/posix/kernel_resolver.cc"
+        )
     endif()
 
     set(POSIX_LIBRARIES pthread dl)
@@ -133,9 +138,11 @@ if (WIN32)
 endif()
 
 # Set the platform-specific sources
-if ("${CMAKE_SYSTEM_NAME}" MATCHES "AIX")
+if (AIX)
     set(LIBFACTER_PLATFORM_SOURCES
         "src/facts/aix/collection.cc"
+        "src/facts/aix/kernel_resolver.cc"
+        "src/facts/aix/operating_system_resolver.cc"
     )
 elseif ("${CMAKE_SYSTEM_NAME}" MATCHES "Darwin")
     set(LIBFACTER_PLATFORM_SOURCES
