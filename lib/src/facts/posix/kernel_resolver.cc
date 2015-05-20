@@ -19,6 +19,8 @@ namespace facter { namespace facts { namespace posix {
         result.name = name.sysname;
         result.release = name.release;
         result.version = result.release.substr(0, result.release.find('-'));
+        // if (result.name == "AIX") { result.version = name.version } else { ... }
+
         return result;
     }
 

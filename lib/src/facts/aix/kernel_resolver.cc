@@ -1,29 +1,28 @@
 #include <internal/facts/aix/kernel_resolver.hpp>
 #include <facter/facts/collection.hpp>
 #include <facter/execution/execution.hpp>
+#include <sys/utsname.h>
 
 using namespace std;
 using namespace facter::execution;
 
 namespace facter { namespace facts { namespace aix {
+
     kernel_resolver::data kernel_resolver::collect_data(collection& facts)
     {
         data result;
         result.name = "AIX"; // this is an aix-specific implementation anyway
 
-        execution::each_line(
-            "/usr/bin/oslevel", {"-s"},
-            [&](string& line) {
-                if(!line.empty()) {
-                    result.release = line;
-                    return false;
-                }
-                return true;
-            },
-            nullptr,
-            0);
+        struct utsname name;
+        if (uname(&name) == -1) {
+          LOG_WARNING("uname failed: %1% (%2%): kernel facts are unavailable.", strerror(errno), errno);
+          return result;
+        }
 
-        result.version = result.release.substr(0, result.release.find('-'));
+        result.name = name.sysname;
+        result.release = name.release;
+        result.version = name.version;
         return result;
     }
-}}}
+
+}}}  // namespace facter::facts::aix
