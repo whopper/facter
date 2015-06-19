@@ -11,9 +11,4 @@ namespace facter { namespace ruby {
         return dynamic_library::find_by_symbol("ruby_init");
     }
 
-    vector<string> api::libruby_config_variables()
-    {
-        return {"libdir", "archlibdir", "sitearchlibdir"};
-    }
-
 }}  // namespace facter::ruby

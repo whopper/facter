@@ -8,7 +8,6 @@
 #include <facter/execution/execution.hpp>
 #include <leatherman/logging/logging.hpp>
 #include <boost/algorithm/string.hpp>
-#include <boost/range/algorithm/remove_if.hpp>
 #include <boost/filesystem/path.hpp>
 #include <boost/filesystem/operations.hpp>
 #include <sstream>
@@ -486,32 +485,27 @@ namespace facter { namespace ruby {
         }
         LOG_DEBUG("ruby was found at \"%1%\".", ruby);
 
-        bool success, loaded = false;
-        string possible_lib_ruby_dirs, ruby_output, none;
-        vector<string> lib_ruby_dirs = libruby_config_variables();
+        bool success;
+        string output, none;
 
-        // Build the list of directories to query for so we only have to execute ruby once
-        for (auto it = lib_ruby_dirs.begin(); it != lib_ruby_dirs.end(); ++it) {
-            possible_lib_ruby_dirs += "'"+*it+"',";
-        }
-
-        tie(success, ruby_output, none) = execute(ruby, { "-e", "print(["+possible_lib_ruby_dirs+"].find do |name| dir = RbConfig::CONFIG[name]; next unless dir; file = File.join(dir, RbConfig::CONFIG['LIBRUBY_SO']); break file if File.exist? file; false end)" });
+        tie(success, output, none) = execute(ruby, { "-e", "print([['libdir', 'archlibdir', 'sitearchlibdir', 'bindir'].find do |name|"
+                                                                  "dir = RbConfig::CONFIG[name];"
+                                                                  "next unless dir;"
+                                                                  "file = File.join(dir, RbConfig::CONFIG['LIBRUBY_SO']);"
+                                                                  "break file if File.exist? file;"
+                                                                  "false end)" });
         if (!success) {
-            LOG_WARNING("ruby failed to run: %1%", ruby_output);
+            LOG_WARNING("ruby failed to run: %1%", output);
             return library;
         }
 
         boost::system::error_code ec;
-        if (exists(ruby_output, ec) && !is_directory(ruby_output, ec)) {
-            library.load(ruby_output);
-            loaded = true;
-        }
-
-        if (!loaded) {
-            LOG_DEBUG("ruby library \"%1%\" was not found: ensure ruby was built with the --enable-shared configuration option.", ruby_output);
+        if (!exists(output, ec) || is_directory(output, ec)) {
+            LOG_DEBUG("ruby library \"%1%\" was not found: ensure ruby was built with the --enable-shared configuration option.", output);
             return library;
         }
 
+        library.load(output);
         return library;
     }
 
