@@ -34,10 +34,10 @@ agents.each do |agent|
 
   if agent['platform'] =~ /x86_64|amd64/
     os_arch     = 'amd64'
-    os_hardware = 'x86_64'
+    os_hardware = /x86_64|unknown/
   else
     os_arch     = 'i386'
-    os_hardware = 'i686'
+    os_hardware = /i686|unknown/
   end
 
   step "Ensure the OS fact resolves as expected"
