@@ -7,14 +7,16 @@ test_name "Facts should resolve as expected in EL 5, 6 and 7"
 # Facts tested: os, processors, networking, identity, kernel
 #
 
-confine :to, :platform => /el-5|el-6|el-7|centos-5|centos-6|centos-7/
+confine :to, :platform => /el-[4567]|centos-[4567]/
 
 agents.each do |agent|
-  if agent['platform'] =~ /el-5|centos-5/
+  if agent['platform'] =~ /(el|centos)-4/
+    os_version = '4'
+  elsif agent['platform'] =~ /(el|centos)-5/
     os_version = '5'
-  elsif agent['platform'] =~ /el-6|centos-6/
+  elsif agent['platform'] =~ /(el|centos)-6/
     os_version = '6'
-  else
+  elsif agent['platform'] =~ /(el|centos)-7/
     os_version = '7'
   end
 
@@ -103,7 +105,9 @@ agents.each do |agent|
   end
 
   step "Ensure the kernel fact resolves as expected"
-  if os_version == '5' || os_version == '6'
+  if os_version == '4'
+    kernel_version = '2.5'
+  elsif os_version == '5' || os_version == '6'
     kernel_version = '2.6'
   else
     kernel_version = '3.1'
