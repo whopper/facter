@@ -16,8 +16,8 @@ namespace facter { namespace facts { namespace solaris {
     {
         data result;
 
-        auto arch = facts.get<string_value>(fact::architecture);
-        if (arch && arch->value() == "i86pc") {
+        auto isa = facts.get<string_value>(fact::hardwareisa);
+        if (isa && isa->value() == "i386") {
             static boost::regex bios_vendor_re("Vendor: (.+)");
             static boost::regex bios_version_re("Version String: (.+)");
             static boost::regex bios_release_re("Release Date: (.+)");
@@ -65,7 +65,7 @@ namespace facter { namespace facts { namespace solaris {
                 }
                 return result.chassis_type.empty() || result.chassis_asset_tag.empty();
             });
-        } else if (arch && arch->value() == "sparc") {
+        } else if (isa && isa->value() == "sparc") {
             static boost::regex line_re("System Configuration: (.+) sun\\d.");
             // prtdiag is not implemented in all sparc machines, so we cant get product name this way.
             each_line("/usr/sbin/prtconf", [&](string& line) {
