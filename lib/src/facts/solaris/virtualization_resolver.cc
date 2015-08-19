@@ -26,14 +26,14 @@ namespace facter { namespace facts { namespace solaris {
             return vm::zone;
         }
 
-        auto arch = facts.get<string_value>(fact::architecture);
-        if (!arch) {
+        auto isa = facts.get<string_value>(fact::hardwareisa);
+        if (!isa) {
             return {};
         }
 
         string guest_of;
 
-        if (arch->value() == "i86pc") {
+        if (isa->value() == "i386") {
             static map<boost::regex, string> virtual_map = {
                 {boost::regex("VMware"),     string(vm::vmware)},
                 {boost::regex("VirtualBox"), string(vm::virtualbox)},
@@ -62,14 +62,14 @@ namespace facter { namespace facts { namespace solaris {
             } catch (timeout_exception const&) {
                 LOG_WARNING("execution of prtdiag has timed out after %1% seconds.", timeout);
             }
-        } else if (arch->value() == "sparc") {
+        } else if (isa->value() == "sparc") {
             // Uses hints from
             // http://serverfault.com/questions/153179/how-to-find-out-if-a-solaris-machine-is-virtualized-or-not
             // interface stability is uncommited. Should we use it?
             string role;
 
             static boost::regex domain_role_root("Domain role:.*(root|guest)");
-            each_line("/usr/sbin/virtinfo", [&] (string& line) {
+            each_line("/usr/sbin/virtinfo", {"-a"}, [&] (string& line) {
                     if (re_search(line, domain_role_root, &role)) {
                         if (role != "root") {
                             guest_of = vm::ldom;
