@@ -642,6 +642,47 @@ namespace facter { namespace facts {
          * The fact for Xen domains.
          */
         constexpr static char const* xendomains = "xendomains";
+
+        /**
+         * The structured fact for Solaris LDom facts.
+         */
+        constexpr static char const* ldom = "ldom";
+        /**
+         * The fact for Solaris LDom domain type.
+         */
+        constexpr static char const* ldom_domainrole_impl = "ldom_domainrole_impl";
+        /**
+         * The fact for Solaris LDom domain control role.
+         */
+        constexpr static char const* ldom_domainrole_control = "ldom_domainrole_control";
+        /**
+         * The fact for Solaris LDom domain io role.
+         */
+        constexpr static char const* ldom_domainrole_io = "ldom_domainrole_io";
+        /**
+         * The fact for Solaris LDom domain service role.
+         */
+        constexpr static char const* ldom_domainrole_service = "ldom_domainrole_service";
+        /**
+         * The fact for Solaris LDom domain root io role.
+         */
+        constexpr static char const* ldom_domainrole_root = "ldom_domainrole_root";
+        /**
+         * The fact for Solaris LDom domain name.
+         */
+        constexpr static char const* ldom_domainname = "ldom_domainname";
+        /**
+         * The fact for Solaris LDom domain UUID.
+         */
+        constexpr static char const* ldom_domainuuid = "ldom_domaiuuid";
+        /**
+         * The fact for Solaris LDom control node name.
+         */
+        constexpr static char const* ldom_domaincontrol = "ldom_domaincontrol";
+        /**
+         * The fact for Solaris LDom platform serial number.
+         */
+        constexpr static char const* ldom_domainchassis = "ldom_domainchassis";
     };
 
 }}  // namespace facter::facts
