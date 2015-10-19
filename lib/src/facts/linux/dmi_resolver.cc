@@ -11,6 +11,7 @@ using namespace boost::filesystem;
 namespace bs = boost::system;
 namespace lth_file = leatherman::file_util;
 using namespace leatherman::util;
+using namespace leatherman::execution;
 
 namespace facter { namespace facts { namespace linux {
 
@@ -36,9 +37,20 @@ namespace facter { namespace facts { namespace linux {
             result.chassis_type         = to_chassis_description(read("/sys/class/dmi/id/chassis_type"));
         } else {
             LOG_DEBUG("/sys/class/dmi cannot be accessed: using dmidecode to query DMI information.");
+            string dmidecode = [] {
+#ifdef FACTER_PATH
+                string fixed = which("dmidecode", {FACTER_PATH});
+                if (fixed.empty()) {
+                    LOG_WARNING("dmidecode not found at configured location %1%, using PATH instead", FACTER_PATH);
+                } else {
+                    return fixed;
+                }
+#endif
+                return string("dmidecode");
+            }();
 
             int dmi_type = -1;
-            leatherman::execution::each_line("dmidecode", [&](string& line) {
+            leatherman::execution::each_line(dmidecode, [&](string& line) {
                 parse_dmidecode_output(result, line, dmi_type);
                 return true;
             });
