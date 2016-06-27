@@ -99,6 +99,18 @@ namespace facter { namespace facts { namespace linux {
         return {};
     }
 
+
+
+    static string check_photon_os()
+    {
+          string contents = lth_file::read(release_file::lsb);
+          boost::trim(contents);
+            if (re_search(contents, "VMware Photon")) {
+                return string(os::photon_os);
+            }
+        return {};
+    }
+
     static string check_suse_linux()
     {
         bs::error_code ec;
@@ -186,6 +198,11 @@ namespace facter { namespace facts { namespace linux {
 
         // Check for SuSE next
         value = check_suse_linux();
+        if (!value.empty()) {
+            return value;
+        }
+
+        value = check_photon_linux();
         if (!value.empty()) {
             return value;
         }
@@ -331,6 +348,8 @@ namespace facter { namespace facts { namespace linux {
             } else if (name == os::arista_eos) {
                 file = release_file::arista_eos;
                 pattern = "Arista Networks EOS (\\d+\\.\\d+\\.\\d+[A-M]?)";
+            } else if (name == os::photon_os) {
+                pattern = "(?m)^DISTRIB_RELEASE=(\\d+)\\.(\\d+) ([a-zA-Z]+\d+)";
             }
             if (file) {
                 string contents = lth_file::read(file);
