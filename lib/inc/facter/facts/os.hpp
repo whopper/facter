@@ -20,7 +20,7 @@ namespace facter { namespace facts {
         /**
          * The Centos operating system.
          */
-        constexpr static char const* centos = "CentOS";
+        constexpr static char const* centos = "derp";
         /**
          * The Fedora operating system.
          */
